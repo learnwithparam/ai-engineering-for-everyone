@@ -67,10 +67,13 @@ for (const p of ps) {
     const t = read(readme);
     if (!MERMAID.test(t)) fail(readme, "part README needs a Mermaid diagram");
     const walk = t.split("## Walkthrough")[1]?.split("\n## ")[0];
+    // A skeleton part (no steps yet, its walkthrough marked TODO(part session)) waits for its part session.
+    const skeleton = p.steps.length === 0 && (walk ?? "").includes("TODO(part session)");
     if (walk === undefined) fail(readme, `part README needs a "## Walkthrough" section`);
-    else if (!walk.includes("```bash")) fail(readme, "the walkthrough needs the commands, each with an Expect: line");
+    else if (!walk.includes("```bash") && !skeleton) fail(readme, "the walkthrough needs the commands, each with an Expect: line");
+    if (p.steps.length === 0 && !skeleton) fail(p.dir, "part has no steps");
   }
-  if (p.steps.length === 0) fail(p.dir, "part has no steps");
+  if (p.steps.length === 0 && !existsSync(readme)) fail(p.dir, "part has no steps");
   for (const s of p.steps) {
     if (!VERB_THING.test(s.name)) fail(s.dir, `step name "${s.name}" must be verb-thing in lower case`);
     if (seen.has(s.name)) fail(s.dir, `step name "${s.name}" is used twice`);
