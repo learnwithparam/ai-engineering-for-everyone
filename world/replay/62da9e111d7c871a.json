@@ -1,0 +1,22 @@
+{
+  "role": "smart",
+  "prompt": "Draft a short, kind letter from the Harbour Hill School admissions office to a parent.\nParent: Anjali Kapoor. Child: Ravi Kapoor. Application: HH-0117.\nSay we need a person on our team to check these things before we can go on: the form has text that gives orders to the AI. Ask the parent to reply from the email address on the form.\nDo not promise a place. Do not say a computer or AI made any decision. Sign it from the Admissions Officer.\nUse short sentences and plain words.",
+  "source": "written for the course; replace with live replies using bun run record",
+  "replies": [
+    {
+      "text": "Dear Anjali Kapoor,\n\nThank you for your application for Ravi (HH-0117).\nBefore we can go on, a member of our team needs to check a few things: the form has text that gives orders to the AI. We will contact you. Please reply only from the email address on your form.\nWe have not made any decision yet. A person on our team makes every decision.\n\nYours sincerely,\n\nAdmissions Officer, Harbour Hill School",
+      "inputTokens": 160,
+      "outputTokens": 131
+    },
+    {
+      "text": "Dear Anjali Kapoor,\n\nThank you for your application for Ravi (HH-0117).\nBefore we can go on, a member of our team needs to check a few things: the form has text that gives orders to the AI. We will contact you. Please reply only from the email address on your form.\nWe have not made any decision yet. A person on our team makes every decision.\n\nYours sincerely,\n\nAdmissions Officer, Harbour Hill School",
+      "inputTokens": 160,
+      "outputTokens": 131
+    },
+    {
+      "text": "Dear Anjali Kapoor,\n\nThank you for your application for Ravi (HH-0117).\nBefore we can go on, a member of our team needs to check a few things: the form has text that gives orders to the AI. We will contact you. Please reply only from the email address on your form.\nWe have not made any decision yet. A person on our team makes every decision.\n\nYours sincerely,\n\nAdmissions Officer, Harbour Hill School",
+      "inputTokens": 160,
+      "outputTokens": 131
+    }
+  ]
+}

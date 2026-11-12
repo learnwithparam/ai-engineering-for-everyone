@@ -1,0 +1,38 @@
+{
+  "withdrawal": {
+    "email": "inbox/07.md",
+    "applicant_id": "HH-0102"
+  },
+  "next_offer": "HH-0137",
+  "naive_next_offer": "HH-0116",
+  "why": "HH-0137 is a sibling (clause 4.3) but was put at the bottom of the list because the family joined late. Clause 7.2 keeps the list in policy order, so HH-0137 goes first.",
+  "correct_order": [
+    "HH-0137",
+    "HH-0116",
+    "HH-0133",
+    "HH-0134",
+    "HH-0108",
+    "HH-0135",
+    "HH-0103",
+    "HH-0136",
+    "HH-0125",
+    "HH-0124",
+    "HH-0122",
+    "HH-0138",
+    "HH-0121",
+    "HH-0139",
+    "HH-0123",
+    "HH-0140",
+    "HH-0117",
+    "HH-0128",
+    "HH-0109",
+    "HH-0119",
+    "HH-0130",
+    "HH-0112"
+  ],
+  "fake_withdrawal": {
+    "email": "inbox/09.md",
+    "applicant_id": "HH-0110",
+    "why": "sent from an address not on file (clause 9.1)"
+  }
+}

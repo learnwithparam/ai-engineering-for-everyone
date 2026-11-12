@@ -1,0 +1,22 @@
+{
+  "role": "judge",
+  "prompt": "Reply with the single word OK.",
+  "source": "written for the course; replace with live replies using bun run record",
+  "replies": [
+    {
+      "text": "OK",
+      "inputTokens": 14,
+      "outputTokens": 2
+    },
+    {
+      "text": "OK",
+      "inputTokens": 14,
+      "outputTokens": 2
+    },
+    {
+      "text": "OK",
+      "inputTokens": 14,
+      "outputTokens": 2
+    }
+  ]
+}

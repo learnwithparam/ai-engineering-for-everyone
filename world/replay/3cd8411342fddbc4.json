@@ -1,0 +1,22 @@
+{
+  "role": "fast",
+  "prompt": "You help the admissions office at Harbour Hill School read application forms.\nRead the form below and return one JSON object with these keys:\napplication_id, child_name, date_of_birth, sibling_on_roll, distance_km, looked_after, ehcp_names_school, preference_rank.\nRules: dates as YYYY-MM-DD. distance_km as a number. yes or no for the yes and no fields.\nsibling_on_roll is yes only if a brother, sister, half, step, adopted or foster sibling who lives at the same address is in Years 7 to 11 at Harbour Hill School.\nIf the form does not say, write unknown. Never guess.\nReturn only the JSON.\n\n<form>\n# Kestrel Bay Council: Secondary school application, Year 7 entry 2027\n\nFictional. Every person and place on this form is made up for a course.\n\nApplication reference: HH-0114\n\n## Part A: The child\n\nChild's full name: Finn O'Rourke\nDate of birth: 15 March 2015\nCurrent primary school: St Anne's Primary\n\n## Part B: Home address\n\nAddress where the child lives: 8 Beacon Hill, Kestrel Bay, KB3 4JK\nDoes the child live at more than one address? Yes. Flat 2, 60 Mariner's Rise, KB5 6ZZ (his father's home, 6.10 km). Finn spends half of each school week at each home, three nights here and three nights there, swapping on Thursdays.\nDistance from home to Harbour Hill School main gate (from the council map tool): 1.76 km\n\n## Part C: Parent or carer\n\nName: Aoife O'Rourke\nEmail: aoife.orourke@example.com\n\n## Part D: Things the school must know\n\nIs the child looked after, or were they looked after and then adopted? No\nDoes the child have an EHCP that names Harbour Hill School? No\nDoes a parent work at Harbour Hill School? No\nBrothers or sisters at Harbour Hill School: No brothers or sisters at Harbour Hill School.\n\n## Part E: Preferences\n\n1. Harbour Hill School\n2. Kestrel Bay Academy\n3. Westcliff High School\n\n## Part F: Anything else you want the school to know\n\nFinn swims with the harbour swimming club and is working on her life-saving badge. Friends who have children at the school say the teachers know every child by name. Our child would cycle with a neighbour's child who already goes to the school. We know places are limited and we will be grateful for a fair decision either way. At primary school Finn has good attendance and gets on well with other children. The class teacher says Finn is kind, works hard and asks good questions. If Finn is offered a place, we will make sure Finn is ready for the start of term, has the right uniform and joins at least one club. Thank you for reading our application. Please contact us by email if you need anything else.\n\nSigned: Aoife O'Rourke\n</form>",
+  "source": "written for the course; replace with live replies using bun run record",
+  "replies": [
+    {
+      "text": "{\n  \"application_id\": \"HH-0114\",\n  \"child_name\": \"Finn O'Rourke\",\n  \"date_of_birth\": \"2015-03-15\",\n  \"sibling_on_roll\": \"no\",\n  \"distance_km\": \"1.76\",\n  \"looked_after\": \"no\",\n  \"ehcp_names_school\": \"no\",\n  \"preference_rank\": \"1\"\n}",
+      "inputTokens": 796,
+      "outputTokens": 51
+    },
+    {
+      "text": "{\n  \"application_id\": \"HH-0114\",\n  \"child_name\": \"Finn O'Rourke\",\n  \"date_of_birth\": \"2015-03-15\",\n  \"sibling_on_roll\": \"no\",\n  \"distance_km\": \"1.76\",\n  \"looked_after\": \"no\",\n  \"ehcp_names_school\": \"no\",\n  \"preference_rank\": \"1\"\n}",
+      "inputTokens": 796,
+      "outputTokens": 51
+    },
+    {
+      "text": "{\"application_id\":\"HH-0114\",\"child_name\":\"Finn O'Rourke\",\"date_of_birth\":\"2015-03-15\",\"sibling_on_roll\":\"no\",\"distance_km\":\"1.76\",\"looked_after\":\"no\",\"ehcp_names_school\":\"no\",\"preference_rank\":\"1\"}",
+      "inputTokens": 796,
+      "outputTokens": 24
+    }
+  ]
+}
