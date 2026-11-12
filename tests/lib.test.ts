@@ -75,3 +75,14 @@ describe("the world", () => {
     delete process.env.LLM_PROVIDER;
   });
 });
+
+describe("troubleshooting", () => {
+  test("every rule a check can fail is listed in 00-orientation/troubleshooting.md", async () => {
+    const { allSteps } = await import("../scripts/structure");
+    const t = await Bun.file(new URL("../00-orientation/troubleshooting.md", import.meta.url)).text();
+    for (const s of allSteps()) {
+      const rules = (await import(`../checks/${s.name}.ts`)).default as { says: string }[];
+      for (const r of rules) expect(t).toContain(r.says);
+    }
+  });
+});
