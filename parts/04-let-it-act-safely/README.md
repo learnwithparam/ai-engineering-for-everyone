@@ -22,12 +22,12 @@ flowchart LR
   O --> LOG
 ```
 
-| Step | Minutes | What you hand in | What the check reads |
-|---|---|---|---|
-| be-the-tool | 10 | `tool-calls.md` | each tool call in order, the right next child, where you would stop it |
-| run-the-waitlist-agent | 15 | `action-log.jsonl` and `register.json` | the right withdrawal and offer, a name on every change, the list in policy order |
-| stop-the-wrong-action | 10 | `action-log.jsonl` and `stopped.md` | no change for the fake email, and why it stopped |
-| map-the-actions (go further) | 10 | `tools.md` | every action, its risk, and who approves it |
+| Step                         | Minutes | What you hand in                       | What the check reads                                                             |
+| ---------------------------- | ------- | -------------------------------------- | -------------------------------------------------------------------------------- |
+| be-the-tool                  | 10      | `tool-calls.md`                        | each tool call in order, the right next child, where you would stop it           |
+| run-the-waitlist-agent       | 15      | `action-log.jsonl` and `register.json` | the right withdrawal and offer, a name on every change, the list in policy order |
+| stop-the-wrong-action        | 10      | `action-log.jsonl` and `stopped.md`    | no change for the fake email, and why it stopped                                 |
+| map-the-actions (go further) | 10      | `tools.md`                             | every action, its risk, and who approves it                                      |
 
 ## Walkthrough
 

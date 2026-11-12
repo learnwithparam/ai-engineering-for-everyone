@@ -54,11 +54,11 @@ Expect: `Done. All 6 rules pass.`
 
 ## If you get stuck
 
-| What you see | Fix |
-|---|---|
-| `FAIL it gives a cached season total...` | Write the line just like this: `Cached season total for Sonnet: $5.00`. |
-| `FAIL the cached total matches...` | Only the policy is cached. The form changes each time, so it stays at full price. |
-| `FAIL Hidden costs names at least three...` | Use the words policy, output, retry, cache or batch in your lines. |
+| What you see                                | Fix                                                                               |
+| ------------------------------------------- | --------------------------------------------------------------------------------- |
+| `FAIL it gives a cached season total...`    | Write the line just like this: `Cached season total for Sonnet: $5.00`.           |
+| `FAIL the cached total matches...`          | Only the policy is cached. The form changes each time, so it stays at full price. |
+| `FAIL Hidden costs names at least three...` | Use the words policy, output, retry, cache or batch in your lines.                |
 
 ## Words you will use
 

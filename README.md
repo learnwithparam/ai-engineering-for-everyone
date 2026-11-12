@@ -86,16 +86,16 @@ one small file: a prompt, a filled table or a scored sheet. A check reads that f
 
 ## The parts
 
-| Part | Steps | Minutes | You hand in |
-|---|---|---|---|
-| [Meet the office](parts/00-meet-the-office/README.md) | 1 | 15 | who you are, and what the office flagged |
-| [Price the work](parts/01-price-the-work/README.md) | 3 | 30 | a token count and the cost of a season |
-| [Ask for a table](parts/02-ask-for-a-table/README.md) | 4 | 50 | a prompt and a clean table from 18 forms |
-| [Give it the policy](parts/03-give-it-the-policy/README.md) | 4 | 45 | answers that quote the right clause |
-| [Let it act safely](parts/04-let-it-act-safely/README.md) | 4 | 45 | an action log where a person approves each change |
-| [Measure the letters](parts/05-measure-the-letters/README.md) | 4 | 50 | notes on 20 letters and a scored test set |
-| [Guard the forms](parts/06-guard-the-forms/README.md) | 3 | 35 | guard rules, tested on attacks and normal forms |
-| [Choose and argue](parts/07-choose-and-argue/README.md) | 3 | 40 | a model choice, a vendor review and a project brief |
+| Part                                                          | Steps | Minutes | You hand in                                         |
+| ------------------------------------------------------------- | ----- | ------- | --------------------------------------------------- |
+| [Meet the office](parts/00-meet-the-office/README.md)         | 1     | 15      | who you are, and what the office flagged            |
+| [Price the work](parts/01-price-the-work/README.md)           | 3     | 30      | a token count and the cost of a season              |
+| [Ask for a table](parts/02-ask-for-a-table/README.md)         | 4     | 50      | a prompt and a clean table from 18 forms            |
+| [Give it the policy](parts/03-give-it-the-policy/README.md)   | 4     | 45      | answers that quote the right clause                 |
+| [Let it act safely](parts/04-let-it-act-safely/README.md)     | 4     | 45      | an action log where a person approves each change   |
+| [Measure the letters](parts/05-measure-the-letters/README.md) | 4     | 50      | notes on 20 letters and a scored test set           |
+| [Guard the forms](parts/06-guard-the-forms/README.md)         | 3     | 35      | guard rules, tested on attacks and normal forms     |
+| [Choose and argue](parts/07-choose-and-argue/README.md)       | 3     | 40      | a model choice, a vendor review and a project brief |
 
 Steps marked "go further" in a part are extra. The core path is about 240 minutes. Everything is about 310.
 Start with [00-orientation](00-orientation/README.md).

@@ -30,8 +30,10 @@ const ORDERS = [
 export function guard(form: string, row: Row | null): string[] {
   const why: string[] = [];
   if (!row) return ["the reply was not a table row"];
-  for (const k of FIELDS) if (row[k].toLowerCase() === "unknown") why.push(`${k.replace(/_/g, " ")} is unknown`);
-  if (/more than one address\?\s*yes/i.test(form)) why.push("the child lives at two addresses (clause 5.2)");
+  for (const k of FIELDS)
+    if (row[k].toLowerCase() === "unknown") why.push(`${k.replace(/_/g, " ")} is unknown`);
+  if (/more than one address\?\s*yes/i.test(form))
+    why.push("the child lives at two addresses (clause 5.2)");
   if (ORDERS.some((r) => r.test(form))) why.push("the form has text that gives orders to the AI");
   return why;
 }

@@ -51,11 +51,11 @@ Expect: `Done. All 6 rules pass.`
 
 ## If you get stuck
 
-| What you see | Fix |
-|---|---|
-| `FAIL the first line is file,words,tokens` | Your spreadsheet may have changed the first line. Put back `file,words,tokens`. |
-| `FAIL each word count is within 10%...` | Count again. Run `bun run words` with the file path after it. |
-| `FAIL each token count is more than its word count` | You may have copied the words into the tokens column. Multiply by 1.8. |
+| What you see                                        | Fix                                                                             |
+| --------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `FAIL the first line is file,words,tokens`          | Your spreadsheet may have changed the first line. Put back `file,words,tokens`. |
+| `FAIL each word count is within 10%...`             | Count again. Run `bun run words` with the file path after it.                   |
+| `FAIL each token count is more than its word count` | You may have copied the words into the tokens column. Multiply by 1.8.          |
 
 Go further: if you have an API key, `bun run measure-tokens` asks Claude's token counter for the real count. How
 close was 1.8?

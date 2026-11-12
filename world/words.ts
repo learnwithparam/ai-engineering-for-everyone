@@ -5,7 +5,9 @@ import { countWords } from "./lib/words";
 
 const files = process.argv.slice(2);
 if (files.length === 0) {
-  console.log("Name a file. For example: bun run words world/harbour-hill/policy/admissions-policy-2027.md");
+  console.log(
+    "Name a file. For example: bun run words world/harbour-hill/policy/admissions-policy-2027.md",
+  );
   process.exit(1);
 }
 for (const f of files) {

@@ -19,12 +19,12 @@ flowchart LR
   OLD[Last year's policy] -.->|a trap| PR
 ```
 
-| Step | Minutes | What you hand in | What the check reads |
-|---|---|---|---|
-| ask-without-the-policy | 5 | `answers.csv` | five answers, and which ones you marked wrong |
-| load-the-policy-project | 15 | `answers.csv` with clause columns | every clause exists, at least 4 of 5 match the key |
-| find-the-right-page | 10 | `retrieval.csv` | your picks for ten questions, at least 8 match the key |
-| catch-the-stale-policy (go further) | 15 | `stale.md` | the two clauses that changed, and the fix |
+| Step                                | Minutes | What you hand in                  | What the check reads                                   |
+| ----------------------------------- | ------- | --------------------------------- | ------------------------------------------------------ |
+| ask-without-the-policy              | 5       | `answers.csv`                     | five answers, and which ones you marked wrong          |
+| load-the-policy-project             | 15      | `answers.csv` with clause columns | every clause exists, at least 4 of 5 match the key     |
+| find-the-right-page                 | 10      | `retrieval.csv`                   | your picks for ten questions, at least 8 match the key |
+| catch-the-stale-policy (go further) | 15      | `stale.md`                        | the two clauses that changed, and the fix              |
 
 ## Walkthrough
 

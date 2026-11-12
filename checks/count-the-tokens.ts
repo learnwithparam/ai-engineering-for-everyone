@@ -6,10 +6,15 @@ import { tokensIn, wordsIn } from "./lib/world";
 const F = "token-count.csv";
 export const FILES = ["policy/admissions-policy-2027.md", "applications/03.md", "inbox/04.md"];
 const rows = (d: string) => csv(d, F).rows;
-const rowFor = (d: string, f: string) => rows(d).find((r) => r.file?.replace(/^world\/harbour-hill\//, "") === f);
+const rowFor = (d: string, f: string) =>
+  rows(d).find((r) => r.file?.replace(/^world\/harbour-hill\//, "") === f);
 
 export default [
-  { says: "token-count.csv is in the folder", test: (d) => has(d, F), tryNext: "Save token-count.csv in this step's problem folder." },
+  {
+    says: "token-count.csv is in the folder",
+    test: (d) => has(d, F),
+    tryNext: "Save token-count.csv in this step's problem folder.",
+  },
   {
     says: "the first line is file,words,tokens",
     test: (d) => csv(d, F).header.join(",") === "file,words,tokens",
@@ -28,11 +33,13 @@ export default [
   {
     says: "each token count is more than its word count",
     test: (d) => FILES.every((f) => num(rowFor(d, f)?.tokens) > num(rowFor(d, f)?.words)),
-    tryNext: "A token is often a piece of a word, so there are more tokens than words. Multiply words by 1.8.",
+    tryNext:
+      "A token is often a piece of a word, so there are more tokens than words. Multiply words by 1.8.",
   },
   {
     says: "each token count is within 25% of the course count",
     test: (d) => FILES.every((f) => within(num(rowFor(d, f)?.tokens), tokensIn(f), 0.25)),
-    tryNext: "Use the rule from Claude's docs: about 1.8 tokens per word. Words times 1.8, rounded.",
+    tryNext:
+      "Use the rule from Claude's docs: about 1.8 tokens per word. Words times 1.8, rounded.",
   },
 ] satisfies Rule[];

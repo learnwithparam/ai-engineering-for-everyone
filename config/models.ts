@@ -46,7 +46,8 @@ export const REPLAY_PRICED_AS: Record<Role, string> = MODELS.anthropic;
 
 export function provider(): Provider {
   const p = (process.env.LLM_PROVIDER ?? "replay").trim() as Provider;
-  if (!PROVIDERS.includes(p)) throw new Error(`LLM_PROVIDER is "${p}". Use one of: ${PROVIDERS.join(", ")}.`);
+  if (!PROVIDERS.includes(p))
+    throw new Error(`LLM_PROVIDER is "${p}". Use one of: ${PROVIDERS.join(", ")}.`);
   return p;
 }
 

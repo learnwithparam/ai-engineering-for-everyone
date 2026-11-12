@@ -12,16 +12,16 @@ Each call sends one form and the whole policy, and gets back one short row and a
 
 ## Per application
 
-| Model | Input price per million | Output price per million | Cost per application |
-|---|---|---|---|
-| Haiku | (write here) | (write here) | (write here) |
-| Sonnet | (write here) | (write here) | (write here) |
-| Opus | (write here) | (write here) | (write here) |
+| Model  | Input price per million | Output price per million | Cost per application |
+| ------ | ----------------------- | ------------------------ | -------------------- |
+| Haiku  | (write here)            | (write here)             | (write here)         |
+| Sonnet | (write here)            | (write here)             | (write here)         |
+| Opus   | (write here)            | (write here)             | (write here)         |
 
 ## Per season
 
-| Model | Season cost |
-|---|---|
-| Haiku | (write here) |
+| Model  | Season cost  |
+| ------ | ------------ |
+| Haiku  | (write here) |
 | Sonnet | (write here) |
-| Opus | (write here) |
+| Opus   | (write here) |

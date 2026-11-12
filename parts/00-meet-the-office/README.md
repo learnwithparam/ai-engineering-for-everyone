@@ -20,9 +20,9 @@ flowchart LR
   H --> O[Letters go out]
 ```
 
-| Step | Minutes | What you hand in | What the check reads |
-|---|---|---|---|
-| [meet-the-office](01-meet-the-office/problem/README.md) | 15 | `about-me.md` | your plan, role and task, and the forms the office flagged |
+| Step                                                    | Minutes | What you hand in | What the check reads                                       |
+| ------------------------------------------------------- | ------- | ---------------- | ---------------------------------------------------------- |
+| [meet-the-office](01-meet-the-office/problem/README.md) | 15      | `about-me.md`    | your plan, role and task, and the forms the office flagged |
 
 ## Walkthrough
 

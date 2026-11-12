@@ -24,11 +24,11 @@ flowchart LR
   Q --> B
 ```
 
-| Step | Minutes | What you hand in | What the check reads |
-|---|---|---|---|
-| compare-two-models | 15 | `model-choice.md` | accuracy and season cost for two models, a decision that cites both |
-| judge-the-vendor-pitch | 10 | `vendor-review.md` | the claims, the evidence each needs, at least six questions, a verdict |
-| write-the-project-brief | 15 | `project-brief.md` | eight sections, a cost with its token numbers, a test set size |
+| Step                    | Minutes | What you hand in   | What the check reads                                                   |
+| ----------------------- | ------- | ------------------ | ---------------------------------------------------------------------- |
+| compare-two-models      | 15      | `model-choice.md`  | accuracy and season cost for two models, a decision that cites both    |
+| judge-the-vendor-pitch  | 10      | `vendor-review.md` | the claims, the evidence each needs, at least six questions, a verdict |
+| write-the-project-brief | 15      | `project-brief.md` | eight sections, a cost with its token numbers, a test set size         |
 
 ## Walkthrough
 

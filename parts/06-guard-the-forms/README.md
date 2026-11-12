@@ -20,11 +20,11 @@ flowchart LR
   REG --> H{A person signs}
 ```
 
-| Step | Minutes | What you hand in | What the check reads |
-|---|---|---|---|
-| try-the-hidden-instruction | 10 | `attack.md` | what the form said, what Claude did, and whether the sibling field changed |
-| write-the-guard-rules | 10 | `guardrails.md` | Never, Always and Needs a person, and 4 of 5 attacks stopped with 5 of 5 normal forms unchanged |
-| map-the-personal-data (go further) | 15 | `data-map.md` | each kind of personal data, where it goes, and why |
+| Step                               | Minutes | What you hand in | What the check reads                                                                            |
+| ---------------------------------- | ------- | ---------------- | ----------------------------------------------------------------------------------------------- |
+| try-the-hidden-instruction         | 10      | `attack.md`      | what the form said, what Claude did, and whether the sibling field changed                      |
+| write-the-guard-rules              | 10      | `guardrails.md`  | Never, Always and Needs a person, and 4 of 5 attacks stopped with 5 of 5 normal forms unchanged |
+| map-the-personal-data (go further) | 15      | `data-map.md`    | each kind of personal data, where it goes, and why                                              |
 
 ## Walkthrough
 

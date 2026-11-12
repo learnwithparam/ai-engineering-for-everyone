@@ -1,8 +1,9 @@
 // bun run models: one tiny call per role on the chosen provider. Prints provider, role, pass or fail, cost.
 // It never prints a key or a model name.
-import { ROLES, provider } from "./models";
+
 import { ask } from "../world/lib/llm";
 import { PING } from "../world/lib/prompts";
+import { provider, ROLES } from "./models";
 
 let p;
 try {
@@ -24,5 +25,9 @@ for (const role of ROLES) {
     console.log(`  FAIL  ${role.padEnd(5)}  ${(e as Error).message}`);
   }
 }
-console.log(bad ? `${bad} role(s) failed. Look up the message in 00-orientation/troubleshooting.md.` : "Every role answered.");
+console.log(
+  bad
+    ? `${bad} role(s) failed. Look up the message in 00-orientation/troubleshooting.md.`
+    : "Every role answered.",
+);
 process.exit(bad ? 1 : 0);

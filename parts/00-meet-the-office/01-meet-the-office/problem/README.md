@@ -45,11 +45,11 @@ Expect: `Done. All 5 rules pass.`
 
 ## If you get stuck
 
-| What you see | Fix |
-|---|---|
-| `FAIL Plan names your Claude plan` | Write one plan name under `## Plan`. Look in Claude's settings if you are not sure. |
+| What you see                                      | Fix                                                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `FAIL Plan names your Claude plan`                | Write one plan name under `## Plan`. Look in Claude's settings if you are not sure.   |
 | `FAIL What the office flagged lists the forms...` | Run `bun run office` again. Copy the form numbers from the last line, like `HH-0113`. |
-| `No recorded reply for this ... prompt` | Someone changed a form. Run `bun run world reset`, or download the folder again. |
+| `No recorded reply for this ... prompt`           | Someone changed a form. Run `bun run world reset`, or download the folder again.      |
 
 ## Words you will use
 

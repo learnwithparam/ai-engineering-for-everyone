@@ -1,11 +1,17 @@
 import { describe, expect, test } from "bun:test";
-import { num, within, sections, field, table, filled, names } from "../checks/lib/handin";
-import { assumptions, perSeason, cachedSeason, seasonTotals, referenceInput } from "../checks/lib/season";
-import { PRICES, priceByMenu } from "../config/prices";
+import { field, filled, names, num, sections, table, within } from "../checks/lib/handin";
 import { officeFlags, threeRuns } from "../checks/lib/runs";
-import { countWords } from "../world/lib/words";
-import { readRegister } from "../world/lib/state";
+import {
+  assumptions,
+  cachedSeason,
+  perSeason,
+  referenceInput,
+  seasonTotals,
+} from "../checks/lib/season";
 import { keyJson } from "../checks/lib/world";
+import { PRICES, priceByMenu } from "../config/prices";
+import { readRegister } from "../world/lib/state";
+import { countWords } from "../world/lib/words";
 
 describe("reading hand-ins", () => {
   test("num reads numbers the way people write them", () => {
@@ -21,7 +27,8 @@ describe("reading hand-ins", () => {
     expect(within(NaN, 100, 0.5)).toBe(false);
   });
   test("sections, fields and tables", () => {
-    const md = "# T\n\n## Assumptions\n\n- Applications in a season: 1,200\n\n## Per season\n\n| Model | Season cost |\n|---|---|\n| Haiku | $0.50 |\n";
+    const md =
+      "# T\n\n## Assumptions\n\n- Applications in a season: 1,200\n\n## Per season\n\n| Model | Season cost |\n|---|---|\n| Haiku | $0.50 |\n";
     expect(Object.keys(sections(md))).toEqual(["assumptions", "per season"]);
     expect(field(sections(md).assumptions, /applications/i)).toBe("1,200");
     expect(table(sections(md)["per season"])).toEqual([{ model: "Haiku", "season cost": "$0.50" }]);
@@ -37,15 +44,25 @@ describe("reading hand-ins", () => {
 });
 
 describe("season maths", () => {
-  const a = { applications: 1200, formTokens: 600, policyTokens: 1800, inputTokens: 2400, outputTokens: 300 };
+  const a = {
+    applications: 1200,
+    formTokens: 600,
+    policyTokens: 1800,
+    inputTokens: 2400,
+    outputTokens: 300,
+  };
   test("a season on the small model", () => {
-    expect(perSeason(priceByMenu("Haiku")!, a)).toBeCloseTo(1200 * (2400 * 0.1 + 300 * 0.5) / 1e6, 8);
+    expect(perSeason(priceByMenu("Haiku")!, a)).toBeCloseTo(
+      (1200 * (2400 * 0.1 + 300 * 0.5)) / 1e6,
+      8,
+    );
   });
   test("caching the policy is cheaper on every model", () => {
     for (const p of PRICES) expect(cachedSeason(p, a)).toBeLessThan(perSeason(p, a));
   });
   test("assumptions and totals are read from a sheet", () => {
-    const md = "## Assumptions\n- Applications in a season: 1200\n- Input tokens per application: 2400\n- Output tokens per application: 300\n## Per season\n| Model | Season cost |\n|---|---|\n| Sonnet | $9.36 |\n";
+    const md =
+      "## Assumptions\n- Applications in a season: 1200\n- Input tokens per application: 2400\n- Output tokens per application: 300\n## Per season\n| Model | Season cost |\n|---|---|\n| Sonnet | $9.36 |\n";
     expect(assumptions(md).inputTokens).toBe(2400);
     expect(seasonTotals(md).get(priceByMenu("Sonnet")!)).toBe(9.36);
   });
@@ -60,7 +77,9 @@ describe("the world", () => {
   });
   test("the register starts with the planted waiting list fault", () => {
     const w = keyJson("waitlist.json");
-    const list = readRegister().applicants.filter((r) => r.waitlist_position).sort((x, y) => x.waitlist_position! - y.waitlist_position!);
+    const list = readRegister()
+      .applicants.filter((r) => r.waitlist_position)
+      .sort((x, y) => x.waitlist_position! - y.waitlist_position!);
     expect(list[0].applicant_id).toBe(w.naive_next_offer);
     expect(list.at(-1)!.applicant_id).toBe(w.next_offer);
   });
@@ -79,7 +98,9 @@ describe("the world", () => {
 describe("troubleshooting", () => {
   test("every rule a check can fail is listed in 00-orientation/troubleshooting.md", async () => {
     const { allSteps } = await import("../scripts/structure");
-    const t = await Bun.file(new URL("../00-orientation/troubleshooting.md", import.meta.url)).text();
+    const t = await Bun.file(
+      new URL("../00-orientation/troubleshooting.md", import.meta.url),
+    ).text();
     for (const s of allSteps()) {
       const rules = (await import(`../checks/${s.name}.ts`)).default as { says: string }[];
       for (const r of rules) expect(t).toContain(r.says);

@@ -12,19 +12,19 @@ Each call sends one form and the whole policy, and gets back one short row and a
 
 ## Per application
 
-| Model | Input price per million | Output price per million | Cost per application |
-|---|---|---|---|
-| Haiku | $0.10 | $0.50 | $0.000389 |
-| Sonnet | $2 | $10 | $0.007776 |
-| Opus | $4 | $20 | $0.015552 |
+| Model  | Input price per million | Output price per million | Cost per application |
+| ------ | ----------------------- | ------------------------ | -------------------- |
+| Haiku  | $0.10                   | $0.50                    | $0.000389            |
+| Sonnet | $2                      | $10                      | $0.007776            |
+| Opus   | $4                      | $20                      | $0.015552            |
 
 ## Per season
 
-| Model | Season cost |
-|---|---|
-| Haiku | $0.47 |
-| Sonnet | $9.33 |
-| Opus | $18.66 |
+| Model  | Season cost |
+| ------ | ----------- |
+| Haiku  | $0.47       |
+| Sonnet | $9.33       |
+| Opus   | $18.66      |
 
 ## Hidden costs
 

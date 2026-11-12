@@ -13,7 +13,10 @@ export function text(dir: string, name: string): string {
 // A number as people write it: "$1,234.50", "1 200", "0.0036", "about 2,400 tokens". NaN if there is none.
 export function num(s: string | undefined): number {
   if (!s) return NaN;
-  const m = s.replace(/(\d),(\d{3})/g, "$1$2").replace(/(\d) (\d{3})\b/g, "$1$2").match(/-?\d+(\.\d+)?/);
+  const m = s
+    .replace(/(\d),(\d{3})/g, "$1$2")
+    .replace(/(\d) (\d{3})\b/g, "$1$2")
+    .match(/-?\d+(\.\d+)?/);
   return m ? Number(m[0]) : NaN;
 }
 
@@ -60,7 +63,12 @@ export function field(body: string | undefined, label: RegExp): string | undefin
 export function table(body: string | undefined): Record<string, string>[] {
   const lines = (body ?? "").split("\n").filter((l) => l.trim().startsWith("|"));
   if (lines.length < 2) return [];
-  const cells = (l: string) => l.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
+  const cells = (l: string) =>
+    l
+      .trim()
+      .replace(/^\||\|$/g, "")
+      .split("|")
+      .map((c) => c.trim());
   const head = cells(lines[0]).map((h) => h.toLowerCase());
   return lines
     .slice(1)
@@ -69,11 +77,20 @@ export function table(body: string | undefined): Record<string, string>[] {
 }
 
 // A CSV file as rows. Header names are trimmed and lower case. Empty lines are dropped.
-export function csv(dir: string, name: string): { header: string[]; rows: Record<string, string>[] } {
+export function csv(
+  dir: string,
+  name: string,
+): { header: string[]; rows: Record<string, string>[] } {
   const t = text(dir, name);
   if (!t.trim()) return { header: [], rows: [] };
-  const r = Papa.parse<Record<string, string>>(t.trim(), { header: true, skipEmptyLines: true, transformHeader: (h) => h.trim().toLowerCase() });
-  const rows = r.data.map((row) => Object.fromEntries(Object.entries(row).map(([k, v]) => [k, String(v ?? "").trim()])));
+  const r = Papa.parse<Record<string, string>>(t.trim(), {
+    header: true,
+    skipEmptyLines: true,
+    transformHeader: (h) => h.trim().toLowerCase(),
+  });
+  const rows = r.data.map((row) =>
+    Object.fromEntries(Object.entries(row).map(([k, v]) => [k, String(v ?? "").trim()])),
+  );
   return { header: r.meta.fields ?? [], rows };
 }
 

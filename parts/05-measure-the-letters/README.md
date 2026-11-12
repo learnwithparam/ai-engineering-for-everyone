@@ -20,12 +20,12 @@ flowchart LR
   L --> D[Decide]
 ```
 
-| Step | Minutes | What you hand in | What the check reads |
-|---|---|---|---|
-| read-twenty-outputs | 15 | `letter-notes.csv` | 20 rows, a note on every fail, at least 4 of 5 planted faults caught |
-| name-the-failures | 10 | `failure-modes.md` | counts that add up, and a yes or no rule for each type |
-| label-the-test-set | 10 | `test-set.csv` | at least 16 of 20 labels match the key, with a reason for each miss |
-| test-the-judge (go further) | 15 | `judge.md` | how often Claude agrees with you, out of 20 |
+| Step                        | Minutes | What you hand in   | What the check reads                                                 |
+| --------------------------- | ------- | ------------------ | -------------------------------------------------------------------- |
+| read-twenty-outputs         | 15      | `letter-notes.csv` | 20 rows, a note on every fail, at least 4 of 5 planted faults caught |
+| name-the-failures           | 10      | `failure-modes.md` | counts that add up, and a yes or no rule for each type               |
+| label-the-test-set          | 10      | `test-set.csv`     | at least 16 of 20 labels match the key, with a reason for each miss  |
+| test-the-judge (go further) | 15      | `judge.md`         | how often Claude agrees with you, out of 20                          |
 
 ## Walkthrough
 

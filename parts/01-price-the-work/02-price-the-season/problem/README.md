@@ -51,11 +51,11 @@ Expect: `Done. All 6 rules pass.`
 
 ## If you get stuck
 
-| What you see | Fix |
-|---|---|
-| `FAIL input tokens per application include...` | Add the policy tokens to the form tokens. Every call sends both. |
-| `FAIL each season cost matches...` | Did you divide by 1,000,000? Did you add the output cost? Check one line by hand. |
-| `FAIL Per season gives a cost for...` | Put a cost like `$9.33` in each row of the Per season table. |
+| What you see                                   | Fix                                                                               |
+| ---------------------------------------------- | --------------------------------------------------------------------------------- |
+| `FAIL input tokens per application include...` | Add the policy tokens to the form tokens. Every call sends both.                  |
+| `FAIL each season cost matches...`             | Did you divide by 1,000,000? Did you add the output cost? Check one line by hand. |
+| `FAIL Per season gives a cost for...`          | Put a cost like `$9.33` in each row of the Per season table.                      |
 
 ## Words you will use
 

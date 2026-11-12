@@ -3,8 +3,8 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { ask, RUNS_PER_RECORDING } from "../../world/lib/llm";
+import { guard, OFFICE_SAMPLE, parseRow } from "../../world/lib/office";
 import { extractionPrompt } from "../../world/lib/prompts";
-import { guard, parseRow, OFFICE_SAMPLE } from "../../world/lib/office";
 import { HH } from "../../world/lib/state";
 
 export async function threeRuns<T>(fn: (run: number) => Promise<T>): Promise<T[]> {

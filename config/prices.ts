@@ -30,7 +30,8 @@ export const TOKENS_PER_WORD = 1.8;
 import { MENU_FOR_ID } from "./models";
 // Model ids live in config/models.ts; this maps an id to its row here.
 export const priceById = (id: string) => PRICES.find((p) => p.menu === MENU_FOR_ID[id]);
-export const priceByMenu = (name: string) => PRICES.find((p) => p.menu.toLowerCase() === name.trim().toLowerCase());
+export const priceByMenu = (name: string) =>
+  PRICES.find((p) => p.menu.toLowerCase() === name.trim().toLowerCase());
 
 export function callCost(id: string, inputTokens: number, outputTokens: number): number {
   const p = priceById(id);

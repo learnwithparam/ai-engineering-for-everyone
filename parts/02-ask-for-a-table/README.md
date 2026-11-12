@@ -17,12 +17,12 @@ flowchart LR
   P -->|the form does not say| U[unknown, never a guess]
 ```
 
-| Step | Minutes | What you hand in | What the check reads |
-|---|---|---|---|
-| write-the-brief-prompt | 10 | `prompts/summary.md` | the five prompt sections and the "say unknown" rule |
-| extract-the-fields | 15 | `applications.csv` | 12 rows against the answer key, at least 90% of fields right |
-| fix-the-messy-ones | 10 | `applications.csv` | 18 rows, the three gaps say unknown, the two-home form is flagged |
-| draft-the-letter (go further) | 15 | `letters/offer-template.md` and three letters | the five fields, real clauses, short sentences |
+| Step                          | Minutes | What you hand in                              | What the check reads                                              |
+| ----------------------------- | ------- | --------------------------------------------- | ----------------------------------------------------------------- |
+| write-the-brief-prompt        | 10      | `prompts/summary.md`                          | the five prompt sections and the "say unknown" rule               |
+| extract-the-fields            | 15      | `applications.csv`                            | 12 rows against the answer key, at least 90% of fields right      |
+| fix-the-messy-ones            | 10      | `applications.csv`                            | 18 rows, the three gaps say unknown, the two-home form is flagged |
+| draft-the-letter (go further) | 15      | `letters/offer-template.md` and three letters | the five fields, real clauses, short sentences                    |
 
 ## Walkthrough
 
