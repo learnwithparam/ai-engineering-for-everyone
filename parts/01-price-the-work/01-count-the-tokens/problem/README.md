@@ -32,8 +32,8 @@ Expect: `world/harbour-hill/inbox/04.md: 33 words`
    for each word. So multiply the words by 1.8 and round it to a whole number.
 3. Open `token-count.csv` in a spreadsheet or a text editor. Put the words and tokens in each row. Save it as CSV.
 
-For example, the email `inbox/04.md` asks how long a family has to appeal. It has 33 words. 33 times 1.8 is 59.4,
-so you write 59 tokens. Its row in your file is `inbox/04.md,33,59`.
+For example, the email `inbox/02.md` asks which address the school uses for a child with two homes. It has 32
+words. 32 times 1.8 is 57.6, so you write 58 tokens. If it were in your file, its row would be `inbox/02.md,32,58`.
 
 ![What you see when your counts are right](../images/expected.png)
 
