@@ -12,59 +12,90 @@ import { fileURLToPath } from "node:url";
 const { chromium } = createRequire(import.meta.url)("playwright");
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
-// Run commands in a throwaway copy, so a "your work passes" shot can use the sample solution as the work.
-function inCopy(setup, cmds) {
-  const tmp = mkdtempSync(join(tmpdir(), "shot-"));
-  cpSync(ROOT, tmp, { recursive: true, filter: (s) => !s.includes("/.git") });
-  setup?.(tmp);
-  const out = cmds
-    .map((c) => {
-      let o;
-      try {
-        o = execSync(c, {
-          cwd: tmp,
-          env: { ...process.env, LLM_PROVIDER: "replay", FORCE_COLOR: "0" },
-          encoding: "utf8",
-          stdio: ["ignore", "pipe", "pipe"],
-        });
-      } catch (e) {
-        o = (e.stdout ?? "") + (e.stderr ?? "");
-      }
-      return (
-        `$ ${c}\n` +
-        o
-          .split("\n")
-          .filter((l) => !l.startsWith("$ bun ") && !l.startsWith("error: script"))
-          .join("\n")
-          .trimEnd()
-      );
-    })
-    .join("\n\n");
-  rmSync(tmp, { recursive: true, force: true });
-  return out;
+// Every run plays back saved replies, so pictures never need a key and never change.
+function replayEnvironment() {
+  const environment = { ...process.env };
+  environment.LLM_PROVIDER = "replay";
+  return environment;
 }
 
-const solved = (step) => (tmp) => {
-  const dir = execSync(`ls -d parts/*/*-${step}`, { cwd: tmp, encoding: "utf8" }).trim();
-  cpSync(join(tmp, dir, "solution"), join(tmp, dir, "problem"), { recursive: true });
+function runCommand(command, folder) {
+  const environment = replayEnvironment();
+  environment.FORCE_COLOR = "0";
+  try {
+    return execSync(command, {
+      cwd: folder,
+      env: environment,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"],
+    });
+  } catch (error) {
+    // A failing command is still a picture: show what it printed.
+    return (error.stdout ?? "") + (error.stderr ?? "");
+  }
+}
+
+// Bun echoes the script it runs; the picture shows only the command the learner typed.
+function isBunNoise(line) {
+  return line.startsWith("$ bun ") || line.startsWith("error: script");
+}
+
+function terminalText(command, output) {
+  const lines = output.split("\n").filter((line) => !isBunNoise(line));
+  const shown = lines.join("\n").trimEnd();
+  return `$ ${command}\n${shown}`;
+}
+
+// Run commands in a throwaway copy, so a "your work passes" shot can use the sample solution
+// as the work.
+function inCopy(setup, commands) {
+  const copy = mkdtempSync(join(tmpdir(), "shot-"));
+  cpSync(ROOT, copy, { recursive: true, filter: (source) => !source.includes("/.git") });
+  setup?.(copy);
+  const screens = commands.map((command) => terminalText(command, runCommand(command, copy)));
+  rmSync(copy, { recursive: true, force: true });
+  return screens.join("\n\n");
+}
+
+const solved = (step) => (copy) => {
+  const listing = execSync(`ls -d parts/*/*-${step}`, { cwd: copy, encoding: "utf8" });
+  const stepFolder = listing.trim();
+  const solution = join(copy, stepFolder, "solution");
+  cpSync(solution, join(copy, stepFolder, "problem"), { recursive: true });
 };
 
-const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
-const paint = (s) =>
-  esc(s)
+function escapeHtml(text) {
+  return text.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+}
+
+function paint(text) {
+  return escapeHtml(text)
     .replace(/^(\$ .*)$/gm, '<span class="cmd">$1</span>')
     .replace(/\b(PASS)\b/g, '<span class="pass">$1</span>')
     .replace(/\b(FAIL|ERROR)\b/g, '<span class="fail">$1</span>')
     .replace(/(Try next:)/g, '<span class="hint">$1</span>')
     .replace(/\b(YES)\b/g, '<span class="fail">$1</span>');
-const terminal = (title, body) => `<!doctype html><meta charset="utf-8"><style>
-body{margin:0;background:#0d1117;padding:16px;width:800px;box-sizing:border-box}
-.win{background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden}
-.bar{display:flex;gap:6px;align-items:center;padding:8px 12px;background:#21262d;color:#8b949e;font:12px system-ui}
-.dot{width:10px;height:10px;border-radius:50%;background:#484f58}
-pre{margin:0;padding:14px 16px;color:#e6edf3;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap}
-.cmd{color:#79c0ff}.pass{color:#3fb950;font-weight:700}.fail{color:#f85149;font-weight:700}.hint{color:#d29922}
-</style><div class="win"><div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span>&nbsp;${esc(title)}</div><pre>${paint(body)}</pre></div>`;
+}
+
+const TERMINAL_STYLE = [
+  "body{margin:0;background:#0d1117;padding:16px;width:800px;box-sizing:border-box}",
+  ".win{background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden}",
+  ".bar{display:flex;gap:6px;align-items:center;padding:8px 12px;background:#21262d;" +
+    "color:#8b949e;font:12px system-ui}",
+  ".dot{width:10px;height:10px;border-radius:50%;background:#484f58}",
+  "pre{margin:0;padding:14px 16px;color:#e6edf3;" +
+    "font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap}",
+  ".cmd{color:#79c0ff}.pass{color:#3fb950;font-weight:700}.fail{color:#f85149;font-weight:700}" +
+    ".hint{color:#d29922}",
+].join("\n");
+
+function terminal(title, body) {
+  const dots = '<span class="dot"></span>'.repeat(3);
+  const titleBar = `<div class="bar">${dots}&nbsp;${escapeHtml(title)}</div>`;
+  const terminalWindow = `<div class="win">${titleBar}<pre>${paint(body)}</pre></div>`;
+  const head = `<!doctype html><meta charset="utf-8"><style>\n${TERMINAL_STYLE}\n</style>`;
+  return head + terminalWindow;
+}
 
 export const SHOTS = [
   {
@@ -88,7 +119,12 @@ export const SHOTS = [
     title: "count-the-tokens",
     run: () =>
       inCopy(solved("count-the-tokens"), [
-        "bun run words world/harbour-hill/policy/admissions-policy-2027.md world/harbour-hill/applications/03.md world/harbour-hill/inbox/04.md",
+        [
+          "bun run words",
+          "world/harbour-hill/policy/admissions-policy-2027.md",
+          "world/harbour-hill/applications/03.md",
+          "world/harbour-hill/inbox/04.md",
+        ].join(" "),
         "bun run verify count-the-tokens",
       ]),
   },
@@ -104,27 +140,31 @@ export const SHOTS = [
   },
 ];
 
+async function takeShot(browser, shot) {
+  const page = await browser.newPage({
+    viewport: { width: shot.width ?? 832, height: 400 },
+    deviceScaleFactor: 2,
+  });
+  if (shot.page) await page.goto(`file://${join(ROOT, shot.page)}`);
+  else {
+    const html = join(tmpdir(), "shot.html");
+    writeFileSync(html, terminal(shot.title, shot.run()));
+    await page.goto(`file://${html}`);
+  }
+  mkdirSync(dirname(join(ROOT, shot.out)), { recursive: true });
+  await page.screenshot({ path: join(ROOT, shot.out), fullPage: true });
+  console.log("took", shot.out);
+  await page.close();
+}
+
+// Pass part of a file name to take only the pictures that match.
 const only = process.argv[2];
 execSync("bun run world reset && bun run office", {
   cwd: ROOT,
   stdio: "ignore",
-  env: { ...process.env, LLM_PROVIDER: "replay" },
+  env: replayEnvironment(),
 });
 const browser = await chromium.launch();
-for (const s of SHOTS.filter((s) => !only || s.out.includes(only))) {
-  const page = await browser.newPage({
-    viewport: { width: s.width ?? 832, height: 400 },
-    deviceScaleFactor: 2,
-  });
-  if (s.page) await page.goto("file://" + join(ROOT, s.page));
-  else {
-    const html = join(tmpdir(), "shot.html");
-    writeFileSync(html, terminal(s.title, s.run()));
-    await page.goto("file://" + html);
-  }
-  mkdirSync(dirname(join(ROOT, s.out)), { recursive: true });
-  await page.screenshot({ path: join(ROOT, s.out), fullPage: true });
-  console.log("took", s.out);
-  await page.close();
-}
+const wanted = SHOTS.filter((shot) => !only || shot.out.includes(only));
+for (const shot of wanted) await takeShot(browser, shot);
 await browser.close();
