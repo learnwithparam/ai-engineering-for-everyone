@@ -4,7 +4,10 @@
   "type": "module",
   "packageManager": "bun@1.4.4",
   "scripts": {
-    "check": "bun scripts/check.ts && bun scripts/verify.ts --all",
+    "check": "bun scripts/readable.ts && bun scripts/plain-english.ts && bun scripts/check.ts && bun scripts/verify.ts --all",
+    "readable": "bun scripts/readable.ts",
+    "format": "biome check --write .",
+    "plain-english": "bun scripts/plain-english.ts",
     "verify": "bun scripts/verify.ts",
     "world": "bun world/world.ts",
     "office": "bun world/office.ts",
@@ -22,8 +25,12 @@
     "zod": "4.6.7"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.6.5",
     "@types/bun": "1.4.4",
     "@types/papaparse": "5.5.2",
     "typescript": "7.0.2"
+  },
+  "plainEnglish": {
+    "grade": 6
   }
 }
