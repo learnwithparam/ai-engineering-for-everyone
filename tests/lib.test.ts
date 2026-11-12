@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { field, filled, names, num, sections, table, within } from "../checks/lib/handin";
+import { field, filled, names, readNumber, sections, table, within } from "../checks/lib/handin";
 import { officeFlags, threeRuns } from "../checks/lib/runs";
 import {
   assumptions,
@@ -14,12 +14,12 @@ import { readRegister } from "../world/lib/state";
 import { countWords } from "../world/lib/words";
 
 describe("reading hand-ins", () => {
-  test("num reads numbers the way people write them", () => {
-    expect(num("$1,234.50")).toBe(1234.5);
-    expect(num("about 2 400 tokens")).toBe(2400);
-    expect(num("0.0036")).toBe(0.0036);
-    expect(num("")).toBeNaN();
-    expect(num("none")).toBeNaN();
+  test("readNumber reads numbers the way people write them", () => {
+    expect(readNumber("$1,234.50")).toBe(1234.5);
+    expect(readNumber("about 2 400 tokens")).toBe(2400);
+    expect(readNumber("0.0036")).toBe(0.0036);
+    expect(readNumber("")).toBeNaN();
+    expect(readNumber("none")).toBeNaN();
   });
   test("within allows a share either way", () => {
     expect(within(110, 100, 0.1)).toBe(true);

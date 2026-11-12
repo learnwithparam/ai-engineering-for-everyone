@@ -2,6 +2,7 @@
 // https://platform.claude.com/docs/en/about-claude/pricing
 // Part one of the course prices a season on the three models people pick in the Claude app menu.
 // The checker recomputes every learner sheet from this table, so update it here when prices change.
+import { MENU_FOR_ID } from "./models";
 
 export const PRICES_READ_ON = "2026-11-12";
 export const PRICES_SOURCE = "https://platform.claude.com/docs/en/about-claude/pricing";
@@ -27,13 +28,17 @@ export const BATCH_DISCOUNT = 0.5;
 // https://platform.claude.com/docs/en/about-claude/models/overview
 export const TOKENS_PER_WORD = 1.8;
 
-import { MENU_FOR_ID } from "./models";
 // Model ids live in config/models.ts; this maps an id to its row here.
-export const priceById = (id: string) => PRICES.find((p) => p.menu === MENU_FOR_ID[id]);
-export const priceByMenu = (name: string) =>
-  PRICES.find((p) => p.menu.toLowerCase() === name.trim().toLowerCase());
+export const priceById = (id: string) => PRICES.find((price) => price.menu === MENU_FOR_ID[id]);
+
+// A learner may write "sonnet" or " Sonnet", so the menu name is matched without case or spaces.
+export function priceByMenu(name: string): Price | undefined {
+  const wanted = name.trim().toLowerCase();
+  return PRICES.find((price) => price.menu.toLowerCase() === wanted);
+}
 
 export function callCost(id: string, inputTokens: number, outputTokens: number): number {
-  const p = priceById(id);
-  return p ? (inputTokens * p.input + outputTokens * p.output) / 1e6 : 0;
+  const price = priceById(id);
+  if (!price) return 0;
+  return (inputTokens * price.input + outputTokens * price.output) / 1e6;
 }

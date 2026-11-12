@@ -10,11 +10,14 @@ if (files.length === 0) {
   );
   process.exit(1);
 }
-for (const f of files) {
-  const p = resolve(process.env.INIT_CWD ?? process.cwd(), f);
-  if (!existsSync(p)) {
-    console.log(`There is no file at ${f}. Check the path and try again.`);
+// bun run moves into the repo folder, so a path is read from the folder the learner typed it in.
+const typedIn = process.env.INIT_CWD ?? process.cwd();
+for (const file of files) {
+  const path = resolve(typedIn, file);
+  if (!existsSync(path)) {
+    console.log(`There is no file at ${file}. Check the path and try again.`);
     process.exit(1);
   }
-  console.log(`${f}: ${countWords(readFileSync(p, "utf8"))} words`);
+  const words = countWords(readFileSync(path, "utf8"));
+  console.log(`${file}: ${words} words`);
 }

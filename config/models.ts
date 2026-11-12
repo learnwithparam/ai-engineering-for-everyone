@@ -1,5 +1,6 @@
 // The only file that names a model. Code asks for a role (fast, smart, judge), never an id.
-// Swap the provider with one setting, LLM_PROVIDER, in a git-ignored .env file (see .env.example).
+// Swap the provider with one setting, LLM_PROVIDER, in a git-ignored .env file
+// (see .env.example).
 // Ids read from briefs/MODELS.md and the providers' live lists on 2026-11-12.
 
 export type Role = "fast" | "smart" | "judge";
@@ -17,7 +18,8 @@ export const MODELS: Record<Exclude<Provider, "replay">, Record<Role, string>> =
     judge: "anthropic/claude-haiku-5.5",
   },
   openai: { fast: "gpt-6-luna", smart: "gpt-6-luna-pro", judge: "gpt-6-luna" },
-  // A local model through Ollama's OpenAI-compatible server. Set OLLAMA_MODEL to the one you pulled.
+  // A local model through Ollama's OpenAI-compatible server.
+  // Set OLLAMA_MODEL to the one you pulled.
   ollama: {
     fast: process.env.OLLAMA_MODEL ?? "qwen3",
     smart: process.env.OLLAMA_MODEL ?? "qwen3",
@@ -41,16 +43,19 @@ export const MENU_FOR_ID: Record<string, string> = {
   "claude-opus-5-5": "Opus",
 };
 
-// What a replayed reply is priced as, so a replay run shows a real cost: the anthropic model for that role.
+// What a replayed reply is priced as, so a replay run shows a real cost:
+// the anthropic model for that role.
 export const REPLAY_PRICED_AS: Record<Role, string> = MODELS.anthropic;
 
 export function provider(): Provider {
-  const p = (process.env.LLM_PROVIDER ?? "replay").trim() as Provider;
-  if (!PROVIDERS.includes(p))
-    throw new Error(`LLM_PROVIDER is "${p}". Use one of: ${PROVIDERS.join(", ")}.`);
-  return p;
+  const chosen = (process.env.LLM_PROVIDER ?? "replay").trim() as Provider;
+  if (!PROVIDERS.includes(chosen)) {
+    throw new Error(`LLM_PROVIDER is "${chosen}". Use one of: ${PROVIDERS.join(", ")}.`);
+  }
+  return chosen;
 }
 
-export function modelFor(role: Role, p: Provider = provider()): string {
-  return p === "replay" ? `replay:${role}` : MODELS[p][role];
+export function modelFor(role: Role, chosen: Provider = provider()): string {
+  if (chosen === "replay") return `replay:${role}`;
+  return MODELS[chosen][role];
 }
