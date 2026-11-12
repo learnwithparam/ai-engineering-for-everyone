@@ -3,12 +3,16 @@
 ## The problem
 
 You are the new admissions officer at Harbour Hill School. The school is made up for this course. About 1,200
-families want one of 180 places. Your team is three people and an inbox. Your boss wants to know: should we use
-AI here, and how would we know it works?
+families want one of 180 places. Your team is three people and an inbox. Your boss asks you two questions:
+should we use AI here, and how would we know it works?
 
-You can't answer that until you have seen what AI in this office looks like. So first, you watch the finished
-office run. It reads six forms, puts each one in policy order, and drafts a letter. Then it flags the forms a
-person must check.
+You cannot answer yet. First you need to see what AI in this office looks like. So you watch the finished office
+run. It reads six forms and puts each one in policy order. The policy is the school's written rules. Then it
+drafts a letter for each form, and it flags the forms a person must check.
+
+For example, one line of the run is about form HH-0114 for Finn O'Rourke. It says
+`YES: the child lives at two addresses (clause 5.2)`. Finn spends equal time at both homes. In that case,
+clause 5.2 says a person decides.
 
 ![The finished office: three forms need a person](../images/expected.png)
 
@@ -24,8 +28,12 @@ Expect: the last line starts with `3 of 6 forms need a person:` and lists three 
 
 2. Open `world/state/office-report.html` in your web browser. Look at the red cards. Read why each one needs a
    person.
-3. Open `about-me.md` in this folder. Fill in all four parts. Replace each `(write here ...)` line with your own
-   words. Under **What the office flagged**, list the three form numbers and say why, in a few words.
+3. Open `about-me.md` in this folder. It has four parts. Fill in all four.
+4. In each part, replace the `(write here ...)` line with your own words.
+5. Under **What the office flagged**, list the three form numbers. For each one, say why in a few words.
+
+For example, a filled **Plan** part can be one word, like `Free`. A filled **Role** part can be one line, like
+`Office manager at a small school`.
 
 ## Done when
 
@@ -34,8 +42,8 @@ Expect: the last line starts with `3 of 6 forms need a person:` and lists three 
 - **Role** and **A task I want help with** each have your own words.
 - **What the office flagged** lists the forms the office flagged, and no others.
 
-How this step is checked: the check reads `about-me.md`. It runs the office three times on its own and keeps
-the forms it flags every time. Your list must match.
+How this step is checked: the check reads `about-me.md`. It also runs the office three times on its own. It keeps
+the forms that are flagged every time. Your list must match those forms.
 
 ```bash
 bun run verify meet-the-office
@@ -54,6 +62,7 @@ Expect: `Done. All 5 rules pass.`
 ## Words you will use
 
 - **Form**: one family's application for a place.
+- **Policy**: the school's written rules for who gets a place. Each rule has a number, called a clause.
 - **Register**: the list of every child and where they stand. It is the truth the office works from.
 - **Flag**: a mark that says "a person must look at this before anything else happens".
 - **Replay**: the office plays back saved AI replies, so it runs with no account and costs nothing.

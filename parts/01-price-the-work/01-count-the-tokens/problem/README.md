@@ -2,8 +2,9 @@
 
 ## The problem
 
-Your boss asks a simple question: "What would AI cost us for the whole season?" You can't answer in words or
-pages. AI is priced in **tokens**. So the first thing to learn is how many tokens the office's files are.
+Your boss asks a simple question: "What would AI cost us for the whole season?" You cannot answer in words or
+pages, because AI is priced in **tokens**. A token is a small piece of text, often part of a word. So first you
+find out how many tokens the office's files have.
 
 ```mermaid
 flowchart LR
@@ -28,8 +29,11 @@ bun run words world/harbour-hill/inbox/04.md
 Expect: `world/harbour-hill/inbox/04.md: 33 words`
 
 2. Turn words into tokens. Claude's docs say one million tokens is about 555,000 words. That is about 1.8 tokens
-   for each word. So multiply the words by 1.8 and round it.
+   for each word. So multiply the words by 1.8 and round it to a whole number.
 3. Open `token-count.csv` in a spreadsheet or a text editor. Put the words and tokens in each row. Save it as CSV.
+
+For example, the email `inbox/04.md` asks how long a family has to appeal. It has 33 words. 33 times 1.8 is 59.4,
+so you write 59 tokens. Its row in your file is `inbox/04.md,33,59`.
 
 ![What you see when your counts are right](../images/expected.png)
 
@@ -40,8 +44,8 @@ Expect: `world/harbour-hill/inbox/04.md: 33 words`
 - Each word count is within 10% of the real count.
 - Each token count is more than its word count, and within 25% of the course count.
 
-How this step is checked: the check reads your CSV. It counts the words in each file itself, and compares your
-tokens to the count the course keeps in `world/keys/tokens.json`.
+How this step is checked: the check reads your CSV. It counts the words in each file itself. Then it compares
+your tokens to the count the course keeps in `world/keys/tokens.json`.
 
 ```bash
 bun run verify count-the-tokens
@@ -57,8 +61,8 @@ Expect: `Done. All 6 rules pass.`
 | `FAIL each word count is within 10%...`             | Count again. Run `bun run words` with the file path after it.                   |
 | `FAIL each token count is more than its word count` | You may have copied the words into the tokens column. Multiply by 1.8.          |
 
-Go further: if you have an API key, `bun run measure-tokens` asks Claude's token counter for the real count. How
-close was 1.8?
+Go further: an API key is a secret password for your own AI account. If you have one, `bun run measure-tokens`
+asks Claude's token counter for the real count. How close was 1.8?
 
 ## Words you will use
 

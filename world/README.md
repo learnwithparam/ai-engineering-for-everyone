@@ -1,7 +1,10 @@
 # The office
 
-Harbour Hill School and Kestrel Bay are made up. So is every child, parent and email. No real person's details
-are in this folder.
+This folder holds the made-up school you work in. Harbour Hill School and the town of Kestrel Bay are not real.
+Every child, parent and email is made up too. No real person's details are in this folder.
+
+For example, `harbour-hill/applications/01.md` is the form for Amara Okafor. Her reference is HH-0101, and she
+lives 0.84 km from the school gate.
 
 ## What is here
 
@@ -19,11 +22,15 @@ are in this folder.
 
 ## Commands
 
+This command puts the office back to how it was at the start. Use it if a form or the register has changed.
+
 ```bash
 bun run world reset
 ```
 
 Expect: `The office is reset: the register is back to its first state and the logs are empty.`
+
+This command runs the finished office. It reads six forms and drafts six letters.
 
 ```bash
 bun run office
@@ -31,5 +38,6 @@ bun run office
 
 Expect: `3 of 6 forms need a person: HH-0113, HH-0114, HH-0117`
 
-The saved replies in `replay/` were written for the course to match what a model returns. With a key in `.env`,
-`bun run record` swaps them for live replies.
+The saved replies in `replay/` were written for the course. They match what a real AI model returns. A model is
+the AI program that reads and writes text. If you have a key in `.env`, `bun run record` swaps the saved replies
+for live ones.

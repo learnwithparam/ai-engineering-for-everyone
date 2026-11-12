@@ -2,9 +2,19 @@
 
 ## The problem
 
-A vendor says its tool is "95% accurate" and "saves 80% of staff time". Your boss wants a decision. You now have
-a cost sheet, a test set and guard rules. Use them: pick a model with your own numbers, test the pitch, and write
-a one-page brief.
+A vendor is a company that sells you a product. One vendor says its tool is "95% accurate" and "saves 80% of
+staff time". Your boss wants a decision.
+
+You now have a cost sheet, a test set and guard rules. Use them in three ways:
+
+- Pick a model with your own numbers.
+- Test the vendor's sales pitch.
+- Write a one-page project brief: a short plan your boss can say yes or no to.
+
+For example, the pitch in `world/harbour-hill/vendor-pitch.md` is for a made-up tool called Sortwell Admit. It
+says "95% accurate", but it does not say 95% of what, or on which forms. It also says the tool "makes the
+decisions". But clause 1.2 of the school's policy says a person makes every admission
+decision. So that claim is a problem, not a feature.
 
 Carta Healthcare says it cut clinical data work "by up to 66%"
 ([Carta Healthcare's story on claude.com](https://claude.com/customers/carta-healthcare)). AES says AI agents gave
@@ -23,6 +33,8 @@ flowchart LR
   D --> B[One-page project brief]
   Q --> B
 ```
+
+This part has three steps:
 
 | Step                    | Minutes | What you hand in   | What the check reads                                                   |
 | ----------------------- | ------- | ------------------ | ---------------------------------------------------------------------- |

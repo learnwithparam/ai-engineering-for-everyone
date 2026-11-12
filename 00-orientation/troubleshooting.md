@@ -1,6 +1,13 @@
 # When something goes wrong
 
-Every message a command can print when something fails is in these tables. Find the words you see, then do the fix.
+When a command fails, it prints a message. Every one of those messages is in the tables below.
+
+1. Find the words you see in the first column, **What you see**.
+2. Read **What it means**.
+3. Do what the **Fix** column says.
+
+For example, you type `bun run office` and see `bun: command not found`. The first row says Bun is not installed.
+The fix is to install Bun, then close the terminal and open a new one.
 
 ## Setting up and running the office
 
@@ -19,6 +26,8 @@ Every message a command can print when something fails is in these tables. Find 
 
 ## Using your own AI account (not needed)
 
+You only see these messages if you set up your own AI account in `.env`. Replay mode never shows them.
+
 | What you see                                                     | What it means                                            | Fix                                                                      |
 | ---------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------ |
 | `LLM_PROVIDER is "..."`                                          | The provider name in `.env` is not one the course knows. | Use replay, anthropic, openrouter, openai or ollama.                     |
@@ -30,7 +39,8 @@ Every message a command can print when something fails is in these tables. Find 
 
 ## Step checks
 
-Each `FAIL` line comes with a `Try next:` line. This table has the same advice in one place.
+Each `FAIL` line comes with a `Try next:` line under it. This table has the same advice in one place. The first
+words in **What it means** name the step, such as meet-the-office.
 
 | What you see                                                                              | What it means                                   | Fix                                                                                                                                                |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
