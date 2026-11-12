@@ -11,7 +11,17 @@ import { ROOT } from "./structure";
 const DEFAULT_READING_GRADE = 8;
 const LONGEST_SENTENCE = 25;
 
-const SKIPPED_FOLDERS = new Set(["node_modules", ".git", ".venv", "recordings", "research"]);
+// This course also skips the made-up school's own papers (harbour-hill) and the answer keys (keys).
+// Their exact words feed the saved AI replies and the answers, so they must not change.
+const SKIPPED_FOLDERS = new Set([
+  "node_modules",
+  ".git",
+  ".venv",
+  "recordings",
+  "research",
+  "harbour-hill",
+  "keys",
+]);
 
 // Pages for the people who build the course, not for learners.
 const AUTHOR_PAGES = new Set(["STANDARD.md", "SPEC.md", "PARTS.md"]);
