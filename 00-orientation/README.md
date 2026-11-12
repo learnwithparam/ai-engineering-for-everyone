@@ -27,7 +27,7 @@ your file and tells you what passed.
 bun install
 ```
 
-Expect: the last line ends with `packages installed` and there is no line that starts with `error`.
+Expect: the last line says `packages installed` and there is no line that starts with `error`.
 
 ## Meet the office
 
