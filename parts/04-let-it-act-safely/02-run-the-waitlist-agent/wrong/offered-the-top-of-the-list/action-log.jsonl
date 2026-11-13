@@ -1,0 +1,5 @@
+{"at":"2026-11-13T05:03:52.044Z","tool":"read_register","applicant_id":"HH-0102","approved_by":null,"result":"ok"}
+{"at":"2026-11-13T05:03:52.056Z","tool":"withdraw","applicant_id":"HH-0102","approved_by":"Ms R. Adebayo","result":"ok"}
+{"at":"2026-11-13T05:03:52.065Z","tool":"next_on_waitlist","applicant_id":"HH-0116","approved_by":null,"result":"ok"}
+{"at":"2026-11-13T05:03:52.075Z","tool":"offer_place","applicant_id":"HH-0116","approved_by":"Ms R. Adebayo","result":"ok"}
+{"at":"2026-11-13T05:03:52.087Z","tool":"draft_letter","applicant_id":"HH-0116","approved_by":null,"result":"ok"}
