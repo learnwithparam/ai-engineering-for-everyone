@@ -138,6 +138,22 @@ export const SHOTS = [
     title: "spot-the-hidden-cost",
     run: () => inCopy(solved("spot-the-hidden-cost"), ["bun run verify spot-the-hidden-cost"]),
   },
+  {
+    out: "parts/06-guard-the-forms/01-try-the-hidden-instruction/images/expected.png",
+    title: "try-the-hidden-instruction",
+    run: () =>
+      inCopy(solved("try-the-hidden-instruction"), ["bun run verify try-the-hidden-instruction"]),
+  },
+  {
+    out: "parts/06-guard-the-forms/02-write-the-guard-rules/images/expected.png",
+    title: "write-the-guard-rules",
+    run: () => inCopy(solved("write-the-guard-rules"), ["bun run verify write-the-guard-rules"]),
+  },
+  {
+    out: "parts/06-guard-the-forms/03-map-the-personal-data/images/expected.png",
+    title: "map-the-personal-data",
+    run: () => inCopy(solved("map-the-personal-data"), ["bun run verify map-the-personal-data"]),
+  },
 ];
 
 async function takeShot(browser, shot) {
