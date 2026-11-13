@@ -139,6 +139,47 @@ export const SHOTS = [
     run: () => inCopy(solved("spot-the-hidden-cost"), ["bun run verify spot-the-hidden-cost"]),
   },
   {
+    out: "parts/02-ask-for-a-table/01-write-the-brief-prompt/images/expected.png",
+    title: "write-the-brief-prompt",
+    run: () => inCopy(solved("write-the-brief-prompt"), ["bun run verify write-the-brief-prompt"]),
+  },
+  {
+    out: "parts/02-ask-for-a-table/02-extract-the-fields/images/expected.png",
+    title: "extract-the-fields",
+    run: () => inCopy(solved("extract-the-fields"), ["bun run verify extract-the-fields"]),
+  },
+  {
+    out: "parts/02-ask-for-a-table/03-fix-the-messy-ones/images/expected.png",
+    title: "fix-the-messy-ones",
+    run: () => inCopy(solved("fix-the-messy-ones"), ["bun run verify fix-the-messy-ones"]),
+  },
+  {
+    out: "parts/02-ask-for-a-table/04-draft-the-letter/images/expected.png",
+    title: "draft-the-letter",
+    run: () => inCopy(solved("draft-the-letter"), ["bun run verify draft-the-letter"]),
+  },
+  {
+    out: "parts/03-give-it-the-policy/01-ask-without-the-policy/images/expected.png",
+    title: "ask-without-the-policy",
+    run: () => inCopy(solved("ask-without-the-policy"), ["bun run verify ask-without-the-policy"]),
+  },
+  {
+    out: "parts/03-give-it-the-policy/02-load-the-policy-project/images/expected.png",
+    title: "load-the-policy-project",
+    run: () =>
+      inCopy(solved("load-the-policy-project"), ["bun run verify load-the-policy-project"]),
+  },
+  {
+    out: "parts/03-give-it-the-policy/03-find-the-right-page/images/expected.png",
+    title: "find-the-right-page",
+    run: () => inCopy(solved("find-the-right-page"), ["bun run verify find-the-right-page"]),
+  },
+  {
+    out: "parts/03-give-it-the-policy/04-catch-the-stale-policy/images/expected.png",
+    title: "catch-the-stale-policy",
+    run: () => inCopy(solved("catch-the-stale-policy"), ["bun run verify catch-the-stale-policy"]),
+  },
+  {
     out: "parts/07-choose-and-argue/01-compare-two-models/images/expected.png",
     title: "compare-two-models",
     run: () => inCopy(solved("compare-two-models"), ["bun run verify compare-two-models"]),
