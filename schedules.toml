@@ -1,6 +1,6 @@
 # The same parts, in the same order, on different calendars. Learner pages never name a time; only this file does.
 # Minutes per part: meet-the-office 15, price-the-work 30, ask-for-a-table 50, give-it-the-policy 45,
-# let-it-act-safely 45, measure-the-letters 50, guard-the-forms 35, choose-and-argue 40. Total 310.
+# let-it-act-safely 45, measure-the-letters 50, guard-the-forms 35, choose-and-argue 40, compare-prompts 10. Total 320.
 
 # One full day: four blocks, with breaks and lunch between them (not counted here).
 [one-day]
@@ -8,7 +8,7 @@ sessions = [
   { parts = ["meet-the-office", "price-the-work", "ask-for-a-table"], minutes = 100 },
   { parts = ["give-it-the-policy", "let-it-act-safely"], minutes = 95 },
   { parts = ["measure-the-letters", "guard-the-forms"], minutes = 90 },
-  { parts = ["choose-and-argue"], minutes = 70 },
+  { parts = ["choose-and-argue", "compare-prompts"], minutes = 70 },
 ]
 
 # Four evenings of 100 minutes, each opening with a short recap. The last ends with three learners presenting briefs.
@@ -17,7 +17,7 @@ sessions = [
   { parts = ["meet-the-office", "price-the-work", "ask-for-a-table"], minutes = 100 },
   { parts = ["give-it-the-policy", "let-it-act-safely"], minutes = 100 },
   { parts = ["measure-the-letters", "guard-the-forms"], minutes = 100 },
-  { parts = ["choose-and-argue"], minutes = 100 },
+  { parts = ["choose-and-argue", "compare-prompts"], minutes = 100 },
 ]
 
 # Four weeks, self-paced, with one live hour each week to review the hand-ins.
@@ -26,5 +26,5 @@ sessions = [
   { parts = ["meet-the-office", "price-the-work", "ask-for-a-table"], minutes = 155 },
   { parts = ["give-it-the-policy", "let-it-act-safely"], minutes = 150 },
   { parts = ["measure-the-letters", "guard-the-forms"], minutes = 145 },
-  { parts = ["choose-and-argue"], minutes = 100 },
+  { parts = ["choose-and-argue", "compare-prompts"], minutes = 100 },
 ]
