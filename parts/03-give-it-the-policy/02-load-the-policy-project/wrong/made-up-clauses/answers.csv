@@ -1,0 +1,6 @@
+question_id,question,without_policy,right,with_project,clause
+Q1,Does a stepdaughter who lives with us count as a sibling?,"It depends on the school. Many schools do not count step-siblings, so check the policy.",no,Yes. Clause 4.3 says a stepsister who lives at the same address counts as a sibling.,4.6
+Q2,Which address is used for a child with two homes?,Most schools use the address where Child Benefit is paid.,no,"We use the home where the child sleeps on most school nights. If the time is equal, a person on the team decides. Clause 5.2.",5.4
+Q3,Does joining the waiting list first put us at the top?,"No. Waiting lists are usually kept in the order of the admission rules, not by date.",yes,"No. Clause 7.2 says the list is kept in policy order, not the order families joined it.",7.2
+Q4,Can we apply late if we move to Kestrel Bay?,"You can apply late, but late forms go to the back of the queue after all the others.",no,"Yes. Clause 8.1 says late forms come after the others, unless there is a good reason such as moving to Kestrel Bay.",8.1
+Q5,What happens to a twin if the other gets the last place?,The other twin may go on the waiting list. Ask the school.,no,"Both twins get a place, even if this takes the school over 180. Clause 6.2.",6.2
