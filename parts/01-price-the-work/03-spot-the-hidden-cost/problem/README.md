@@ -11,6 +11,10 @@ policy is the same text all 1,200 times, and you pay full price for it every tim
 prompt for a short while. When the next call starts with the same text, the AI reads it from the cache. That costs
 much less.
 
+"A short while" is 5 minutes by default. Writing to the cache also costs a little more than a normal call. So the
+saving is real only when the forms run close together, for example in one batch at the end of each day. The
+[pricing page](https://platform.claude.com/docs/en/about-claude/pricing) has both prices.
+
 ```mermaid
 flowchart TB
   subgraph Without the cache
@@ -69,5 +73,5 @@ Expect: `Done. All 6 rules pass.`
 ## Words you will use
 
 - **Cache**: a short memory of the start of a prompt. Reading from it costs much less than sending it fresh.
-- **Batch**: sending many calls at once and waiting for the answers. Claude's docs say it costs half.
+- **Batch**: sending many calls at once and waiting for the answers. The [pricing page](https://platform.claude.com/docs/en/about-claude/pricing) says it costs half.
 - **Retry**: running a call again after it failed. You pay again.

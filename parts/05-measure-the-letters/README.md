@@ -107,7 +107,7 @@ office changes its letter prompt, you run the new prompt on batch B and count ag
 ship it.
 
 This part teaches the first loop: read, group, count, label. How to tune a judge until you trust it, and when to
-launch, is in the AI Evals for PMs course.
+launch, is in a separate learnwithparam course, AI Evals for PMs. It is not in this folder.
 
 Next, in guard-the-forms, you look at a different kind of failure. A form tries to give the AI orders. You write
 guard rules and test them, the same way you tested the letters.

@@ -38,7 +38,8 @@ For example, the Harbour Hill cost lines are:
 - Cost: $9.36 a season
 ```
 
-That is 2,402 times $2, plus 300 times $10, divided by 1,000,000, times 1,200. A full Harbour Hill brief is in
+That is 2,402 times $2, plus 300 times $10, divided by 1,000,000, times 1,200. Part one used form 03, so it had
+2,388 tokens and $9.33. Here the form is the average form, 586 tokens, so the total is a little higher. A full Harbour Hill brief is in
 `../solution/project-brief.md`. Read it after you write your own.
 
 Do not put real names, emails or dates of birth in your brief. Describe the data, never copy it.

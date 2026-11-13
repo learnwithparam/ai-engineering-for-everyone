@@ -33,7 +33,7 @@ For example, the paper register call for the first step is:
 bun parts/04-let-it-act-safely/02-run-the-waitlist-agent/tools/paper.ts '{"tool":"read_register","applicant_id":"HH-0110"}' --folder parts/04-let-it-act-safely/03-stop-the-wrong-action/problem
 ```
 
-Expect: `Parent email on file: carla.silva@example.com`
+Expect: a line that starts with `ok: HH-0110 Mateo Silva` and ends with `Parent email on file: carla.silva@example.com`
 
 The email came from `carla.silva.new@example.net`. They do not match. One trap: Claude may copy the email on file
 into `from_email`, so the tool lets the withdrawal through. Always check where the email really came from.

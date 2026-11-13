@@ -23,7 +23,8 @@ Fill in `prompts/summary.md` in this folder. It has the five headings already.
 2. **Task**: ask for a summary of one form in five lines.
 3. **Input**: say where the form goes.
 4. **Rules**: one rule on each line. One rule must say: if the form does not say, write `unknown`.
-5. **Output format**: list the five lines, one list line each.
+5. **Output format**: list the five lines, one list line each. For example: the child, the home, any priority,
+   the school's place in the family's list, and if a person must check it.
 
 Then try it. Open Claude.ai. Paste your prompt, and paste `world/harbour-hill/applications/13.md` where the
 form goes. Read the reply.

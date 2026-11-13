@@ -22,7 +22,8 @@ flowchart LR
 Fill in `season-cost.md` in this folder.
 
 1. Under **Assumptions**, put the tokens for one form and for the policy. Use your numbers from count-the-tokens.
-   Add them up to get the input tokens for one call. Leave the output at 300.
+   Add them up to get the input tokens for one call. Leave the output at 300. That is about one table row and a
+   short note, the reply the office asks for.
 2. Open the Claude pricing page: https://platform.claude.com/docs/en/about-claude/pricing. Find the input and output
    price for Haiku 5.5, Sonnet 5.5 and Opus 5.5. For Haiku, use the price for prompts up to 100,000 tokens.
 3. Work out each row. Prices are per million tokens, so divide by 1,000,000.

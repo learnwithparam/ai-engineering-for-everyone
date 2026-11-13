@@ -28,7 +28,8 @@ bun run words world/harbour-hill/inbox/04.md
 
 Expect: `world/harbour-hill/inbox/04.md: 33 words`
 
-2. Turn words into tokens. Claude's docs say one million tokens is about 555,000 words. That is about 1.8 tokens
+2. Turn words into tokens. [Claude's docs](https://platform.claude.com/docs/en/about-claude/models/overview) say
+   one million tokens is about 555,000 words. That is about 1.8 tokens
    for each word. So multiply the words by 1.8 and round it to a whole number.
 3. Open `token-count.csv` in a spreadsheet or a text editor. Put the words and tokens in each row. Save it as CSV.
 
@@ -62,7 +63,8 @@ Expect: `Done. All 6 rules pass.`
 | `FAIL each token count is more than its word count` | You may have copied the words into the tokens column. Multiply by 1.8.          |
 
 Go further: an API key is a secret password for your own AI account. If you have one, `bun run measure-tokens`
-asks Claude's token counter for the real count. How close was 1.8?
+asks Claude's token counter for the real count. How close was 1.8? It saves the new counts in
+`world/keys/tokens.json`, the file the check reads. To undo it, run `git checkout world/keys/tokens.json`.
 
 ## Words you will use
 

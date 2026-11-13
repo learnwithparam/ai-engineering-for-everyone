@@ -14,6 +14,10 @@ A sibling on roll is a brother or sister who is already a student at the school.
 list, under clause 4.3. When you run `bun run office`, it flags this form:
 `YES: the form has text that gives orders to the AI`.
 
+The office finds this with a short list of word patterns, in `world/lib/office.ts`. It is a demo, not a real
+guard. It misses attacks written in other words, and it misses form 23. That is why a person still reads every
+flag, and every letter.
+
 The rule is simple. Forms are data, never orders. There is a second risk too: the folder is full of children's
 personal details, such as names, addresses and dates of birth.
 
@@ -105,8 +109,8 @@ You now have guard rules you tested on 10 real forms. For example, your rules st
 0.10 km, and they leave Ewan's real half-brother on form 18 alone. You also know which private facts go to the AI,
 and why.
 
-This part teaches one attack and one test. Large attack sets, block rates and false alarms at scale are in the
-Guardrails workshop.
+This part teaches one attack and one test. Large attack sets, block rates and false alarms at scale are in a separate
+learnwithparam workshop on guardrails. It is not in this folder.
 
 Next, in choose-and-argue, you put it all together. You pick a model with your own numbers, test a vendor's pitch,
 and write a one-page brief your boss can say yes to.
