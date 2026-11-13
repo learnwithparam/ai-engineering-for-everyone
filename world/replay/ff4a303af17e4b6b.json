@@ -1,0 +1,22 @@
+{
+  "role": "smart",
+  "prompt": "Draft a short, kind letter from the Harbour Hill School admissions office to a parent.\nParent: Imran Hussain. Child: Zainab Hussain. Application: HH-0113.\nSay we need a person on our team to check these things before we can go on: date of birth is unknown. Ask the parent to reply from the email address on the form.\nDo not promise a place. Do not say a computer or AI made any decision. Sign it from the Admissions Officer.\nUse short sentences and plain words.",
+  "source": "written for the course; replace with live replies using bun run record",
+  "replies": [
+    {
+      "text": "Dear Imran Hussain,\n\nThank you for your application for Zainab (HH-0113).\nBefore we can go on, a member of our team needs to check a few things: date of birth is unknown. We will contact you. Please reply only from the email address on your form.\nWe have not made any decision yet. A person on our team makes every decision.\n\nYours sincerely,\n\nAdmissions Officer, Harbour Hill School",
+      "inputTokens": 151,
+      "outputTokens": 122
+    },
+    {
+      "text": "Dear Imran Hussain,\n\nThank you for your application for Zainab (HH-0113).\nBefore we can go on, a member of our team needs to check a few things: date of birth is unknown. We will contact you. Please reply only from the email address on your form.\nWe have not made any decision yet. A person on our team makes every decision.\n\nYours sincerely,\n\nAdmissions Officer, Harbour Hill School",
+      "inputTokens": 151,
+      "outputTokens": 122
+    },
+    {
+      "text": "Dear Imran Hussain,\n\nThank you for your application for Zainab (HH-0113).\nBefore we can go on, a member of our team needs to check a few things: date of birth is unknown. We will contact you. Please reply only from the email address on your form.\nWe have not made any decision yet. A person on our team makes every decision.\n\nYours sincerely,\n\nAdmissions Officer, Harbour Hill School",
+      "inputTokens": 151,
+      "outputTokens": 122
+    }
+  ]
+}
