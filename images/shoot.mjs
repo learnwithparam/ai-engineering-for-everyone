@@ -255,6 +255,22 @@ export const SHOTS = [
     title: "map-the-personal-data",
     run: () => inCopy(solved("map-the-personal-data"), ["bun run verify map-the-personal-data"]),
   },
+  {
+    out: "parts/07-choose-and-argue/01-compare-two-models/images/expected.png",
+    title: "compare-two-models",
+    run: () => inCopy(solved("compare-two-models"), ["bun run verify compare-two-models"]),
+  },
+  {
+    out: "parts/07-choose-and-argue/02-judge-the-vendor-pitch/images/expected.png",
+    title: "judge-the-vendor-pitch",
+    run: () => inCopy(solved("judge-the-vendor-pitch"), ["bun run verify judge-the-vendor-pitch"]),
+  },
+  {
+    out: "parts/07-choose-and-argue/03-write-the-project-brief/images/expected.png",
+    title: "write-the-project-brief",
+    run: () =>
+      inCopy(solved("write-the-project-brief"), ["bun run verify write-the-project-brief"]),
+  },
 ];
 
 async function takeShot(browser, shot) {
