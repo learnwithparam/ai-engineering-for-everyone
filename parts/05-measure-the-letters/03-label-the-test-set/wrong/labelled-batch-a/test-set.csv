@@ -1,0 +1,21 @@
+letter,pass,note
+A01,yes,
+A02,no,A waiting list letter that does not say how to appeal.
+A03,yes,
+A04,yes,
+A05,no,Cites clause 4.6 but the policy has no clause 4.6.
+A06,yes,
+A07,yes,
+A08,yes,
+A09,no,Says our AI system made the decision. That breaks clause 1.2.
+A10,yes,
+A11,yes,
+A12,no,The child's name does not match HH-0132 in the register.
+A13,yes,
+A14,yes,
+A15,yes,
+A16,no,Offers Ines a place but the register has her on the waiting list.
+A17,yes,
+A18,yes,
+A19,yes,I missed this one. The letter says position 22 but the register says 18.
+A20,yes,

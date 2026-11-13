@@ -97,6 +97,20 @@ function terminal(title, body) {
   return head + terminalWindow;
 }
 
+const AGENT_STEP = "parts/04-let-it-act-safely/02-run-the-waitlist-agent";
+const PAPER = `${AGENT_STEP}/tools/paper.ts`;
+
+// One paper register call that offers a place, as the learner types it.
+function offerTo(applicantId, approver) {
+  return JSON.stringify({
+    tool: "offer_place",
+    // biome-ignore lint/style/useNamingConvention: the tool contract's own field names
+    applicant_id: applicantId,
+    // biome-ignore lint/style/useNamingConvention: the tool contract's own field names
+    approved_by: approver,
+  });
+}
+
 export const SHOTS = [
   {
     out: "images/office-run.png",
@@ -178,6 +192,52 @@ export const SHOTS = [
     out: "parts/03-give-it-the-policy/04-catch-the-stale-policy/images/expected.png",
     title: "catch-the-stale-policy",
     run: () => inCopy(solved("catch-the-stale-policy"), ["bun run verify catch-the-stale-policy"]),
+  },
+  {
+    out: "parts/04-let-it-act-safely/01-be-the-tool/images/expected.png",
+    title: "be-the-tool",
+    run: () => inCopy(solved("be-the-tool"), ["bun run verify be-the-tool"]),
+  },
+  {
+    out: "parts/04-let-it-act-safely/02-run-the-waitlist-agent/images/expected.png",
+    title: "run-the-waitlist-agent",
+    run: () =>
+      inCopy(null, [
+        `bun ${PAPER} '{"tool":"next_on_waitlist"}' | head -4`,
+        `bun ${PAPER} '${offerTo("HH-0137", "")}'`,
+        `bun ${PAPER} '${offerTo("HH-0137", "Ms R. Adebayo")}'`,
+        `tail -1 ${AGENT_STEP}/problem/action-log.jsonl`,
+      ]),
+  },
+  {
+    out: "parts/04-let-it-act-safely/03-stop-the-wrong-action/images/expected.png",
+    title: "stop-the-wrong-action",
+    run: () => inCopy(solved("stop-the-wrong-action"), ["bun run verify stop-the-wrong-action"]),
+  },
+  {
+    out: "parts/04-let-it-act-safely/04-map-the-actions/images/expected.png",
+    title: "map-the-actions",
+    run: () => inCopy(solved("map-the-actions"), ["bun run verify map-the-actions"]),
+  },
+  {
+    out: "parts/05-measure-the-letters/01-read-twenty-outputs/images/expected.png",
+    title: "read-twenty-outputs",
+    run: () => inCopy(solved("read-twenty-outputs"), ["bun run verify read-twenty-outputs"]),
+  },
+  {
+    out: "parts/05-measure-the-letters/02-name-the-failures/images/expected.png",
+    title: "name-the-failures",
+    run: () => inCopy(solved("name-the-failures"), ["bun run verify name-the-failures"]),
+  },
+  {
+    out: "parts/05-measure-the-letters/03-label-the-test-set/images/expected.png",
+    title: "label-the-test-set",
+    run: () => inCopy(solved("label-the-test-set"), ["bun run verify label-the-test-set"]),
+  },
+  {
+    out: "parts/05-measure-the-letters/04-test-the-judge/images/expected.png",
+    title: "test-the-judge",
+    run: () => inCopy(solved("test-the-judge"), ["bun run verify test-the-judge"]),
   },
   {
     out: "parts/07-choose-and-argue/01-compare-two-models/images/expected.png",
