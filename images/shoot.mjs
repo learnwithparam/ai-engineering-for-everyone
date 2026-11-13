@@ -139,6 +139,26 @@ export const SHOTS = [
     run: () => inCopy(solved("spot-the-hidden-cost"), ["bun run verify spot-the-hidden-cost"]),
   },
   {
+    out: "parts/02-ask-for-a-table/01-write-the-brief-prompt/images/expected.png",
+    title: "write-the-brief-prompt",
+    run: () => inCopy(solved("write-the-brief-prompt"), ["bun run verify write-the-brief-prompt"]),
+  },
+  {
+    out: "parts/02-ask-for-a-table/02-extract-the-fields/images/expected.png",
+    title: "extract-the-fields",
+    run: () => inCopy(solved("extract-the-fields"), ["bun run verify extract-the-fields"]),
+  },
+  {
+    out: "parts/02-ask-for-a-table/03-fix-the-messy-ones/images/expected.png",
+    title: "fix-the-messy-ones",
+    run: () => inCopy(solved("fix-the-messy-ones"), ["bun run verify fix-the-messy-ones"]),
+  },
+  {
+    out: "parts/02-ask-for-a-table/04-draft-the-letter/images/expected.png",
+    title: "draft-the-letter",
+    run: () => inCopy(solved("draft-the-letter"), ["bun run verify draft-the-letter"]),
+  },
+  {
     out: "parts/03-give-it-the-policy/01-ask-without-the-policy/images/expected.png",
     title: "ask-without-the-policy",
     run: () => inCopy(solved("ask-without-the-policy"), ["bun run verify ask-without-the-policy"]),

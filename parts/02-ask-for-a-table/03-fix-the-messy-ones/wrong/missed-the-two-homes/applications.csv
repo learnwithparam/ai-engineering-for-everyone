@@ -1,0 +1,19 @@
+application_id,child_name,date_of_birth,sibling_on_roll,distance_km,looked_after,ehcp_names_school,preference_rank,needs_person
+HH-0101,Amara Okafor,2015-03-02,no,0.84,no,no,1,no
+HH-0102,Leo Brennan,2015-07-19,no,0.62,no,no,1,no
+HH-0103,Priya Natarajan,2015-11-28,no,2.31,no,no,2,no
+HH-0104,Tomasz Nowak,2015-01-09,yes,1.47,no,no,1,no
+HH-0105,Isla McLeod,2015-06-30,no,1.12,no,no,1,no
+HH-0106,Yusuf Rahman,2015-09-04,no,3.05,yes,no,1,no
+HH-0107,Freya Lindqvist,2015-02-17,yes,2.76,no,no,1,no
+HH-0108,Kofi Mensah,2015-10-11,no,1.98,no,no,1,no
+HH-0109,Ruby Ashworth,2015-04-22,no,4.12,no,no,3,no
+HH-0110,Mateo Silva,2015-08-05,no,0.95,no,yes,1,no
+HH-0111,Hana Sato,2015-12-13,no,2.04,no,no,1,no
+HH-0112,Oliver Pryce,2015-05-26,no,5.60,no,no,2,no
+HH-0113,Zainab Hussain,unknown,no,1.33,no,no,1,yes
+HH-0114,Finn O'Rourke,2015-03-15,no,1.76,no,no,1,no
+HH-0115,Maya Desai,2015-07-07,no,unknown,no,no,1,yes
+HH-0125,Elif Kaya,2015-09-21,no,2.58,no,no,1,no
+HH-0126,Noah Whitfield,2015-01-30,yes,3.44,no,no,2,no
+HH-0127,Grace Adeyemi,2015-06-12,no,1.21,no,no,unknown,yes
