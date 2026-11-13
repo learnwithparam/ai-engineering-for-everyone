@@ -1,0 +1,11 @@
+question_id,question,document,clause,claude_clause,claude_hit
+R1,How many places are there in Year 7?,admissions-policy-2027.md,2.1,2.1,yes
+R2,Does a sibling at Harbour Hill Primary count?,admissions-policy-2027.md,4.3,4.3,yes
+R3,Who decides when a child has two homes with equal time?,admissions-policy-2027.md,5.2,5.2,yes
+R4,How is a tie on distance broken?,admissions-policy-2027.md,6.1,6.1,yes
+R5,When does the waiting list close?,admissions-policy-2027.md,7.5,7.5,yes
+R6,Can we act on a withdrawal from a new email address?,admissions-policy-2027.md,9.1,9.1,yes
+R7,How long do families have to appeal?,appeals-guide.md,A2,10.1,no
+R8,Does appealing change a waiting list position?,appeals-guide.md,A7,A7,yes
+R9,When are offers sent?,term-dates.md,T2,T2,yes
+R10,Can an AI system decide who gets a place?,admissions-policy-2027.md,1.2,11.1,no
