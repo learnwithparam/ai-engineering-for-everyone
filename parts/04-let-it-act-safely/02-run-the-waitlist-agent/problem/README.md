@@ -6,9 +6,8 @@ You played the tools by hand. Now real tools do the work. They change a copy of 
 log. The log is a list of every tool call: what, for whom, who approved it, and the result. Each change needs a
 person's name in `approved_by`, or the tool refuses it.
 
-Be careful: in Claude Desktop, Claude fills in `approved_by` itself. The tool only checks that a name is there. The
-real stop is the moment Claude Desktop asks you to allow the call. In a real office, the name comes from the
-person who logs in, not from the AI.
+Be careful: in Claude Desktop, Claude types the `approved_by` name itself. The real stop is when Claude Desktop
+asks you to allow the call.
 
 ```mermaid
 flowchart LR
@@ -39,8 +38,7 @@ your name for `approved_by`.
 **Way 2: the paper register.** No install. Ask Claude in Claude.ai to write each tool call as one line of JSON.
 You read it, put your name in `approved_by`, and run it. Each command prints the result to paste back.
 
-JSON is a way to write data with names and values, like `{"tool":"next_on_waitlist"}`. Give Claude this list, so
-it knows the names each tool needs:
+Give Claude this list. It shows the JSON fields each tool needs:
 
 ```text
 Write each tool call as one line of JSON. The tools and their fields are:
