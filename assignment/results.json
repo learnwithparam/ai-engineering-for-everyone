@@ -1,0 +1,1156 @@
+{
+  "evalId": "eval-xD8-2026-11-13T17:06:04",
+  "results": {
+    "version": 3,
+    "timestamp": "2026-11-13T17:06:04.515Z",
+    "prompts": [
+      {
+        "id": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "raw": "Read form {{form}} and return one CSV row.",
+        "label": "Read form {{form}} and return one CSV row.",
+        "provider": "Small model",
+        "metrics": {
+          "score": 6,
+          "testPassCount": 6,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "testCacheHitCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 0,
+          "totalLatencyMs": 31,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 6,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "namedScoreWeights": {},
+          "cost": 0
+        }
+      },
+      {
+        "id": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "raw": "Read form {{form}} and return one CSV row.",
+        "label": "Read form {{form}} and return one CSV row.",
+        "provider": "Middle model",
+        "metrics": {
+          "score": 6,
+          "testPassCount": 6,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "testCacheHitCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 0,
+          "totalLatencyMs": 22,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 6,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "namedScoreWeights": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "26d3c649-4e2f-4fbe-a21c-b64042c2ba64",
+        "latencyMs": 6,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Read form HH-0116 and return one CSV row.",
+          "label": "Read form {{form}} and return one CSV row.",
+          "config": {}
+        },
+        "promptId": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "promptIdx": 0,
+        "provider": {
+          "id": "file://recorded/provider.cjs",
+          "label": "Small model"
+        },
+        "response": {
+          "output": "HH-0116,Lily Chen,2015-03-27,no,1.51,no,no,1"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "form": "HH-0116"
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "form": "HH-0116"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "9298b4f2-7c29-4e48-aa55-615511aa3d4f",
+        "latencyMs": 4,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Read form HH-0116 and return one CSV row.",
+          "label": "Read form {{form}} and return one CSV row.",
+          "config": {}
+        },
+        "promptId": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "promptIdx": 1,
+        "provider": {
+          "id": "file://recorded/provider.cjs",
+          "label": "Middle model"
+        },
+        "response": {
+          "output": "HH-0116,Lily Chen,2015-03-27,no,1.51,no,no,1"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "form": "HH-0116"
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "form": "HH-0116"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "2f885659-00b4-4c19-8fce-b79885128b45",
+        "latencyMs": 3,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Read form HH-0118 and return one CSV row.",
+          "label": "Read form {{form}} and return one CSV row.",
+          "config": {}
+        },
+        "promptId": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "promptIdx": 0,
+        "provider": {
+          "id": "file://recorded/provider.cjs",
+          "label": "Small model"
+        },
+        "response": {
+          "output": "HH-0118,Ewan Fraser,2015-11-03,yes,2.33,no,no,1"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "form": "HH-0118"
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "form": "HH-0118"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "1863abdb-5a7f-46dd-804c-aec96da91721",
+        "latencyMs": 3,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Read form HH-0118 and return one CSV row.",
+          "label": "Read form {{form}} and return one CSV row.",
+          "config": {}
+        },
+        "promptId": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "promptIdx": 1,
+        "provider": {
+          "id": "file://recorded/provider.cjs",
+          "label": "Middle model"
+        },
+        "response": {
+          "output": "HH-0118,Ewan Fraser,2015-11-03,yes,2.33,no,no,1"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "form": "HH-0118"
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "form": "HH-0118"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "0c083c28-4c36-465c-bea0-a43fa4c0df41",
+        "latencyMs": 5,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Read form HH-0120 and return one CSV row.",
+          "label": "Read form {{form}} and return one CSV row.",
+          "config": {}
+        },
+        "promptId": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "promptIdx": 0,
+        "provider": {
+          "id": "file://recorded/provider.cjs",
+          "label": "Small model"
+        },
+        "response": {
+          "output": "HH-0120,Nadia Petrov,2015-05-18,no,0.71,no,no,1"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "form": "HH-0120"
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "form": "HH-0120"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "abdbf1b7-25e6-4723-a154-4df114c7fb67",
+        "latencyMs": 4,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Read form HH-0120 and return one CSV row.",
+          "label": "Read form {{form}} and return one CSV row.",
+          "config": {}
+        },
+        "promptId": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "promptIdx": 1,
+        "provider": {
+          "id": "file://recorded/provider.cjs",
+          "label": "Middle model"
+        },
+        "response": {
+          "output": "HH-0120,Nadia Petrov,2015-05-18,no,0.71,no,no,1"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "form": "HH-0120"
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 2,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "form": "HH-0120"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "9c6c2498-309c-475f-bd93-92fa502746b8",
+        "latencyMs": 4,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Read form HH-0122 and return one CSV row.",
+          "label": "Read form {{form}} and return one CSV row.",
+          "config": {}
+        },
+        "promptId": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "promptIdx": 0,
+        "provider": {
+          "id": "file://recorded/provider.cjs",
+          "label": "Small model"
+        },
+        "response": {
+          "output": "HH-0122,Sam Taylor-Reid,2015-09-09,yes,2.74,no,no,1"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "form": "HH-0122"
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "form": "HH-0122"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "46e02c2e-63e4-486d-a1a4-3c21d296f952",
+        "latencyMs": 3,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Read form HH-0122 and return one CSV row.",
+          "label": "Read form {{form}} and return one CSV row.",
+          "config": {}
+        },
+        "promptId": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "promptIdx": 1,
+        "provider": {
+          "id": "file://recorded/provider.cjs",
+          "label": "Middle model"
+        },
+        "response": {
+          "output": "HH-0122,Sam Taylor-Reid,2015-09-09,no,2.74,no,no,1"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "form": "HH-0122"
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 3,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "form": "HH-0122"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "03be95e0-ba8e-4922-892f-ad9e81c6168b",
+        "latencyMs": 9,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Read form HH-0128 and return one CSV row.",
+          "label": "Read form {{form}} and return one CSV row.",
+          "config": {}
+        },
+        "promptId": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "promptIdx": 0,
+        "provider": {
+          "id": "file://recorded/provider.cjs",
+          "label": "Small model"
+        },
+        "response": {
+          "output": "HH-0128,Ines Duarte,2015-07-28,no,4.05,no,no,1"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "form": "HH-0128"
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "form": "HH-0128"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "20f18659-3703-4e6c-ad7b-f0ceaed6d722",
+        "latencyMs": 5,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Read form HH-0128 and return one CSV row.",
+          "label": "Read form {{form}} and return one CSV row.",
+          "config": {}
+        },
+        "promptId": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "promptIdx": 1,
+        "provider": {
+          "id": "file://recorded/provider.cjs",
+          "label": "Middle model"
+        },
+        "response": {
+          "output": "HH-0128,Ines Duarte,2015-07-23,no,4.05,no,no,1"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "form": "HH-0128"
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 4,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "form": "HH-0128"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "78e26381-f510-4487-aad4-cd9893e15e6a",
+        "latencyMs": 4,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Read form HH-0130 and return one CSV row.",
+          "label": "Read form {{form}} and return one CSV row.",
+          "config": {}
+        },
+        "promptId": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "promptIdx": 0,
+        "provider": {
+          "id": "file://recorded/provider.cjs",
+          "label": "Small model"
+        },
+        "response": {
+          "output": "HH-0130,Poppy Harding,2015-02-25,no,5.38,no,no,3"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "form": "HH-0130"
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 5,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "form": "HH-0130"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "No assertions",
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          }
+        },
+        "id": "c828361d-bff8-482d-aca1-e6fa6784cb76",
+        "latencyMs": 3,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Read form HH-0130 and return one CSV row.",
+          "label": "Read form {{form}} and return one CSV row.",
+          "config": {}
+        },
+        "promptId": "766dfb989fd447190be31c07358b86c5ac1da6d932de0cbcc222f7b224f35378",
+        "promptIdx": 1,
+        "provider": {
+          "id": "file://recorded/provider.cjs",
+          "label": "Middle model"
+        },
+        "response": {
+          "output": "HH-0130,Poppy Harding,2015-02-25,no,5.58,no,no,3"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "vars": {
+            "form": "HH-0130"
+          },
+          "assert": [],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 5,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "form": "HH-0130"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 12,
+      "failures": 0,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "cached": 0,
+        "total": 0,
+        "numRequests": 12,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          }
+        }
+      },
+      "durationMs": 95,
+      "evaluationDurationMs": 95
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "Two models read the same six admission forms",
+    "prompts": ["Read form {{form}} and return one CSV row."],
+    "providers": [
+      {
+        "id": "file://recorded/provider.cjs",
+        "label": "Small model",
+        "config": {
+          "file": "small.csv",
+          "name": "small"
+        }
+      },
+      {
+        "id": "file://recorded/provider.cjs",
+        "label": "Middle model",
+        "config": {
+          "file": "middle.csv",
+          "name": "middle"
+        }
+      }
+    ],
+    "tests": [
+      {
+        "vars": {
+          "form": "HH-0116"
+        }
+      },
+      {
+        "vars": {
+          "form": "HH-0118"
+        }
+      },
+      {
+        "vars": {
+          "form": "HH-0120"
+        }
+      },
+      {
+        "vars": {
+          "form": "HH-0122"
+        }
+      },
+      {
+        "vars": {
+          "form": "HH-0128"
+        }
+      },
+      {
+        "vars": {
+          "form": "HH-0130"
+        }
+      }
+    ],
+    "env": {},
+    "outputPath": ["out.json"],
+    "extensions": [],
+    "metadata": {},
+    "evaluateOptions": {},
+    "basePath": "."
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.125.1",
+    "nodeVersion": "v22.23.4",
+    "platform": "linux",
+    "arch": "x64",
+    "exportedAt": "2026-11-13T17:06:04.703Z",
+    "evaluationCreatedAt": "2026-11-13T17:06:04.515Z"
+  },
+  "vars": ["form"],
+  "runtimeOptions": {
+    "eventSource": "cli",
+    "showProgressBar": true,
+    "repeat": 1,
+    "maxConcurrency": 4,
+    "cache": false
+  }
+}

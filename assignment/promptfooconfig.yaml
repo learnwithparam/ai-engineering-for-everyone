@@ -1,0 +1,19 @@
+# The recorded comparison. Each provider plays back answers that were saved earlier, so it needs no key.
+# To run live models instead, replace the two providers with your own and run the eval again.
+description: Two models read the same six admission forms
+prompts:
+  - "Read form {{form}} and return one CSV row."
+providers:
+  - id: file://recorded/provider.cjs
+    label: Small model
+    config: { file: small.csv, name: small }
+  - id: file://recorded/provider.cjs
+    label: Middle model
+    config: { file: middle.csv, name: middle }
+tests:
+  - vars: { form: HH-0116 }
+  - vars: { form: HH-0118 }
+  - vars: { form: HH-0120 }
+  - vars: { form: HH-0122 }
+  - vars: { form: HH-0128 }
+  - vars: { form: HH-0130 }
