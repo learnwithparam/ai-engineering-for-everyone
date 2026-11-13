@@ -5,8 +5,7 @@
 Your boss does not want a chat log. They want one page they can say yes or no to. What is the problem? What will
 the AI do, and what will a person do? What will it cost, and how will you know it works?
 
-A project brief is that page. You have every part of it already: a cost, a test set, guard rules and a model
-choice. Now you put them together, for one task.
+A project brief is that page. You already have every part of it. Now you put them together, for one task.
 
 ```mermaid
 flowchart LR
@@ -38,7 +37,8 @@ For example, the Harbour Hill cost lines are:
 - Cost: $9.36 a season
 ```
 
-That is 2,402 times $2, plus 300 times $10, divided by 1,000,000, times 1,200. A full Harbour Hill brief is in
+That is 2,402 times $2, plus 300 times $10, divided by 1,000,000, times 1,200. Part one used form 03 and got $9.33. Here
+the form is the average form, 586 tokens, so it costs a bit more. A full Harbour Hill brief is in
 `../solution/project-brief.md`. Read it after you write your own.
 
 Do not put real names, emails or dates of birth in your brief. Describe the data, never copy it.
@@ -53,8 +53,7 @@ Do not put real names, emails or dates of birth in your brief. Describe the data
 - How we will measure it names a test set of at least 20 cases.
 - What a person does says who signs or approves.
 
-How this step is checked: the check reads your page. It works out the cost again from your own token numbers and
-the price list. In a cohort, a person also reads it and asks: would a stranger know what happens when the AI is
+How this step is checked: the check works out the cost again from your token numbers. In a cohort, a person also reads it and asks: would a stranger know what happens when the AI is
 wrong?
 
 ```bash

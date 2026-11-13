@@ -45,6 +45,7 @@ In `judge.md`, that letter goes in the Disagreements table, and the right one is
 - `test-set.csv` has a `judge` column with `yes` or `no` on every row.
 - `judge.md` shows the prompt you gave Claude under The judge prompt.
 - Agreement gives a count of 20, such as `17 of 20`, that matches your judge column.
+  Compare it with a judge that says `yes` to every letter. In batch B, that lazy judge already gets 14 of 20.
 - Disagreements lists every letter where you and Claude differ, and no others.
 - Each disagreement says who was right, and the expert key agrees.
 

@@ -16,7 +16,8 @@ flowchart LR
 
 ## Your challenge
 
-Fill in `letter-notes.csv` in this folder. It has one row for each letter, A01 to A20.
+Fill in `letter-notes.csv` in this folder. It has one row for each letter, A01 to A20. Row A01 is the letter in
+`world/harbour-hill/letters/batch-a/01.md`, and so on.
 
 1. Open a letter, for example `world/harbour-hill/letters/batch-a/01.md`.
 2. Check it against two things. The policy is `world/harbour-hill/policy/admissions-policy-2027.md`. The register

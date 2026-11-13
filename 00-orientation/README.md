@@ -76,10 +76,13 @@ Every step starts with a check that fails. That is fine. It shows you what is le
 bun run verify meet-the-office
 ```
 
-Expect: four `FAIL` lines, each with a `Try next:` line, and `Progress: 0/4 steps pass.`
+Expect: one `PASS` line, four `FAIL` lines, `1 of 5 rules pass.` and `Progress: 0/26 steps pass.`
 
 Each `FAIL` line has a `Try next:` line under it. For example, you see `FAIL  Plan names your Claude plan`. The
 line under it tells you to write your plan name, such as Free or Pro.
+
+The last line says `error: script "verify" exited with code 1`. That is normal. It only means some rules still
+fail. You did not break anything.
 
 ![Your first check: each FAIL line says what to try next](images/first-run.png)
 

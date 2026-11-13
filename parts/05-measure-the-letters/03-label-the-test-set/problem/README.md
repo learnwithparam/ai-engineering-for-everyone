@@ -19,7 +19,8 @@ flowchart LR
 
 ## Your challenge
 
-Fill in `test-set.csv` in this folder. It has one row for each letter, B01 to B20.
+Fill in `test-set.csv` in this folder. It has one row for each letter, B01 to B20. Row B01 is the letter in
+`world/harbour-hill/letters/batch-b/01.md`, and so on.
 
 1. Open your `failure-modes.md` from the last step. Keep your pass rules beside you.
 2. For each letter, ask each pass rule. If every rule says yes, write `yes`. If one says no, write `no`.

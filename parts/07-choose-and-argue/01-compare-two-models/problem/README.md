@@ -34,7 +34,8 @@ flowchart LR
 For example, if Haiku said form 22 has a sibling, that is wrong. The form names a cousin, and a cousin does not
 count. If that was Haiku's only mistake, it got 41 of 42 right. That is 41 divided by 42, times 100: 97.6%.
 
-On the Free plan, if a model is not in your menu, ask your teacher for their CSVs.
+On the Free plan, a model may not be in your menu. Then copy `haiku.csv` and `sonnet.csv` from `../solution/` into
+this folder, and count those.
 
 ![What you see when your comparison is right](../images/expected.png)
 

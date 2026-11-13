@@ -65,7 +65,7 @@ This command runs one tool by hand, the paper register way. It reads one row of 
 bun parts/04-let-it-act-safely/02-run-the-waitlist-agent/tools/paper.ts '{"tool":"read_register","applicant_id":"HH-0137"}'
 ```
 
-Expect: `ok: HH-0137 Zara Ahmed: waitlisted, position 22 (sibling, clause 4.3, 3.9 km).`
+Expect: a line that starts with `ok: HH-0137 Zara Ahmed: waitlisted, position 22 (sibling, clause 4.3, 3.9 km).`
 
 ```bash
 bun run verify be-the-tool

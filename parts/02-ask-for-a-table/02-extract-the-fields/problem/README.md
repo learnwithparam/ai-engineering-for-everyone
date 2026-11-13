@@ -20,6 +20,13 @@ flowchart LR
 Fill in `applications.csv` in this folder. The first line has the nine column names. The second line is a worked
 row for form 01. Keep both.
 
+Form `01.md` is `HH-0101`. Four columns may be new:
+
+- `sibling_on_roll`: a brother or sister is at the school now.
+- `looked_after`: the child is in the care of the council.
+- `ehcp_names_school`: the child's EHCP names Harbour Hill.
+- `preference_rank`: Harbour Hill's place in the family's list. `1` is first choice.
+
 1. Open Claude.ai. Start a new chat.
 2. Write a prompt that asks for one CSV row per form. Paste the first line of the starter, so Claude uses the
    same columns in the same order.
@@ -31,8 +38,6 @@ row for form 01. Keep both.
    - If the form does not say, write `unknown`. Never guess.
 4. Paste forms 02 to 12. Ask Claude to make a CSV file you can download.
 5. Copy the rows into `applications.csv`, under the worked row.
-
-Read the sibling column with care. Clause 4.3 of the 2027 policy says who counts as a sibling.
 
 For example, form 08 is for Kofi Mensah. His sister goes to Harbour Hill Primary, not to the secondary school.
 So she does not count. His row says `no` in `sibling_on_roll`:
@@ -76,6 +81,4 @@ Expect: `Done. All 7 rules pass.`
 ## Words you will use
 
 - **CSV**: a plain text table. Each line is a row. Commas split the columns.
-- **Field**: one fact in a row, such as the date of birth.
-- **Column names**: the first line of the CSV. They say what each field holds.
 - **Extract**: pull the facts you need out of a longer text.

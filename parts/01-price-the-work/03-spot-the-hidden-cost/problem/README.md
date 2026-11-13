@@ -11,6 +11,9 @@ policy is the same text all 1,200 times, and you pay full price for it every tim
 prompt for a short while. When the next call starts with the same text, the AI reads it from the cache. That costs
 much less.
 
+The cache lasts 5 minutes, and the first write costs a little more. So it only saves money when the forms run
+close together.
+
 ```mermaid
 flowchart TB
   subgraph Without the cache
@@ -49,8 +52,8 @@ From the cache it is about $0.22.
 - That total is lower than the same model's total in Per season.
 - It matches your own assumptions within 20%, with only the policy cached.
 
-How this step is checked: the check reads your sheet and looks for the hidden costs by name. Then it works out
-the cached total from your own numbers and the price list.
+How this step is checked: the check looks for the hidden costs by name. It works out the cached total from your
+numbers.
 
 ```bash
 bun run verify spot-the-hidden-cost
@@ -69,5 +72,5 @@ Expect: `Done. All 6 rules pass.`
 ## Words you will use
 
 - **Cache**: a short memory of the start of a prompt. Reading from it costs much less than sending it fresh.
-- **Batch**: sending many calls at once and waiting for the answers. Claude's docs say it costs half.
+- **Batch**: sending many calls at once and waiting for the answers. The [pricing page](https://platform.claude.com/docs/en/about-claude/pricing) says it costs half.
 - **Retry**: running a call again after it failed. You pay again.

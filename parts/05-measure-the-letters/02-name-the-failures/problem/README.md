@@ -28,8 +28,8 @@ For example, letter A03 cites clause 4.6, which does not exist. One row could be
 | The clause does not exist | 1 | Does every clause number in the letter exist in the 2027 policy? |
 ```
 
-Why yes or no, and not a score from 1 to 5? Two people often give the same letter a 3 and a 4. They far more
-often agree on yes or no. And a rule you can answer yes or no can become a test later.
+Why yes or no, and not a score from 1 to 5? Try it: give letter A01 a score from 1 to 5, and ask a friend to do the
+same. You may say 3 and they may say 4. You are far more likely to agree on yes or no. And a rule you can answer yes or no can become a test later.
 
 You may paste your notes into Claude and ask it to suggest groups. Then check that each group makes sense to you.
 

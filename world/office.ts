@@ -240,7 +240,8 @@ const flaggedIds = flagged.map((outcome) => outcome.id).join(", ");
 
 console.log(`\nLetters drafted: ${outcomes.length}. Every one waits for a person to sign it.`);
 console.log(`Cost of this run: $${cost.toFixed(4)} for ${tokens.toLocaleString("en-GB")} tokens.`);
-console.log(`${flagged.length} of ${outcomes.length} forms need a person: ${flaggedIds}`);
+// The flagged forms come last, so the pages can say "copy them from the last line".
 console.log("Log: world/state/office-log.jsonl   Page: world/state/office-report.html");
+console.log(`${flagged.length} of ${outcomes.length} forms need a person: ${flaggedIds}`);
 
 writeFileSync(OFFICE_REPORT, reportPage(outcomes, cost, tokens));

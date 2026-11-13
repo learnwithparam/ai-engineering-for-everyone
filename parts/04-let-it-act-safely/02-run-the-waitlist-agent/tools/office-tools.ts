@@ -165,7 +165,10 @@ function draftLetterTool(folder: string, call: ToolCall): Outcome {
   const applicant = findApplicant(registerIn(folder), call.applicant_id);
   if (!applicant) return refused(`There is no applicant ${call.applicant_id} in the register.`);
   const letter = (call.text ?? "").trim();
-  if (!letter) return refused("draft_letter needs the text of the letter.");
+  if (!letter)
+    return refused(
+      'draft_letter needs the text of the letter. Add it as "text":"..." in the call.',
+    );
   const lettersFolder = join(folder, "letters");
   mkdirSync(lettersFolder, { recursive: true });
   writeFileSync(join(lettersFolder, `${applicant.applicant_id}.md`), `${letter}\n`);

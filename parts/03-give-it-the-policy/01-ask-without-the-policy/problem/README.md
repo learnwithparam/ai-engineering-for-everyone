@@ -22,7 +22,8 @@ flowchart LR
 `answers.csv` in this folder has five questions from the inbox, Q1 to Q5.
 
 1. Open Claude.ai and start a new chat. Do not add any files.
-2. Ask each question. Paste Claude's answer into the `without_policy` column.
+2. Ask each question. Paste Claude's answer into the `without_policy` column. If the answer has a comma, put
+   double quotes around it, like `"Yes, it does."`. Keep it on one line.
 3. Open `world/harbour-hill/policy/admissions-policy-2027.md`. Find the rule for each question.
 4. In the `right` column, write `yes` if Claude's answer matches the policy. Write `no` if it is wrong, vague, or
    says "check with the school".
