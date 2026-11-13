@@ -158,6 +158,27 @@ export const SHOTS = [
     title: "draft-the-letter",
     run: () => inCopy(solved("draft-the-letter"), ["bun run verify draft-the-letter"]),
   },
+  {
+    out: "parts/03-give-it-the-policy/01-ask-without-the-policy/images/expected.png",
+    title: "ask-without-the-policy",
+    run: () => inCopy(solved("ask-without-the-policy"), ["bun run verify ask-without-the-policy"]),
+  },
+  {
+    out: "parts/03-give-it-the-policy/02-load-the-policy-project/images/expected.png",
+    title: "load-the-policy-project",
+    run: () =>
+      inCopy(solved("load-the-policy-project"), ["bun run verify load-the-policy-project"]),
+  },
+  {
+    out: "parts/03-give-it-the-policy/03-find-the-right-page/images/expected.png",
+    title: "find-the-right-page",
+    run: () => inCopy(solved("find-the-right-page"), ["bun run verify find-the-right-page"]),
+  },
+  {
+    out: "parts/03-give-it-the-policy/04-catch-the-stale-policy/images/expected.png",
+    title: "catch-the-stale-policy",
+    run: () => inCopy(solved("catch-the-stale-policy"), ["bun run verify catch-the-stale-policy"]),
+  },
 ];
 
 async function takeShot(browser, shot) {
