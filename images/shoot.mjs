@@ -138,6 +138,26 @@ export const SHOTS = [
     title: "spot-the-hidden-cost",
     run: () => inCopy(solved("spot-the-hidden-cost"), ["bun run verify spot-the-hidden-cost"]),
   },
+  {
+    out: "parts/05-measure-the-letters/01-read-twenty-outputs/images/expected.png",
+    title: "read-twenty-outputs",
+    run: () => inCopy(solved("read-twenty-outputs"), ["bun run verify read-twenty-outputs"]),
+  },
+  {
+    out: "parts/05-measure-the-letters/02-name-the-failures/images/expected.png",
+    title: "name-the-failures",
+    run: () => inCopy(solved("name-the-failures"), ["bun run verify name-the-failures"]),
+  },
+  {
+    out: "parts/05-measure-the-letters/03-label-the-test-set/images/expected.png",
+    title: "label-the-test-set",
+    run: () => inCopy(solved("label-the-test-set"), ["bun run verify label-the-test-set"]),
+  },
+  {
+    out: "parts/05-measure-the-letters/04-test-the-judge/images/expected.png",
+    title: "test-the-judge",
+    run: () => inCopy(solved("test-the-judge"), ["bun run verify test-the-judge"]),
+  },
 ];
 
 async function takeShot(browser, shot) {

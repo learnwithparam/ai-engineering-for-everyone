@@ -1,0 +1,21 @@
+letter,pass,note
+A01,yes,
+A02,yes,
+A03,no,Cites clause 4.6 but the policy has no clause 4.6.
+A04,yes,
+A05,yes,
+A06,yes,
+A07,no,Names Ravi Kapoor but HH-0120 is Nadia Petrov.
+A08,yes,
+A09,yes,
+A10,yes,
+A11,no,Says our AI system made the decision. That breaks clause 1.2.
+A12,yes,
+A13,yes,
+A14,yes,
+A15,no,Offers Ruby a place but the register has her on the waiting list.
+A16,yes,
+A17,yes,
+A18,no,A waiting list letter with no word about the right to appeal.
+A19,yes,
+A20,yes,
