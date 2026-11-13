@@ -118,14 +118,34 @@ function escapeHtml(text: string): string {
   return text.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 }
 
+// The words a reader sees for each field the AI reads from a form.
+const FIELD_LABELS: Record<string, string> = {
+  // biome-ignore-start lint/style/useNamingConvention: these are the form fields' own names
+  date_of_birth: "Date of birth",
+  sibling_on_roll: "Sibling at the school",
+  distance_km: "Distance from school (km)",
+  looked_after: "Looked after by the council",
+  ehcp_names_school: "Education plan names this school",
+  preference_rank: "Rank on the preference list",
+  // biome-ignore-end lint/style/useNamingConvention: end of the form fields' own names
+};
+
+function fieldLabel(field: string): string {
+  const known = FIELD_LABELS[field];
+  if (known) return known;
+  const words = field.replace(/_/g, " ");
+  return words.charAt(0).toUpperCase() + words.slice(1);
+}
+
 function tableRows(row: Record<string, string>): string {
   const shown = Object.entries(row).filter(
     ([field]) => field !== "application_id" && field !== "child_name",
   );
   const rows = shown.map(([field, value]) => {
-    const label = field.replace(/_/g, " ");
-    const valueClass = value === "unknown" ? "unk" : "";
-    return `<tr><td>${label}</td><td class="${valueClass}">${escapeHtml(value)}</td></tr>`;
+    const missing = value === "unknown";
+    const shownValue = missing ? "Not on the form" : escapeHtml(value);
+    const valueClass = missing ? "unk" : "";
+    return `<tr><td>${fieldLabel(field)}</td><td class="${valueClass}">${shownValue}</td></tr>`;
   });
   return rows.join("");
 }
@@ -142,9 +162,10 @@ function card(outcome: Outcome): string {
   if (flagged) badge = '<span class="badge">Needs a person</span>';
   return [
     `<section class="card ${flagged ? "flag" : ""}">`,
-    `  <header><b>${outcome.id}</b> ${escapeHtml(outcome.child)} ${badge}</header>`,
+    `  <header><b>Form ${outcome.id}</b> ${escapeHtml(outcome.child)} ${badge}</header>`,
     `  <table>${tableRows(outcome.row)}`,
-    `  <tr><td>policy place</td><td>clause ${escapeHtml(outcome.place)}</td></tr></table>`,
+    `  <tr><td>Place under the policy</td><td>clause ${escapeHtml(outcome.place)}</td></tr>`,
+    "  </table>",
     `  ${reasonList(outcome.reasons)}`,
     `  <details><summary>Draft letter</summary><pre>${escapeHtml(outcome.letter)}</pre></details>`,
     "</section>",
@@ -195,13 +216,14 @@ function reportPage(outcomes: Outcome[], cost: number, tokens: number): string {
     "<style>",
     STYLE,
     "</style>",
+    '<body data-audience="staff">',
     "<main>",
     "<h1>Harbour Hill admissions office: one run</h1>",
     '<p class="sub">Fictional school. The AI reads forms and drafts letters. ' +
       "The policy rules set the order. A person signs every letter.</p>",
     `<div class="sum">${summary}</div>`,
     `<div class="grid">${cards}</div>`,
-    "</main></html>",
+    "</main></body></html>",
     "",
   ].join("\n");
 }
