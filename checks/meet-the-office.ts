@@ -23,6 +23,13 @@ async function listsTheFlags(folder: string): Promise<boolean> {
   return got.size === want.length && want.every((id) => got.has(id));
 }
 
+// Delegation has two sides. The keep line must be its own thought, not a copy.
+function keepsSomethingElse(folder: string): boolean {
+  const keep = section(answerIn(folder), "What I would keep for a person");
+  const hand = section(answerIn(folder), "What I would hand to AI") ?? "";
+  return filled(keep) && (keep ?? "").trim() !== hand.trim();
+}
+
 export default [
   {
     says: "about-me.md is in the folder",
@@ -43,6 +50,18 @@ export default [
     says: "A task I want help with names one task",
     test: (folder) => filled(section(answerIn(folder), "A task I want help with")),
     tryNext: "Under ## A task I want help with, write one real task from your work.",
+  },
+  {
+    says: "What I would hand to AI names a part of your task",
+    test: (folder) => filled(section(answerIn(folder), "What I would hand to AI")),
+    tryNext: "Under ## What I would hand to AI, write the part of your task AI may draft.",
+  },
+  {
+    says: "What I would keep for a person says what stays with a person, in different words",
+    test: keepsSomethingElse,
+    tryNext:
+      "Under ## What I would keep for a person, write what you would never hand over. " +
+      "It must not repeat the hand-over line.",
   },
   {
     says: "What the office flagged lists the forms the office flagged, and no others",

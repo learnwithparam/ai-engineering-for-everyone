@@ -2,11 +2,7 @@
 
 ## The problem
 
-Now you know how big the files are. Your boss still wants one number: what does a season cost? A season is
-1,200 forms. For each form, the AI gets the form and the whole policy. It writes back one short row.
-
-A model is the AI program that reads and writes. The Claude app has three models in its menu: Haiku, Sonnet and
-Opus. They do not cost the same, so you price the season on all three.
+Your boss wants one number: what does a season cost? A season is 1,200 forms. Each call sends the form and the whole policy, and gets one short row back. A model is the AI program. Claude has three, Haiku, Sonnet and Opus, so you price all three.
 
 ```mermaid
 flowchart LR
@@ -17,39 +13,27 @@ flowchart LR
   C -->|times 1,200| S[Cost of a season]
 ```
 
-## Your challenge
+## Watch it done
 
-Fill in `season-cost.md` in this folder.
+Before, `season-cost.md` has empty numbers. After, each model has a season cost. With the sample numbers, Sonnet comes to about $9.33.
 
-1. Under **Assumptions**, put the tokens for one form and for the policy. Use your numbers from count-the-tokens.
-   Add them up to get the input tokens for one call. Leave the output at 300. That is about one table row and a
-   short note, the reply the office asks for.
-2. Open the Claude pricing page: https://platform.claude.com/docs/en/about-claude/pricing. Find the input and output
-   price for Haiku 5.5, Sonnet 5.5 and Opus 5.5. For Haiku, use the price for prompts up to 100,000 tokens.
-3. Work out each row. Prices are per million tokens, so divide by 1,000,000.
-4. Multiply each one by 1,200 to get the season. You can paste your numbers into Claude and ask it to do the sums.
-   Check one line yourself.
-
-For example, here is Sonnet with the sample numbers. Form 03 is 572 tokens and the policy is 1,816 tokens. So one
-call sends 2,388 input tokens and gets 300 output tokens back.
-
-- Input: 2,388 tokens at $2 per million is $0.004776.
-- Output: 300 tokens at $10 per million is $0.003.
-- One call: $0.004776 plus $0.003 is $0.007776.
-- One season: $0.007776 times 1,200 is about $9.33.
+```text
+| Haiku  | $0.47  |
+| Sonnet | $9.33  |
+| Opus   | $18.66 |
+```
 
 ![What you see when your sheet is right](../images/expected.png)
 
-## Done when
+## Your turn
 
-- `season-cost.md` has the sections Assumptions, Per application and Per season.
-- Assumptions give 1,200 forms, and the input and output tokens for each.
-- The input tokens include one form and the whole policy.
-- Per season gives a cost for Haiku, Sonnet and Opus.
-- Each season cost matches your own assumptions and the price list, within 20%.
+Fill in `season-cost.md` in this folder.
 
-How this step is checked: the check reads your sheet. It takes your own token numbers. Then it works out the cost
-from the price list in `config/prices.ts`. So a small slip in a sum is fine. A wrong method is not.
+1. Under **Assumptions**, put the tokens for one form and for the policy. Use your numbers from count-the-tokens. Add them to get the input tokens for one call. Leave the output at 300, about one table row and a short note.
+2. Open the [Claude pricing page](https://platform.claude.com/docs/en/about-claude/pricing). Find the input and output price for Haiku, Sonnet and Opus. For Haiku, use the price for prompts up to 100,000 tokens.
+3. Work out each model. Prices are per million tokens, so divide by 1,000,000. For example, Sonnet: 2,388 input tokens at $2 per million is $0.004776. 300 output tokens at $10 per million is $0.003. One call is $0.007776. Times 1,200 is about $9.33.
+4. Put a season cost like $9.33 in each row of the **Per season** table. You can ask Claude to do the sums. Check one line yourself.
+5. Run the check.
 
 ```bash
 bun run verify price-the-season
@@ -57,16 +41,19 @@ bun run verify price-the-season
 
 Expect: `Done. All 6 rules pass.`
 
-## If you get stuck
+If the input tokens fail, add the policy tokens to the form tokens, because every call sends both. If a season cost fails, did you divide by 1,000,000 and add the output cost?
 
-| What you see                                   | Fix                                                                               |
-| ---------------------------------------------- | --------------------------------------------------------------------------------- |
-| `FAIL input tokens per application include...` | Add the policy tokens to the form tokens. Every call sends both.                  |
-| `FAIL each season cost matches...`             | Did you divide by 1,000,000? Did you add the output cost? Check one line by hand. |
-| `FAIL Per season gives a cost for...`          | Put a cost like `$9.33` in each row of the Per season table.                      |
+## Do it on your work
 
-## Words you will use
+Price one job of your own: its files, its number of cases, and a short reply. Good looks like a table with three models and one season total each, and one line you checked by hand.
 
-- **Input tokens**: the tokens you send to the AI: the form, the policy and your question.
-- **Output tokens**: the tokens the AI writes back. They cost more than input tokens.
-- **Per million**: prices are for one million tokens. Divide by 1,000,000 to get the price of one token.
+## Done when
+
+- `season-cost.md` has Assumptions, Per application and Per season.
+- The input tokens include one form and the whole policy.
+- Per season gives a cost for Haiku, Sonnet and Opus.
+- Each season cost matches your assumptions and the price list, within 20%.
+
+## Solution
+
+The after state is a filled `season-cost.md`. See `solution/season-cost.md`.

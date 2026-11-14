@@ -10,7 +10,7 @@
 
 ## Next child
 
-HH-0137, Zara Ahmed. She is a sibling under clause 4.3. Clause 7.2 keeps the list in policy order, so she comes
+HH-0137, Zara Ahmed. She is a sibling under clause 4.3. clause 7.2 keeps the list in policy order, so she comes
 before HH-0116, who is first on the list only by distance.
 
 ## Where I would stop it

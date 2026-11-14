@@ -1,28 +1,29 @@
-// bun run text-audit: builds the office report, then runs the text audit on it in a browser.
-// The audit needs Chromium. Install it once with: bunx playwright install chromium
+// bun run text-audit: opens every route in a real browser and runs the 10 text checks.
+// A repo with no e2e/routes.ts has no pages yet, so there is nothing to audit.
 import { existsSync } from "node:fs";
-import { chromium } from "@playwright/test";
+import { join } from "node:path";
+import { ROOT } from "./structure";
 
-const run = (command: string[], env: Record<string, string> = {}): number =>
-  Bun.spawnSync(command, {
-    stdio: ["inherit", "inherit", "inherit"],
-    env: { ...process.env, ...env },
-  }).exitCode;
+const routesFile = join(ROOT, "e2e", "routes.ts");
 
-const browser = process.env.AUDIT_BROWSER ?? chromium.executablePath();
-if (!existsSync(browser)) {
-  console.log("Text audit skipped: no browser found. Run: bunx playwright install chromium");
-  process.exit(process.env.AUDIT_REQUIRED ? 1 : 0);
+if (!existsSync(routesFile)) {
+  console.log("Text audit skipped: e2e/routes.ts does not exist yet.");
+  console.log("Try next: copy e2e/routes.example.ts to e2e/routes.ts when the course has pages.");
+  process.exit(0);
 }
-if (run(["bun", "world/office.ts"]) !== 0) process.exit(1);
-const port = "4173";
-process.exit(
-  run(["bunx", "playwright", "test", "--config", "e2e/playwright.config.ts", "--trace", "off"], {
-    // biome-ignore lint/style/useNamingConvention: environment variable names are upper case
-    AUDIT_URL: `http://localhost:${port}`,
-    // biome-ignore lint/style/useNamingConvention: environment variable names are upper case
-    AUDIT_SERVER: "bun serve.ts",
-    // biome-ignore lint/style/useNamingConvention: environment variable names are upper case
-    AUDIT_PORT: port,
-  }),
-);
+
+const configFile = join(ROOT, "e2e", "playwright.config.ts");
+const install = Bun.spawnSync(["bunx", "playwright", "install", "chromium"], { cwd: ROOT });
+if (install.exitCode !== 0) {
+  console.error("Could not get the browser. Try next: run bunx playwright install chromium.");
+  process.exit(2);
+}
+const audit = Bun.spawnSync(["bunx", "playwright", "test", "-c", configFile, "--trace", "off"], {
+  cwd: ROOT,
+  stdout: "inherit",
+  stderr: "inherit",
+});
+if (audit.exitCode !== 0) {
+  console.error("The text audit found problems. Try next: fix the lines marked above, then rerun.");
+}
+process.exit(audit.exitCode === 0 ? 0 : 1);

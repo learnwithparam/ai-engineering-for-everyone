@@ -2,9 +2,7 @@
 
 ## The problem
 
-Your boss asks a simple question: "What would AI cost us for the whole season?" You cannot answer in words or
-pages, because AI is priced in **tokens**. A token is a small piece of text, often part of a word. So first you
-find out how many tokens the office's files have.
+Your boss asks: "What would AI cost us for the whole season?" AI is priced in tokens, not pages. A token is a small piece of text, often part of a word. So first count the tokens in the office's files. The policy file has 1,009 words.
 
 ```mermaid
 flowchart LR
@@ -12,15 +10,22 @@ flowchart LR
   T --> P[Price per call]
 ```
 
-## Your challenge
+## Watch it done
 
-Fill in `token-count.csv` in this folder. It has one row for each of three files in `world/harbour-hill/`:
+Before, `token-count.csv` has only its first line. After, it has a row for each file. For the policy, 1,009 words times 1.8 is 1,816 tokens.
 
-- `policy/admissions-policy-2027.md`
-- `applications/03.md`
-- `inbox/04.md`
+```text
+file,words,tokens
+policy/admissions-policy-2027.md,1009,1816
+```
 
-1. Count the words in each file. Use your editor's word count, or run this in the course folder:
+![What you see when your counts are right](../images/expected.png)
+
+## Your turn
+
+Fill in `token-count.csv` in this folder. Use `world/harbour-hill/policy/admissions-policy-2027.md`, `applications/03.md` and `inbox/04.md`.
+
+1. Count the words in a file.
 
 ```bash
 bun run words world/harbour-hill/inbox/04.md
@@ -28,25 +33,9 @@ bun run words world/harbour-hill/inbox/04.md
 
 Expect: `world/harbour-hill/inbox/04.md: 33 words`
 
-2. Turn words into tokens. [Claude's docs](https://platform.claude.com/docs/en/about-claude/models/overview) say
-   one million tokens is about 555,000 words. That is about 1.8 tokens
-   for each word. So multiply the words by 1.8 and round it to a whole number.
-3. Open `token-count.csv` in a spreadsheet or a text editor. Put the words and tokens in each row. Save it as CSV.
-
-For example, the email `inbox/02.md` asks which address the school uses for a child with two homes. It has 32
-words. 32 times 1.8 is 57.6, so you write 58 tokens. If it were in your file, its row would be `inbox/02.md,32,58`.
-
-![What you see when your counts are right](../images/expected.png)
-
-## Done when
-
-- `token-count.csv` is in this folder, and its first line is `file,words,tokens`.
-- There is a row for each of the three files.
-- Each word count is within 10% of the real count.
-- Each token count is more than its word count, and within 25% of the course count.
-
-How this step is checked: the check reads your CSV. It counts the words in each file itself. Then it compares
-your tokens to the count the course keeps in `world/keys/tokens.json`.
+2. Turn words into tokens. Claude's docs say one million tokens is about 555,000 words. That is about 1.8 tokens for each word. Multiply the words by 1.8 and round to a whole number. For example, 32 words times 1.8 is 57.6, so write 58.
+3. Put the words and tokens in each row of the CSV. A CSV is a plain table file with commas between columns. If your spreadsheet changes the first line, put back `file,words,tokens`.
+4. Run the check.
 
 ```bash
 bun run verify count-the-tokens
@@ -54,20 +43,18 @@ bun run verify count-the-tokens
 
 Expect: `Done. All 6 rules pass.`
 
-## If you get stuck
+If a word count fails, count again with `bun run words` and the file path. If a token count fails, you may have copied the words into the tokens column. Multiply by 1.8.
 
-| What you see                                        | Fix                                                                             |
-| --------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `FAIL the first line is file,words,tokens`          | Your spreadsheet may have changed the first line. Put back `file,words,tokens`. |
-| `FAIL each word count is within 10%...`             | Count again. Run `bun run words` with the file path after it.                   |
-| `FAIL each token count is more than its word count` | You may have copied the words into the tokens column. Multiply by 1.8.          |
+## Do it on your work
 
-Go further: an API key is a secret password for your own AI account. If you have one, `bun run measure-tokens`
-asks Claude's token counter for the real count. How close was 1.8? It saves the new counts in
-`world/keys/tokens.json`, the file the check reads. To undo it, run `git checkout world/keys/tokens.json`.
+Count one real file of your own, such as a policy or a long email. Good looks like a number you can multiply by 1,200 for a season. Go further: with your own AI key, `bun run measure-tokens` asks Claude for the real count and saves it in `world/keys/tokens.json`. How close was 1.8?
 
-## Words you will use
+## Done when
 
-- **Token**: a small piece of text, often part of a word. AI reads and writes in tokens, and you pay per token.
-- **Word count**: how many words a file has. Most editors can show it.
-- **CSV**: a plain table file. Each line is a row, and commas split the columns.
+- `token-count.csv` has the first line `file,words,tokens` and a row for each of the three files.
+- Each word count is within 10% of the real count.
+- Each token count is more than its word count, and within 25% of the course count.
+
+## Solution
+
+The after state is a filled `token-count.csv`. See `solution/token-count.csv`.

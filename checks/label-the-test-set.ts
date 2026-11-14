@@ -23,6 +23,29 @@ function everyMissHasReason(folder: string): boolean {
   return misses.every((label) => wordCount(label.note) >= 5);
 }
 
+const OWN_FILE = "own-test-set.csv";
+const OWN_COLUMNS = "case,right_answer,ai_answer,pass,note";
+const OWN_ROWS_NEEDED = 6;
+
+// The learner's own task, never the course world: the shape is checked, not the content.
+const ownRows = (folder: string) => csv(folder, OWN_FILE).rows;
+
+function ownCasesAreFilled(folder: string): boolean {
+  const rows = ownRows(folder);
+  const cases = rows.map((row) => (row.case ?? "").toLowerCase());
+  const allFilled = rows.every((row) => row.case && row.right_answer && row.ai_answer);
+  return rows.length >= OWN_ROWS_NEEDED && allFilled && new Set(cases).size === cases.length;
+}
+
+function ownLabelsAreHonest(folder: string): boolean {
+  const rows = ownRows(folder);
+  const labelled = rows.every((row) => isYesOrNo(row.pass ?? ""));
+  return (
+    labelled &&
+    rows.filter((row) => row.pass === "no").every((row) => wordCount(row.note ?? "") >= 5)
+  );
+}
+
 export default [
   {
     says: "test-set.csv is in the folder",
@@ -62,5 +85,22 @@ export default [
     tryNext:
       "Open world/keys/letters-b.csv. For each letter where you disagree, write in note why " +
       "you chose your label.",
+  },
+  {
+    says: "own-test-set.csv has the columns case, right_answer, ai_answer, pass, note",
+    test: (folder) => csv(folder, OWN_FILE).header.join(",") === OWN_COLUMNS,
+    tryNext: "Keep the first line of own-test-set.csv exactly as it is.",
+  },
+  {
+    says: "own-test-set.csv has 6 or more different cases from your own work, all filled in",
+    test: ownCasesAreFilled,
+    tryNext:
+      "Add one row for each real case from your own task. Write the right answer first, " +
+      "then what the AI gave back.",
+  },
+  {
+    says: "every pass in own-test-set.csv is yes or no, and every no says why in 5 or more words",
+    test: ownLabelsAreHonest,
+    tryNext: "Write yes if the AI matched your right answer. For each no, say what it got wrong.",
   },
 ] satisfies Rule[];

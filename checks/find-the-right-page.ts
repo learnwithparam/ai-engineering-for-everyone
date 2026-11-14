@@ -1,7 +1,7 @@
 // find-the-right-page: for ten questions, the learner picks the document and clause
 // that hold the answer, then marks where Claude's citation hit the same clause.
 import type { Rule } from "../scripts/verify";
-import { csv, has } from "./lib/handin";
+import { csv, filled, has, section, text } from "./lib/handin";
 import { keyCsv } from "./lib/world";
 
 const RETRIEVAL_FILE = "retrieval.csv";
@@ -48,6 +48,31 @@ function hitsAreHonest(folder: string): boolean {
   });
 }
 
+const HABITS_FILE = "checking-habits.md";
+
+// The questions the learner marked as a miss in retrieval.csv, like R7.
+function missedQuestions(folder: string): string[] {
+  const rows = csv(folder, RETRIEVAL_FILE).rows;
+  const misses = rows.filter((row) => (row.claude_hit ?? "").toLowerCase() === "no");
+  return misses.map((row) => (row.question_id ?? "").toUpperCase());
+}
+
+// Checking habits: the write-up must name the real misses, not a guess.
+function namesTheMisses(folder: string): boolean {
+  const written = (section(text(folder, HABITS_FILE), "Where Claude missed") ?? "").toUpperCase();
+  const misses = missedQuestions(folder);
+  return misses.length > 0 && misses.every((id) => new RegExp(`\\b${id}\\b`).test(written));
+}
+
+function ruleIsReal(folder: string): boolean {
+  const rule = section(text(folder, HABITS_FILE), "My rule for when to check") ?? "";
+  const words = rule
+    .replace(/\(write[^)]*\)/gi, "")
+    .split(/\s+/)
+    .filter(Boolean);
+  return words.length >= 8;
+}
+
 export default [
   {
     says: "retrieval.csv is in the folder",
@@ -77,5 +102,22 @@ export default [
     tryNext:
       "Write the clause Claude quoted in claude_clause. " +
       "Write yes in claude_hit only if it is the clause that holds the answer.",
+  },
+  {
+    says: "checking-habits.md names each question where Claude missed",
+    test: namesTheMisses,
+    tryNext:
+      "Open retrieval.csv. List every question where claude_hit is no, like R7, under " +
+      "## Where Claude missed.",
+  },
+  {
+    says: "checking-habits.md says how you caught the miss",
+    test: (folder) => filled(section(text(folder, HABITS_FILE), "How I caught it")),
+    tryNext: "Under ## How I caught it, say what you did that showed the answer was wrong.",
+  },
+  {
+    says: "checking-habits.md has your own rule for when to check, in a full sentence",
+    test: ruleIsReal,
+    tryNext: "Under ## My rule for when to check, write one rule of 8 words or more.",
   },
 ] satisfies Rule[];

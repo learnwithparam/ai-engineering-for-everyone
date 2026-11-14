@@ -2,7 +2,7 @@
 
 ## Never
 
-- The AI never decides who gets a place. Clause 1.2 says a person decides.
+- The AI never decides who gets a place. A person decides, under clause 1.2.
 - The AI never uses religion, race, sex or disability.
 - The AI never writes that a place is agreed or offered.
 

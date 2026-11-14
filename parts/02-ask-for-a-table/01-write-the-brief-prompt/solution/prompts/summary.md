@@ -30,3 +30,10 @@ The form is below, between the form tags. Paste the whole form there.
 3. Priority: looked after, EHCP, or sibling at the school
 4. Preference: where Harbour Hill is in the family's list
 5. Needs a person: yes or no, and why
+
+## What I changed after trying it
+
+| Try | What went wrong                                | What I changed                                           |
+| --- | ---------------------------------------------- | -------------------------------------------------------- |
+| 1   | The reply for form 13 made up a date of birth. | Added the rule: if the form does not say, write unknown. |
+| 2   | The reply ran to a paragraph, not five lines.  | Listed the five lines in Output format, one each.        |

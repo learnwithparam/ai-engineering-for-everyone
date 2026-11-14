@@ -15,7 +15,7 @@
 - 80%: staff time before and after at one named school, measured the same way.
 - Makes the decisions: nothing can make this fine. We need a person to approve each one.
 - No bias: results split by group on the same test set.
-- Any policy: a test on our own 2027 policy, with the clause changes from 2026.
+- Any policy: a test on our own new policy, with the clause changes since the old one.
 - Data: a contract that says where the data is kept, who sees it, and if it trains a model.
 
 ## Questions to ask

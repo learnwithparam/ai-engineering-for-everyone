@@ -1,9 +1,9 @@
-// The audit needs the course app running. Set AUDIT_URL to where it listens.
-// Set AUDIT_SERVER to a command that starts it, and Playwright starts and stops it for you.
+// The audit starts its own page server by default: e2e/serve.ts builds and serves the report.
+// Set AUDIT_URL to audit an app running elsewhere. Set AUDIT_SERVER to a different start command.
 import { defineConfig } from "@playwright/test";
 
-const appUrl = process.env.AUDIT_URL ?? "http://localhost:3000";
-const startCommand = process.env.AUDIT_SERVER;
+const appUrl = process.env.AUDIT_URL ?? "http://localhost:3017";
+const startCommand = process.env.AUDIT_SERVER ?? "bun e2e/serve.ts 3017";
 // Set AUDIT_BROWSER to a Chromium you already have, when Playwright's own copy is not installed.
 const browserPath = process.env.AUDIT_BROWSER;
 
@@ -18,6 +18,6 @@ export default defineConfig({
     launchOptions: browserPath ? { executablePath: browserPath } : {},
   },
   webServer: startCommand
-    ? { command: startCommand, url: appUrl, reuseExistingServer: true }
+    ? { command: startCommand, cwd: "..", url: appUrl, reuseExistingServer: true }
     : undefined,
 });

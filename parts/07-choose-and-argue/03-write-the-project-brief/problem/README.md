@@ -2,10 +2,7 @@
 
 ## The problem
 
-Your boss does not want a chat log. They want one page they can say yes or no to. What is the problem? What will
-the AI do, and what will a person do? What will it cost, and how will you know it works?
-
-A project brief is that page. You already have every part of it. Now you put them together, for one task.
+Your boss does not want a chat log. They want one page they can say yes or no to. A project brief is that page: what you will build, what it costs and how you will know it works. For example, 1,200 forms a season on Sonnet costs $9.36.
 
 ```mermaid
 flowchart LR
@@ -16,20 +13,11 @@ flowchart LR
   B --> Y{Boss says yes or no}
 ```
 
-## Your challenge
+## Watch it done
 
-Fill in `project-brief.md` in this folder. Pick one task. It can be a task from your own job, like the one in your
-`about-me.md`. Or it can be the Harbour Hill forms.
+Before, `project-brief.md` has eight headings and `(write here)` under each. After, each heading is filled in and the cost lines have numbers:
 
-1. Write under each of the 8 headings. A few sentences is enough.
-2. Under **Cost estimate**, fill in each line: runs, input tokens per run, output tokens per run, the model, and
-   the cost. Work the cost out the same way as in price-the-season.
-3. Under **How we will measure it**, say how many real cases you will label as a test set. Start with 20 or more.
-4. Under **What a person does**, name the person, by role, who approves or signs.
-
-For example, the Harbour Hill cost lines are:
-
-```
+```text
 - Runs in a season: 1,200
 - Input tokens per run: 2,402 (one form plus the whole policy)
 - Output tokens per run: 300
@@ -37,13 +25,32 @@ For example, the Harbour Hill cost lines are:
 - Cost: $9.36 a season
 ```
 
-That is 2,402 times $2, plus 300 times $10, divided by 1,000,000, times 1,200. Price the work used form 03 and got $9.33. Here
-the form is the average form, 586 tokens, so it costs a bit more. A full Harbour Hill brief is in
-`../solution/project-brief.md`. Read it after you write your own.
-
-Do not put real names, emails or dates of birth in your brief. Describe the data, never copy it.
-
 ![What you see when your brief is right](../images/expected.png)
+
+## Your turn
+
+You work in this `problem/` folder. Pick one task. It can be from your own job, like the one in your `about-me.md`, or the Harbour Hill forms.
+
+1. Write under each of the 8 headings. A few sentences is enough.
+2. Under **Cost estimate**, keep the five lines and put a number on each: runs, input tokens per run, output tokens per run, the model and the cost.
+3. Work the cost out like this: input tokens times the input price, plus output tokens times the output price, divided by 1,000,000, times the runs. For Harbour Hill that is 2,402 times $2, plus 300 times $10, divided by 1,000,000, times 1,200.
+4. Under **How we will measure it**, name a test set of 20 or more real cases, like 20 letters.
+5. Under **What a person does**, name the person, by role, who approves or signs.
+6. Run the check.
+
+```bash
+bun run verify write-the-project-brief
+```
+
+Expect: `Done. All 6 rules pass.`
+
+If you see `FAIL the cost matches your token numbers`, check one sum by hand. Do not put real names, emails or dates of birth in your brief. Describe the data, never copy it.
+
+When it passes, read `../solution/project-brief.md` and compare.
+
+## Do it on your work
+
+Use a task from your own job. Count the tokens in one real input, pick a model, and fill in the cost lines. Good looks like a brief where a stranger can see what happens when the AI is wrong. Go further: ask a colleague to read it and say yes or no.
 
 ## Done when
 
@@ -53,25 +60,8 @@ Do not put real names, emails or dates of birth in your brief. Describe the data
 - How we will measure it names a test set of at least 20 cases.
 - What a person does says who signs or approves.
 
-How this step is checked: the check works out the cost again from your token numbers. In a cohort, a person also reads it and asks: would a stranger know what happens when the AI is
-wrong?
+The check works out the cost again from your token numbers and looks for the headings. It cannot judge the writing. In a cohort, a person reads it and asks: would a stranger know what happens when the AI is wrong?
 
-```bash
-bun run verify write-the-project-brief
-```
+## Solution
 
-Expect: `Done. All 6 rules pass.`
-
-## If you get stuck
-
-| What you see                                   | Fix                                                              |
-| ---------------------------------------------- | ---------------------------------------------------------------- |
-| `FAIL Cost estimate gives the runs`            | Keep the five lines from the starter, and put a number on each.  |
-| `FAIL the cost matches your token numbers`     | Divide by 1,000,000, then times the runs. Check one sum by hand. |
-| `FAIL How we will measure it names a test set` | Write a number and a word, like: 20 letters, or 30 emails.       |
-
-## Words you will use
-
-- **Project brief**: one page that says what you will build, what it costs and how you will know it works.
-- **Source of truth**: the file or system that holds the right answer, such as the register.
-- **Run**: one call to the AI, such as reading one form.
+The after state is one `project-brief.md`. See `solution/project-brief.md` for the Harbour Hill brief.

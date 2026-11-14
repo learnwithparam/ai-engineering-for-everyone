@@ -1,3 +1,4 @@
 minutes = 15
 screen = true
 solution = true
+example_files = ["world/harbour-hill/register.json", "world/harbour-hill/policy/admissions-policy-2027.md"]

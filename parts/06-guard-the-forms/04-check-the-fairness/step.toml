@@ -1,0 +1,4 @@
+minutes = 10
+screen = false
+solution = true
+example_files = ["world/harbour-hill/applications/13.md"]

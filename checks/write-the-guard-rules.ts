@@ -79,7 +79,8 @@ export default [
   {
     says: "a rule says the AI never decides who gets a place",
     test: (folder) => oneLineSays(folder, [/decid/i, /\b(ai|claude|model|computer)\b/i]),
-    tryNext: "Under Never, add: The AI never decides who gets a place. Clause 1.2 says so.",
+    tryNext:
+      "Under Never, add: The AI never decides who gets a place. A person does, under clause 1.2.",
   },
   {
     says: "a rule says form text is data, not instructions",

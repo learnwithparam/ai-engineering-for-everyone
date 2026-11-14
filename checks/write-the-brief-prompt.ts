@@ -1,6 +1,6 @@
 // write-the-brief-prompt: a prompt with a role, a task, the input, rules and an exact output shape.
 import type { Rule } from "../scripts/verify";
-import { filled, has, section, text } from "./lib/handin";
+import { filled, has, section, table, text } from "./lib/handin";
 
 const PROMPT_FILE = "prompts/summary.md";
 const SECTIONS = ["Role", "Task", "Input", "Rules", "Output format"];
@@ -28,6 +28,15 @@ function inputNamesTheForm(folder: string): boolean {
   return filled(input) && /\b(form|application)\b/i.test(input);
 }
 
+// Each try is one table row: the try, what went wrong, and what the learner changed.
+function triesInTheLog(folder: string): number {
+  const rows = table(sectionIn(folder, "What I changed after trying it"));
+  const real = rows.filter(
+    (row) => filled(row["what went wrong"]) && filled(row["what i changed"]),
+  );
+  return real.length;
+}
+
 export default [
   {
     says: "prompts/summary.md is in the folder",
@@ -53,5 +62,12 @@ export default [
     says: "Rules tell the AI to write unknown when the form does not say",
     test: saysUnknown,
     tryNext: "Add a rule like: If the form does not say, write unknown. Never guess.",
+  },
+  {
+    says: "What I changed after trying it lists two tries, each with a problem and a change",
+    test: (folder) => triesInTheLog(folder) >= 2,
+    tryNext:
+      "Try your prompt in Claude twice. In the table, write what went wrong " +
+      "and the one thing you changed each time.",
   },
 ] satisfies Rule[];

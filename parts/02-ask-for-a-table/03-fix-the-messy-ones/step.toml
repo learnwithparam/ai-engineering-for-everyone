@@ -1,3 +1,4 @@
 minutes = 10
 screen = true
 solution = true
+example_files = ["world/harbour-hill/applications/14.md", "world/harbour-hill/applications/15.md"]

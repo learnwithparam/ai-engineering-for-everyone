@@ -2,83 +2,56 @@
 
 ## The problem
 
-The office ranks children by the rules in the policy. To do that, it needs the same facts from every form, in
-the same place. A pile of forms is not a list you can sort. A table is.
-
-You have 12 typed forms, `applications/01.md` to `12.md`. You turn them into one table with one row for each
-child.
+The office ranks children by the policy. It needs the same facts from every form, in the same place. A pile of 12 typed forms cannot be sorted. A table with one row for each child can. For example, form 08 gives one row. You get the table by writing one prompt.
 
 ```mermaid
 flowchart LR
-  F[12 typed forms] --> P[Your prompt with the column names and rules]
+  F[Typed forms] --> P[Your prompt with the column names and rules]
   P --> C[applications.csv: one row per child]
   C --> S[The office can sort and check it]
 ```
 
-## Your challenge
+## Watch it done
 
-Fill in `applications.csv` in this folder. The first line has the nine column names. The second line is a worked
-row for form 01. Keep both.
-
-Form `01.md` is `HH-0101`. Four columns may be new:
-
-- `sibling_on_roll`: a brother or sister is at the school now.
-- `looked_after`: the child is in the care of the council.
-- `ehcp_names_school`: the child's EHCP names Harbour Hill.
-- `preference_rank`: Harbour Hill's place in the family's list. `1` is first choice.
-
-1. Open Claude.ai. Start a new chat.
-2. Write a prompt that asks for one CSV row per form. Paste the first line of the starter, so Claude uses the
-   same columns in the same order.
-3. Add these rules to your prompt:
-   - Dates as YYYY-MM-DD.
-   - Distance as a plain number of km, with no units.
-   - `yes` or `no` for the yes and no columns.
-   - `needs_person` is `yes` when a fact is missing or unclear. Otherwise `no`.
-   - If the form does not say, write `unknown`. Never guess.
-4. Paste forms 02 to 12. Ask Claude to make a CSV file you can download.
-5. Copy the rows into `applications.csv`, under the worked row.
-
-For example, form 08 is for Kofi Mensah. His sister goes to Harbour Hill Primary, not to the secondary school.
-So she does not count. His row says `no` in `sibling_on_roll`:
+Before, `applications.csv` has the column names and one worked row. After, it has a row for each form. Form 08 is for Kofi Mensah. His sister is at the primary school, so she does not count.
 
 ```text
 HH-0108,Kofi Mensah,2015-10-11,no,1.98,no,no,1,no
 ```
 
-Form 04 is for Tomasz Nowak. His stepsister is in Year 9 and lives with him. Under the 2027 policy she counts,
-so his row says `yes`.
-
 ![What you see when your table is right](../images/expected.png)
 
-## Done when
+## Your turn
 
-- `applications.csv` starts with the nine column names, in order.
-- It has a row for each form from HH-0101 to HH-0112.
-- Every distance is a plain number, like `0.84`.
-- Every date of birth is written YYYY-MM-DD.
-- HH-0104 says `yes` and HH-0108 says `no` in `sibling_on_roll`.
-- At least 90% of the fields match the answer key.
+Fill in `applications.csv` in this folder. Keep the first line and the worked row for form 01.
 
-How this step is checked: the check compares your table with the answer key, field by field. A few slips are
-fine. A wrong format is not.
+1. Open Claude.ai and start a new chat.
+2. Write a prompt that asks for one CSV row per form. A CSV is a plain text table. Paste the first line of the starter so Claude uses the same columns.
+3. Add these rules. Dates as YYYY-MM-DD. Distance as a plain number of km, with no units. `yes` or `no` for the yes and no columns. If the form does not say, write unknown. Never guess. A column called `needs_person` is yes when a fact is missing or unclear.
+4. Paste form 04 and form 08. Four columns may be new. `sibling_on_roll` means a brother or sister is at the school now. `looked_after` means the child is in the care of the council. `ehcp_names_school` means the child's care plan names Harbour Hill. `preference_rank` is the school's place in the family's list, and 1 is first.
+5. Copy the two rows into `applications.csv`. Form 04 is for Tomasz Nowak. His stepsister is in Year 9 and lives with him. Under the new policy she counts, so his row says yes.
+6. Run the check.
 
 ```bash
 bun run verify extract-the-fields
 ```
 
-Expect: `Done. All 7 rules pass.`
+Expect: `Done. All 7 rules pass.` once all 12 forms are in.
 
-## If you get stuck
+If a distance fails, take out the letters km and write `0.84`. If a date fails, write 2015-03-02, not 02/03/2015. If the sibling rule fails, read clause 4.3. A stepsister counts. A sister at the primary does not.
 
-| What you see                                      | Fix                                                                     |
-| ------------------------------------------------- | ----------------------------------------------------------------------- |
-| `FAIL  every distance is a plain number of km...` | Take out the letters km. Write `0.84`.                                  |
-| `FAIL  every date of birth is written YYYY-MM-DD` | The forms write `02/03/2015`. Write `2015-03-02`.                       |
-| `FAIL  the sibling traps are right...`            | Read clause 4.3. A stepsister counts. A sister at the primary does not. |
-| `FAIL  at least 90% of the fields match...`       | Check each column against its form. Look for a column out of place.     |
+## Do it on your work
 
-## Words you will use
+Turn a pile of your own notes, forms or emails into one table. Good looks like the same columns for every row, and unknown in every gap. Go further: the check reads all 12 typed forms, so paste forms 02 to 12 the same way and copy every row under the worked row.
 
-- **CSV**: a plain text table. Each line is a row. Commas split the columns.
-- **Extract**: pull the facts you need out of a longer text.
+## Done when
+
+- `applications.csv` starts with the nine column names, in order.
+- It has a row for each form from HH-0101 to HH-0112.
+- Every distance is a plain number and every date is YYYY-MM-DD.
+- HH-0104 says yes and HH-0108 says no in `sibling_on_roll`.
+- At least 90% of the fields match the answer key.
+
+## Solution
+
+The after state is a table of 12 rows. See `solution/applications.csv`.

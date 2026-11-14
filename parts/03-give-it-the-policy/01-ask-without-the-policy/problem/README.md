@@ -2,11 +2,7 @@
 
 ## The problem
 
-Parents email the office with questions. It is tempting to paste each one into Claude and send the reply. But
-Claude has never seen Harbour Hill's policy. It knows how many schools work. It does not know this school's own
-rules.
-
-So first you find out how often a plain chat gets it wrong.
+A parent asks the office if a stepdaughter counts as a sibling. A plain chat with Claude has never seen Harbour Hill's rules. It answers in a sure voice anyway. So first you find out how many of five answers are wrong.
 
 ```mermaid
 flowchart LR
@@ -17,35 +13,34 @@ flowchart LR
   M -->|wrong or vague| N[no]
 ```
 
-## Your challenge
+## Watch it done
 
-`answers.csv` in this folder has five questions from the inbox, Q1 to Q5.
+Before, the check fails on a blank `answers.csv`:
 
-1. Open Claude.ai and start a new chat. Do not add any files.
-2. Ask each question. Paste Claude's answer into the `without_policy` column. If the answer has a comma, put
-   double quotes around it, like `"Yes, it does."`. Keep it on one line.
-3. Open `world/harbour-hill/policy/admissions-policy-2027.md`. Find the rule for each question.
-4. In the `right` column, write `yes` if Claude's answer matches the policy. Write `no` if it is wrong, vague, or
-   says "check with the school".
+```text
+  FAIL  there is an answer from Claude for each of Q1 to Q5
+  FAIL  at least three answers are marked no
+```
 
-For example, Q2 comes from `inbox/02.md`. A parent asks which address counts for a child with two homes. A plain
-chat often says the school uses the address where Child Benefit is paid. That was last year's rule. Clause 5.2
-of the 2027 policy uses the home where the child sleeps most school nights. So you mark it `no`:
+After, four of the five answers are marked `no`, and the check ends with `Done. All 5 rules pass.`
+
+![What you see when your answers are marked](../images/expected.png)
+
+## Your turn
+
+1. Open Claude.ai and start a new chat. Add no files.
+2. Open `answers.csv` in this folder. It has five questions, Q1 to Q5. Ask Claude each one.
+3. Paste each answer into the `without_policy` column. If the answer has a comma, put double quotes around it. Keep it on one line.
+4. Open `world/harbour-hill/policy/admissions-policy-2027.md`. Find the rule for each question. A clause is one numbered rule, such as clause 5.2.
+5. In the `right` column, write `yes` if Claude matches the policy. Write `no` if it is wrong, vague, or says "check with the school".
+
+For example, Q2 asks which address counts for a child with two homes. A plain chat often says the Child Benefit address. The rule in clause 5.2 uses the home where the child sleeps most school nights. So mark it `no`:
 
 ```text
 Q2,Which address is used for a child with two homes?,Most schools use the address where Child Benefit is paid.,no
 ```
 
-![What you see when your answers are marked](../images/expected.png)
-
-## Done when
-
-- `answers.csv` has Claude's answer for each of Q1 to Q5.
-- Each row is marked `yes` or `no` in the `right` column.
-- At least three answers are marked `no`.
-
-How this step is checked: the check reads your marks. It does not read the chat. If fewer than three are wrong,
-look again: Claude does not know this school's rules.
+6. Run the check.
 
 ```bash
 bun run verify ask-without-the-policy
@@ -53,15 +48,18 @@ bun run verify ask-without-the-policy
 
 Expect: `Done. All 5 rules pass.`
 
-## If you get stuck
+If you see `FAIL  there is an answer from Claude for...`, paste an answer into every row. If you see `FAIL  at least three answers are marked no`, compare each answer with its clause again. A vague answer is a `no`.
 
-| What you see                                  | Fix                                                            |
-| --------------------------------------------- | -------------------------------------------------------------- |
-| `FAIL  there is an answer from Claude for...` | Paste an answer into `without_policy` for every row.           |
-| `FAIL  at least three answers are marked no`  | Compare each answer with the clause. A vague answer is a `no`. |
+## Do it on your work
 
-## Words you will use
+Pick five questions your own office or team gets often. Ask a plain chat each one. Mark each answer against your real rules. Good looks like a list of answers you can prove wrong, with the rule beside each.
 
-- **Policy**: the school's written rules for who gets a place.
-- **Clause**: one numbered rule in the policy, such as clause 5.2.
-- **Plain chat**: a chat with Claude where you add no files. Claude only has what it learned before.
+## Done when
+
+- `answers.csv` has Claude's answer for each of Q1 to Q5.
+- Each row is marked `yes` or `no`.
+- At least three answers are marked `no`.
+
+## Solution
+
+The after state is a filled `answers.csv`. See `solution/answers.csv`.

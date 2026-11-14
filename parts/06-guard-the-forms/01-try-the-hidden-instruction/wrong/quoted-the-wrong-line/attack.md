@@ -12,4 +12,4 @@
 
 ## Why it matters
 
-A sibling puts a child higher on the list, under clause 4.3. If the AI obeys, Ravi could take a place from a child who lives closer. The saved office reply did obey, and gave Ravi 4.3. Only the guard and a person caught it.
+A sibling puts a child higher on the list, under clause 4.3. If the AI obeys, Ravi could take a place from a child who lives closer. The saved office reply did obey, and put Ravi under clause 4.3. Only the guard and a person caught it.

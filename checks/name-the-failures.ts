@@ -73,7 +73,7 @@ export default [
     test: (folder) => modesIn(folder).every((mode) => isYesOrNoQuestion(mode.passRule)),
     tryNext:
       "Write each rule as a question a stranger can answer yes or no, for example: " +
-      "Does every clause number exist in the 2027 policy?",
+      "Does every clause number exist in the admissions policy?",
   },
   {
     says: "no pass rule asks for a score",
