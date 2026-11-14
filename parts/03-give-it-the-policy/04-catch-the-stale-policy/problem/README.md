@@ -41,10 +41,10 @@ That is the 2026 rule. Under the 2027 policy, she counts. A parent who trusts it
 
 - `stale.md` has the sections What changed, What Claude said and The fix, each filled in.
 - What changed names both clauses that differ: 4.3 and 5.2.
-- The fix removes the old policy from the Project, or labels it as out of date.
+- The fix removes the old policy from the Project. A label is not enough, because Claude still reads a labelled file.
 
 How this step is checked: the check reads your notes. It looks for both clause numbers, and for a fix that
-removes or labels the old file.
+removes the old file.
 
 ```bash
 bun run verify catch-the-stale-policy
@@ -54,10 +54,10 @@ Expect: `Done. All 4 rules pass.`
 
 ## If you get stuck
 
-| What you see                                           | Fix                                                               |
-| ------------------------------------------------------ | ----------------------------------------------------------------- |
-| `FAIL  What changed names both clauses that differ...` | Name both 4.3 and 5.2 under What changed.                         |
-| `FAIL  The fix removes the old policy or labels...`    | Say what happens to the 2026 file: remove it, or label it as old. |
+| What you see                                            | Fix                                                                    |
+| ------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `FAIL  What changed names both clauses that differ...`  | Name both 4.3 and 5.2 under What changed.                              |
+| `FAIL  The fix removes the old policy from the Project` | Say you remove the 2026 file. A label does not stop Claude reading it. |
 
 ## Words you will use
 

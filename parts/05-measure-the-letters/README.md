@@ -103,8 +103,10 @@ That is the test-the-judge step.
 ## Finished
 
 You now have a test set: 20 letters with known answers, and pass rules a stranger can use. For example, when the
-office changes its letter prompt, you run the new prompt on batch B and count again. If the count drops, you do not
-ship it.
+office changes its letter prompt, you draft new letters with the new prompt in Claude and read them with your pass
+rules. Batch B in `world/harbour-hill/letters/batch-b` is a fresh set to practise on. Count the fails again. If the
+count is worse than before, you do not ship it. This repo has no script that makes letters from a new prompt, so
+you do this step by hand.
 
 This part teaches the first loop: read, group, count, label. How to tune a judge until you trust it, and when to
 launch, is in a separate learnwithparam course, AI Evals for PMs. It is not in this folder.
