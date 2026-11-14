@@ -65,12 +65,14 @@ Want to see a right answer first? Add the word `solution` after a step name. For
 
 ## Watch and read
 
-| Kind | Title                    | Author             | Why                                                            | Link                                                                                          |
-| ---- | ------------------------ | ------------------ | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| read | Reduce hallucinations    | Anthropic docs     | Ways to make Claude quote its sources and say "I do not know". | https://docs.claude.com/en/docs/test-and-evaluate/strengthen-guardrails/reduce-hallucinations |
-| read | Contextual retrieval     | Anthropic          | Why finding the right page matters, and how to improve it.     | https://www.anthropic.com/news/contextual-retrieval                                           |
-| read | What are projects?       | Claude Help Center | How a Project holds files and instructions.                    | https://support.claude.com/en/articles/9517075-what-are-projects                              |
-| read | Prompting best practices | Anthropic docs     | Put long documents first and ask Claude to quote them.         | https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/long-context-tips        |
+| Kind  | Title                              | Author             | Why                                                                                    | Link                                                                                          |
+| ----- | ---------------------------------- | ------------------ | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| read  | Reduce hallucinations              | Anthropic docs     | Ways to make Claude quote its sources and say "I do not know".                         | https://docs.claude.com/en/docs/test-and-evaluate/strengthen-guardrails/reduce-hallucinations |
+| read  | Contextual retrieval               | Anthropic          | Why finding the right page matters, and how to improve it.                             | https://www.anthropic.com/news/contextual-retrieval                                           |
+| read  | What are projects?                 | Claude Help Center | How a Project holds files and instructions.                                            | https://support.claude.com/en/articles/9517075-what-are-projects                              |
+| read  | Prompting best practices           | Anthropic docs     | Put long documents first and ask Claude to quote them.                                 | https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/long-context-tips        |
+| video | AI prompt engineering: a deep dive | Anthropic          | Four Anthropic people on giving Claude clear context and room to say it does not know. | https://www.youtube.com/watch?v=T9aRN5JkmL8                                                   |
+| video | Prompting 101                      | Anthropic          | A live walk through one prompt, built up with the facts the model needs.               | https://www.youtube.com/watch?v=ysPbXH0LpIE                                                   |
 
 ## Project
 

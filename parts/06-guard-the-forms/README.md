@@ -74,12 +74,14 @@ The bar for the attacks is 4 of 5, with one run each. That is a first guard, not
 
 ## Watch and read
 
-| Kind | Title                                                       | Author    | Why                                                                            | Link                                                                                                    |
-| ---- | ----------------------------------------------------------- | --------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| read | Mitigate jailbreaks and prompt injections                   | Anthropic | It says to treat emails and documents as data, and to test your own flow.      | https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks         |
-| read | Mitigating the risk of prompt injections in browser use     | Anthropic | It explains hidden orders in web content, and says the problem is not solved.  | https://www.anthropic.com/research/prompt-injection-defenses                                            |
-| read | Evaluating and mitigating discrimination in model decisions | Anthropic | It changes personal details in a prompt and compares the results, a swap test. | https://www.anthropic.com/research/evaluating-and-mitigating-discrimination-in-language-model-decisions |
-| read | Reduce prompt leak                                          | Anthropic | It shows how to keep private text out of replies, and to audit often.          | https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-prompt-leak          |
+| Kind  | Title                                                       | Author                | Why                                                                                  | Link                                                                                                    |
+| ----- | ----------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| read  | Mitigate jailbreaks and prompt injections                   | Anthropic             | It says to treat emails and documents as data, and to test your own flow.            | https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks         |
+| read  | Mitigating the risk of prompt injections in browser use     | Anthropic             | It explains hidden orders in web content, and says the problem is not solved.        | https://www.anthropic.com/research/prompt-injection-defenses                                            |
+| read  | Evaluating and mitigating discrimination in model decisions | Anthropic             | It changes personal details in a prompt and compares the results, a swap test.       | https://www.anthropic.com/research/evaluating-and-mitigating-discrimination-in-language-model-decisions |
+| read  | Reduce prompt leak                                          | Anthropic             | It shows how to keep private text out of replies, and to audit often.                | https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-prompt-leak          |
+| video | Defending against AI jailbreaks                             | Anthropic researchers | Four Anthropic researchers explain how they test and block attacks on a model.       | https://www.youtube.com/watch?v=BaNXYqcfDyo                                                             |
+| video | Constitutional Classifiers++                                | Anthropic             | How a second set of checks guards a model against attacks that work on many prompts. | https://www.youtube.com/watch?v=bqaReO7W7RY                                                             |
 
 ## Project
 
