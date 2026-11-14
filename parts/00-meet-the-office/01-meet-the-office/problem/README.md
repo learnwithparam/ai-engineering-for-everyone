@@ -2,17 +2,16 @@
 
 ## The problem
 
-You are the new admissions officer at Harbour Hill School. The school is made up for this course. About 1,200
-families want one of 180 places. Your team is three people and an inbox. Your boss asks you two questions:
-should we use AI here, and how would we know it works?
+You are the new admissions officer at Harbour Hill School, a made-up school. About 1,200 families want one of 180
+places. Your team is three people and an inbox. Your boss asks: should we use AI here, and how would we know it
+works?
 
-You cannot answer yet. First you need to see what AI in this office looks like. So you watch the finished office
-run. It reads six forms and puts each one in policy order. The policy is the school's written rules. Then it
-drafts a letter for each form, and it flags the forms a person must check.
+You cannot answer yet. First you watch the finished office run. It reads six forms and puts each one in policy
+order. The policy is the school's written rules. It drafts a letter for each form, and it flags the forms a
+person must check.
 
 For example, one line of the run is about form HH-0114 for Finn O'Rourke. It says
-`YES: the child lives at two addresses (clause 5.2)`. Finn spends equal time at both homes. In that case,
-clause 5.2 says a person decides.
+`YES: the child lives at two addresses (clause 5.2)`. Under clause 5.2, a person decides.
 
 ![The finished office: three forms need a person](../images/expected.png)
 
@@ -33,10 +32,10 @@ Expect: the last line starts with `3 of 6 forms need a person:` and lists three 
 5. Under **What the office flagged**, list the three form numbers. For each one, say why in a few words.
 
 6. Under **What I would hand to AI** and **What I would keep for a person**, split your task in two. Hand over the
-   part where a slip is cheap and a person checks it. Keep the part where a slip hurts someone. Keep this file. You
-   will come back to it as you go.
+   part where a slip is cheap and a person checks it. Keep the part where a slip hurts someone. You will come back
+   to this file.
 
-For example, a filled **Plan** part can be one word, like `Free`. A filled **Role** part can be one line, like
+For example, **Plan** can be one word, like `Free`. **Role** can be one line, like
 `Office manager at a small school`.
 
 ## Done when
@@ -47,8 +46,8 @@ For example, a filled **Plan** part can be one word, like `Free`. A filled **Rol
 - **What the office flagged** lists the forms the office flagged, and no others.
 - **What I would hand to AI** and **What I would keep for a person** each say something, and they are different.
 
-How this step is checked: the check reads `about-me.md`. It also runs the office three times on its own. It keeps
-the forms that are flagged every time. Your list must match those forms.
+How this step is checked: the check reads `about-me.md`. It runs the office three times and keeps the forms
+flagged every time. Your list must match them.
 
 ```bash
 bun run verify meet-the-office

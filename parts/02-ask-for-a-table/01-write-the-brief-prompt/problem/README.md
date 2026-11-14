@@ -2,8 +2,8 @@
 
 ## The problem
 
-The head teacher wants a short note on each form. You ask Claude: "Sum up this form." You get a nice paragraph.
-But each paragraph has a new shape. One leaves out the distance. One makes up a date of birth.
+The head teacher wants a short note on each form. You ask Claude: "Sum up this form." Each reply has a new
+shape. One leaves out the distance. One makes up a date of birth.
 
 The fix is a better prompt. A prompt is the text you give the AI. A good prompt has five parts:
 
@@ -52,8 +52,7 @@ A weak prompt gets a made-up date. If you see one, make your rule stronger and t
 - Rules tell the AI to write `unknown` when the form does not say.
 - **What I changed after trying it** has two tries, each with what went wrong and what you changed.
 
-How this step is checked: the check reads your prompt file. It does not read the chat, so the reply you got is
-for you.
+How this step is checked: the check reads your prompt file, not the chat.
 
 ```bash
 bun run verify write-the-brief-prompt

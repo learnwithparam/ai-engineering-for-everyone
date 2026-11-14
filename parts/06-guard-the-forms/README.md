@@ -37,13 +37,14 @@ flowchart LR
   REG --> H{A person signs}
 ```
 
-This part has three steps. The last one is extra:
+This part has four steps. The third is extra:
 
 | Step                                                                             | Minutes | What you hand in | What the check reads                                                                            |
 | -------------------------------------------------------------------------------- | ------- | ---------------- | ----------------------------------------------------------------------------------------------- |
 | [try-the-hidden-instruction](01-try-the-hidden-instruction/problem/README.md)    | 10      | `attack.md`      | what the form said, what Claude did, and whether the sibling field changed                      |
 | [write-the-guard-rules](02-write-the-guard-rules/problem/README.md)              | 10      | `guardrails.md`  | Never, Always and Needs a person, and 4 of 5 attacks stopped with 5 of 5 normal forms unchanged |
 | [map-the-personal-data](03-map-the-personal-data/problem/README.md) (go further) | 15      | `data-map.md`    | each kind of personal data, where it goes, and why                                              |
+| [check-the-fairness](04-check-the-fairness/problem/README.md)                    | 10      | `fairness.md`    | who could be treated worse, a swap test, and what families are told                             |
 
 Read this first, if you can:
 [Mitigate jailbreaks and prompt injections](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks).
@@ -79,10 +80,16 @@ bun run verify map-the-personal-data
 Expect: `Done. All 8 rules pass.` once `data-map.md` is filled in.
 
 ```bash
+bun run verify check-the-fairness
+```
+
+Expect: `Done. All 6 rules pass.` once `fairness.md` is filled in.
+
+```bash
 bun run verify part guard-the-forms
 ```
 
-Expect: `Part guard-the-forms is done: 3/3 steps pass.`
+Expect: `Part guard-the-forms is done: 4/4 steps pass.`
 
 ## Assignment
 

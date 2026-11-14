@@ -64,10 +64,10 @@ export default [
     tryNext: "Add a rule like: If the form does not say, write unknown. Never guess.",
   },
   {
-    says: "What I changed after trying it lists two tries, each with what went wrong and the change",
+    says: "What I changed after trying it lists two tries, each with a problem and a change",
     test: (folder) => triesInTheLog(folder) >= 2,
     tryNext:
-      "Try your prompt in Claude twice. In the table, write what went wrong and the one thing you " +
-      "changed each time.",
+      "Try your prompt in Claude twice. In the table, write what went wrong " +
+      "and the one thing you changed each time.",
   },
 ] satisfies Rule[];

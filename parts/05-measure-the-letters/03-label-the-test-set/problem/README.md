@@ -2,9 +2,8 @@
 
 ## The problem
 
-Your pass rules came from batch A. Do they work on letters you have not seen? You find out with a test set. A test
-set is a fixed group of cases where you know the right answer. You keep it, and you test the AI on it again after
-every change.
+Your pass rules came from batch A. Do they work on letters you have not seen? You find out with a test set: a
+fixed group of cases where you know the right answer. You test the AI on it again after every change.
 
 Batch B has 20 new letters, in `world/harbour-hill/letters/batch-b/`. An expert has already labelled them. Now you
 label them with your rules, and you see how often you agree with the expert.
@@ -35,12 +34,10 @@ So the row is:
 B05,no,Cites clause 4.6 but the policy has no clause 4.6.
 ```
 
-6. Do it on your own work. Open `own-test-set.csv`. Pick a task from your `about-me.md`. Add six real cases. For
-   each one, write the right answer before you ask the AI. Then paste what the AI gave, and mark `yes` or `no`. A
-   test set from your own work is the one you will keep using.
+6. Do it on your own work. In `own-test-set.csv`, add six real cases from a task in your `about-me.md`. Write the
+   right answer before you ask the AI. Then paste what it gave and mark `yes` or `no`.
 
-Watch out: a new batch can hold a new kind of fault. If a letter breaks no rule but is still wrong, mark it `no`.
-Then add a new mode and a new rule to `failure-modes.md`.
+Watch out: if a letter breaks no rule but is still wrong, mark it `no`. Add a new rule to `failure-modes.md`.
 
 ![What you see when your labels are right](../images/expected.png)
 
@@ -52,8 +49,8 @@ Then add a new mode and a new rule to `failure-modes.md`.
 - Every label that differs from the key has a reason of 5 or more words.
 - `own-test-set.csv` has six or more cases from your own task, each marked `yes` or `no`, and each `no` says why.
 
-How this step is checked: the check compares each label with `world/keys/letters-b.csv`. The bar is 16 of 20, not
-20 of 20. Labels are a judgment, and two careful people do not always agree.
+How this step is checked: the check compares each label with `world/keys/letters-b.csv`. The bar is 16 of 20,
+because two careful people do not always agree.
 
 ```bash
 bun run verify label-the-test-set
