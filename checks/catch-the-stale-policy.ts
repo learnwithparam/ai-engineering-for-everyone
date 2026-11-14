@@ -40,6 +40,6 @@ export default [
   {
     says: "The fix removes the old policy from the Project",
     test: (folder) => names(sectionIn(folder, "The fix"), REMOVE_WORDS),
-    tryNext: "A label is not enough, because Claude still reads the old file. Remove the 2026 file from the Project.",
+    tryNext: "A label is not enough, Claude still reads the old file. Remove the 2026 file.",
   },
 ] satisfies Rule[];

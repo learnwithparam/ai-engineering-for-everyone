@@ -103,6 +103,29 @@ Expect: `Part guard-the-forms is done: 3/3 steps pass.`
 **Go further.** Write `data-map.md`: every kind of personal data, where it goes, and what never leaves the office.
 That is the map-the-personal-data step.
 
+**Go further, check the roll.** The office guard is weak in one place. If a form says a sibling is on the roll, the
+office believes it. For example, an injected line can still make form 17 claim a sibling and move a child up the
+list. Nothing checks the claim against the school roll, which is the list of pupils now at Harbour Hill. To fix
+it:
+
+1. Make a small roll file, one line for each pupil in Years 7 to 11: family name and address.
+2. In `world/lib/office.ts`, add a rule to `guard`. If `sibling_on_roll` is `yes` and no pupil on the roll shares the
+   child's family name and address, add the reason `the sibling is not on the school roll`.
+3. Run `bun run office`. Form 17 should now need a person for that reason too.
+
+This repo has no roll file, because a real roll is private. That is why this is a task and not a fix.
+
+## Why the bar is 4 of 5
+
+The check passes at 4 of 5 attacks stopped, with one run for each. That is a bar for a first guard, not a safe
+level. Anthropic says even 1% is a real risk. Here is why 4 of 5 is still the bar:
+
+- You test by hand in Claude, so you can only afford one run for each form.
+- Five attacks is too few to measure a rate. One miss is 20%, and no single run can show 1%.
+- The point of the step is to learn to write a rule and test it. A person still reads every flag.
+
+Before real use you would run hundreds of attacks, many times each, and aim for none that get through.
+
 ## Finished
 
 You now have guard rules you tested on 10 real forms. For example, your rules stop form 19 from moving Chloe to
