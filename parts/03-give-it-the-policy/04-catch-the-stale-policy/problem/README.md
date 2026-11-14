@@ -54,9 +54,9 @@ Expect: `Done. All 4 rules pass.`
 
 ## If you get stuck
 
-| What you see                                           | Fix                                                               |
-| ------------------------------------------------------ | ----------------------------------------------------------------- |
-| `FAIL  What changed names both clauses that differ...` | Name both 4.3 and 5.2 under What changed.                         |
+| What you see                                            | Fix                                                                    |
+| ------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `FAIL  What changed names both clauses that differ...`  | Name both 4.3 and 5.2 under What changed.                              |
 | `FAIL  The fix removes the old policy from the Project` | Say you remove the 2026 file. A label does not stop Claude reading it. |
 
 ## Words you will use
