@@ -31,7 +31,9 @@ function inputNamesTheForm(folder: string): boolean {
 // Each try is one table row: the try, what went wrong, and what the learner changed.
 function triesInTheLog(folder: string): number {
   const rows = table(sectionIn(folder, "What I changed after trying it"));
-  const real = rows.filter((row) => filled(row["what went wrong"]) && filled(row["what i changed"]));
+  const real = rows.filter(
+    (row) => filled(row["what went wrong"]) && filled(row["what i changed"]),
+  );
   return real.length;
 }
 

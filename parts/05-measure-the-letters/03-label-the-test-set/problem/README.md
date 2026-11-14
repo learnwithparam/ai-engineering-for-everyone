@@ -35,6 +35,10 @@ So the row is:
 B05,no,Cites clause 4.6 but the policy has no clause 4.6.
 ```
 
+6. Do it on your own work. Open `own-test-set.csv`. Pick a task from your `about-me.md`. Add six real cases. For
+   each one, write the right answer before you ask the AI. Then paste what the AI gave, and mark `yes` or `no`. A
+   test set from your own work is the one you will keep using.
+
 Watch out: a new batch can hold a new kind of fault. If a letter breaks no rule but is still wrong, mark it `no`.
 Then add a new mode and a new rule to `failure-modes.md`.
 
@@ -46,6 +50,7 @@ Then add a new mode and a new rule to `failure-modes.md`.
 - Every `pass` cell is `yes` or `no`, and every `no` has a note of 5 or more words.
 - At least 16 of your 20 labels agree with the expert key.
 - Every label that differs from the key has a reason of 5 or more words.
+- `own-test-set.csv` has six or more cases from your own task, each marked `yes` or `no`, and each `no` says why.
 
 How this step is checked: the check compares each label with `world/keys/letters-b.csv`. The bar is 16 of 20, not
 20 of 20. Labels are a judgment, and two careful people do not always agree.
@@ -54,7 +59,7 @@ How this step is checked: the check compares each label with `world/keys/letters
 bun run verify label-the-test-set
 ```
 
-Expect: `Done. All 7 rules pass.`
+Expect: `Done. All 10 rules pass.`
 
 ## If you get stuck
 

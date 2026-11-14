@@ -26,6 +26,10 @@ flowchart LR
 2. Ask each question in your Harbour Hill Project. Write the clause Claude quoted in `claude_clause`.
 3. In `claude_hit`, write `yes` if Claude's clause is the one that holds the answer. Otherwise write `no`.
 
+4. Open `checking-habits.md`. Name the questions where Claude missed, say how you caught each miss, and write
+   one rule for when you will open the source before you trust Claude. People trust a sure voice too fast. A
+   rule you wrote down beats a promise to be careful.
+
 For example, R7 asks: how long do families have to appeal? The answer is in the appeals guide, clause A2. Claude
 may quote clause 10.1 of the policy instead. That clause says families can appeal, but not how long they have.
 So it is a miss:
@@ -41,6 +45,7 @@ R7,How long do families have to appeal?,appeals-guide.md,A2,10.1,no
 - `retrieval.csv` has a row for each of R1 to R10.
 - Your document and clause match the answer key on at least 8 of 10.
 - `claude_hit` is `yes` only where Claude cited the right clause.
+- `checking-habits.md` names each miss, says how you caught it, and has your own rule for when to check.
 
 How this step is checked: the check compares your picks with the answer key. Then it checks your `claude_hit`
 marks against your own `claude_clause` column.
@@ -49,7 +54,7 @@ marks against your own `claude_clause` column.
 bun run verify find-the-right-page
 ```
 
-Expect: `Done. All 5 rules pass.`
+Expect: `Done. All 8 rules pass.`
 
 ## If you get stuck
 

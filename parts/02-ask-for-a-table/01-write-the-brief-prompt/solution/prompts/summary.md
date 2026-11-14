@@ -33,7 +33,7 @@ The form is below, between the form tags. Paste the whole form there.
 
 ## What I changed after trying it
 
-| Try | What went wrong | What I changed |
-| --- | --- | --- |
-| 1 | The reply for form 13 made up a date of birth. | Added the rule: if the form does not say, write unknown. |
-| 2 | The reply ran to a paragraph, not five lines. | Listed the five lines in Output format, one each. |
+| Try | What went wrong                                | What I changed                                           |
+| --- | ---------------------------------------------- | -------------------------------------------------------- |
+| 1   | The reply for form 13 made up a date of birth. | Added the rule: if the form does not say, write unknown. |
+| 2   | The reply ran to a paragraph, not five lines.  | Listed the five lines in Output format, one each.        |

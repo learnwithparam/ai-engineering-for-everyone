@@ -66,7 +66,7 @@ Expect: `Done. All 7 rules pass.` once `failure-modes.md` is filled in.
 bun run verify label-the-test-set
 ```
 
-Expect: `Done. All 7 rules pass.` once `test-set.csv` is filled in.
+Expect: `Done. All 10 rules pass.` once `test-set.csv` is filled in.
 
 ```bash
 bun run verify test-the-judge

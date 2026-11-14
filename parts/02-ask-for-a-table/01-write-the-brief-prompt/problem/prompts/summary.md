@@ -23,6 +23,6 @@
 ## What I changed after trying it
 
 | Try | What went wrong | What I changed |
-| --- | --- | --- |
-| 1 | (write here) | (write here) |
-| 2 | (write here) | (write here) |
+| --- | --------------- | -------------- |
+| 1   | (write here)    | (write here)   |
+| 2   | (write here)    | (write here)   |

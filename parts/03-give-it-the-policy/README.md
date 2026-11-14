@@ -59,7 +59,7 @@ Expect: `Done. All 5 rules pass.` once `answers.csv` has the Project's answers a
 bun run verify find-the-right-page
 ```
 
-Expect: `Done. All 5 rules pass.` once `retrieval.csv` has all ten rows.
+Expect: `Done. All 8 rules pass.` once `retrieval.csv` has all ten rows and `checking-habits.md` is filled in.
 
 ```bash
 bun run verify catch-the-stale-policy
