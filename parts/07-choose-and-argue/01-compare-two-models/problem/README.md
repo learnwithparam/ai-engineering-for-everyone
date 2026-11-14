@@ -2,11 +2,7 @@
 
 ## The problem
 
-Your boss asks: "Which model should we use?" Most people pick the one they have heard of. You can do better. You
-have a cost for each model from price-the-season. Now you need how often each one is right.
-
-So you run the same prompt on the same forms with two models. You score both against the answer key. Then you
-decide, with both numbers in front of you.
+Your boss asks which model to use. Most people pick the one they have heard of. You can do better. Run the same prompt on the same six forms with two models. Score both against the answer key. For example, Haiku got 39 of 42 fields right and Sonnet got 42.
 
 ```mermaid
 flowchart LR
@@ -19,36 +15,27 @@ flowchart LR
   A --> D[Decision]
 ```
 
-## Your challenge
+## Watch it done
 
-1. Open `prompt.md` in this folder. It is the prompt both models get.
-2. In the Claude app, pick Haiku in the model menu. Run the prompt on each of these forms, one chat each:
-   `applications/16.md`, `18.md`, `20.md`, `22.md`, and the scans `28.png` and `30.png`.
-3. Paste each row Claude gives into `haiku.csv`, on the line with the same application id.
-4. Pick Sonnet in the menu and do it again. Paste the rows into `sonnet.csv`.
-5. Open `world/keys/applications.csv`. Compare each CSV with the key, field by field. Each CSV has 42 fields: 6
-   forms times 7 fields. Count the fields that match.
-6. Fill in `model-choice.md`. Copy each season cost from your `season-cost.md` in price-the-season.
-7. Write your Decision. Name the model, and give its accuracy and its season cost.
+Before, `model-choice.md` says `(write here)` in every cell. After, it shows both models side by side and a decision that cites both:
 
-For example, if Haiku said form 22 has a sibling, that is wrong. The form names a cousin, and a cousin does not
-count. If that was Haiku's only mistake, it got 41 of 42 right. That is 41 divided by 42, times 100: 97.6%.
-
-On the Free plan, a model may not be in your menu. Then copy `haiku.csv` and `sonnet.csv` from `../solution/` into
-this folder, and count those.
+| Model  | Fields right | Fields checked | Accuracy | Season cost |
+| ------ | ------------ | -------------- | -------- | ----------- |
+| Haiku  | 39           | 42             | 92.9%    | $0.47       |
+| Sonnet | 42           | 42             | 100%     | $9.36       |
 
 ![What you see when your comparison is right](../images/expected.png)
 
-## Done when
+## Your turn
 
-- `haiku.csv` and `sonnet.csv` each have the header and one row per test form.
-- Fields right for each model matches its CSV and the answer key.
-- Each accuracy is fields right out of 42, as a percent.
-- The season cost for each model matches Price the work, within 25%.
-- Decision names a model and cites an accuracy and a cost.
+You work in this `problem/` folder. The prompt is in `prompt.md`. The answer key is `world/keys/applications.csv`. The six forms are `applications/16.md`, `18.md`, `20.md`, `22.md` and the scans `28.png` and `30.png`.
 
-How this step is checked: the check scores your two CSVs against the key itself. Then it checks that your counts
-match. It works out the season cost again from the price list.
+1. In the Claude app, pick Haiku in the model menu. Paste the prompt from `prompt.md` and one form, one chat per form. Paste each row Claude gives into `haiku.csv`, on the line with the same application id.
+2. Pick Sonnet and do it again. Paste the rows into `sonnet.csv`.
+3. Compare each CSV with the key, field by field. Each CSV has 42 fields: 6 forms times 7 fields. Count the fields that match. A different date or number is wrong.
+4. Fill in `model-choice.md`. For the season cost, copy each model's cost for 1,200 forms from your `season-cost.md` in price-the-season, not the cost of one form.
+5. Write your Decision in one paragraph: the model, a percent, and a dollar cost.
+6. Run the check.
 
 ```bash
 bun run verify compare-two-models
@@ -56,16 +43,24 @@ bun run verify compare-two-models
 
 Expect: `Done. All 6 rules pass.`
 
-## If you get stuck
+If you see `FAIL Fields right for each model matches`, count again. For example, if Haiku said form 22 has a sibling, that is wrong. The form names a cousin, and a cousin does not count. If you see `FAIL Decision names a model and cites`, put the model name, a percent and a cost in the same paragraph.
 
-| What you see                                  | Fix                                                                    |
-| --------------------------------------------- | ---------------------------------------------------------------------- |
-| `FAIL Fields right for each model matches`    | Count again, one field at a time. A different date or number is wrong. |
-| `FAIL the season cost for each model matches` | Use the season cost, for 1,200 forms, not the cost of one form.        |
-| `FAIL Decision names a model and cites`       | Write the model name, a percent, and a dollar cost in one paragraph.   |
+On the Free plan, a model may be missing from your menu. Then copy `haiku.csv` and `sonnet.csv` from `../solution/` into this folder and count those. Those files are recorded sample answers.
 
-## Words you will use
+## Do it on your work
 
-- **Accuracy**: how many fields a model got right, out of all the fields you checked.
-- **Model menu**: the list in the Claude app where you pick Haiku, Sonnet or Opus.
-- **Decision**: the model you pick, with the numbers that make the case.
+Take one task you repeat and six real cases with a known right answer. Run one prompt on two models. Count the right answers and price a season for each. Good looks like a decision that names both numbers.
+
+## Done when
+
+- `haiku.csv` and `sonnet.csv` each have the header and one row per test form.
+- Fields right for each model matches its CSV and the answer key.
+- Each accuracy is fields right out of 42, as a percent.
+- The season cost for each model matches price-the-season, within 25%.
+- Decision names a model and cites an accuracy and a cost.
+
+The check does not run any model. It scores your two CSVs against the key itself, checks that your counts match, and works out the season cost again from the price list.
+
+## Solution
+
+The after state is `model-choice.md` plus the two CSVs. See `solution/` for recorded sample answers.

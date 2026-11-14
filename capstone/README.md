@@ -9,8 +9,8 @@ bun capstone/check.ts my-work
 
 Expect: `Done. All 9 capstone rules pass.` when your files are filled in.
 
-The check reads only your folder. It proves the files have the right shape, that you have at least six
-real cases, that every miss has a reason, and that your result matches the count in the file. It cannot
+The check reads only your folder. It proves the files have the right shape. It proves you have at least six
+real cases and that every miss has a reason. It also proves your result matches the count in the file. It cannot
 judge whether your task is a good one. A person you trust should read it.
 
 `capstone/sample` shows a finished example.

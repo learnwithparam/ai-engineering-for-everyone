@@ -6,7 +6,7 @@ Each season, three people read 1,200 forms by hand and type each one into the re
 
 ## Source of truth
 
-The register, `register.json`, and the 2027 admissions policy. The AI never changes the register. A person does.
+The register, `register.json`, and the new admissions policy. The AI never changes the register. A person does.
 
 ## What AI does
 
