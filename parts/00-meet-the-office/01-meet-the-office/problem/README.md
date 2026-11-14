@@ -28,9 +28,13 @@ Expect: the last line starts with `3 of 6 forms need a person:` and lists three 
 
 2. Open `world/state/office-report.html` in your web browser. Look at the red cards. Read why each one needs a
    person.
-3. Open `about-me.md` in this folder. It has four parts. Fill in all four.
+3. Open `about-me.md` in this folder. It has six parts. Fill in all six.
 4. In each part, replace the `(write here ...)` line with your own words.
 5. Under **What the office flagged**, list the three form numbers. For each one, say why in a few words.
+
+6. Under **What I would hand to AI** and **What I would keep for a person**, split your task in two. Hand over the
+   part where a slip is cheap and a person checks it. Keep the part where a slip hurts someone. Keep this file. You
+   will come back to it as you go.
 
 For example, a filled **Plan** part can be one word, like `Free`. A filled **Role** part can be one line, like
 `Office manager at a small school`.
@@ -41,6 +45,7 @@ For example, a filled **Plan** part can be one word, like `Free`. A filled **Rol
 - **Plan** names your Claude plan: Free, Pro, Max, Ultra, Team or Enterprise.
 - **Role** and **A task I want help with** each have your own words.
 - **What the office flagged** lists the forms the office flagged, and no others.
+- **What I would hand to AI** and **What I would keep for a person** each say something, and they are different.
 
 How this step is checked: the check reads `about-me.md`. It also runs the office three times on its own. It keeps
 the forms that are flagged every time. Your list must match those forms.
@@ -49,7 +54,7 @@ the forms that are flagged every time. Your list must match those forms.
 bun run verify meet-the-office
 ```
 
-Expect: `Done. All 5 rules pass.`
+Expect: `Done. All 7 rules pass.`
 
 ## If you get stuck
 

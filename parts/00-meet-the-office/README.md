@@ -63,4 +63,4 @@ Expect: `3 of 6 forms need a person: HH-0113, HH-0114, HH-0117`
 bun run verify meet-the-office
 ```
 
-Expect: `Done. All 5 rules pass.` once `about-me.md` is filled in.
+Expect: `Done. All 7 rules pass.` once `about-me.md` is filled in.

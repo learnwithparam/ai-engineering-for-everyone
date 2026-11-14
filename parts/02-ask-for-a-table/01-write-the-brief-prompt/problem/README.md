@@ -38,6 +38,9 @@ back:
 
 A weak prompt gets a made-up date. If you see one, make your rule stronger and try again.
 
+6. Try it twice, on two different forms. After each try, add a row to **What I changed after trying it**: what
+   went wrong, and the one thing you changed. A prompt gets good by small fixes, not by one big write.
+
 ![What you see when your prompt is right](../images/expected.png)
 
 ## Done when
@@ -47,6 +50,7 @@ A weak prompt gets a made-up date. If you see one, make your rule stronger and t
 - Input says where the form goes.
 - Output format lists exactly five lines.
 - Rules tell the AI to write `unknown` when the form does not say.
+- **What I changed after trying it** has two tries, each with what went wrong and what you changed.
 
 How this step is checked: the check reads your prompt file. It does not read the chat, so the reply you got is
 for you.
@@ -55,7 +59,7 @@ for you.
 bun run verify write-the-brief-prompt
 ```
 
-Expect: `Done. All 5 rules pass.`
+Expect: `Done. All 6 rules pass.`
 
 ## If you get stuck
 
@@ -64,6 +68,7 @@ Expect: `Done. All 5 rules pass.`
 | `FAIL  it has the sections Role, Task...`      | Keep the five `##` headings. Write a line under each one.           |
 | `FAIL  Output format lists exactly five lines` | Start each summary line with `1.` or `-`. Use five lines, no more.  |
 | `FAIL  Rules tell the AI to write unknown...`  | Add the rule: If the form does not say, write unknown. Never guess. |
+| `FAIL  What I changed after trying it...`      | Fill two rows. Say what went wrong, then the one change you made.   |
 
 ## Words you will use
 

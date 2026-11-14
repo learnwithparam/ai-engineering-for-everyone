@@ -49,7 +49,7 @@ it. The Expect line under each command says what you see once that step's file i
 bun run verify write-the-brief-prompt
 ```
 
-Expect: `Done. All 5 rules pass.` once `prompts/summary.md` is filled in.
+Expect: `Done. All 6 rules pass.` once `prompts/summary.md` is filled in.
 
 ```bash
 bun run verify extract-the-fields
