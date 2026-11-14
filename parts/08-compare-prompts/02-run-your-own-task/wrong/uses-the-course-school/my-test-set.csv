@@ -1,0 +1,7 @@
+case,right_answer,ai_answer,pass,note
+Open on Monday?,Yes 9 to 5,Yes 9 to 5,yes,
+Open on Sunday?,Closed,Closed,yes,
+Open on a bank holiday?,Closed,Open 10 to 4,no,It did not know about bank holidays and guessed.
+Open late on Thursday?,Yes until 8,Yes until 8,yes,
+Open on Christmas Eve?,Closes at 2,Open all day,no,It missed the special hours on Christmas Eve.
+Open on Saturday?,Yes 10 to 4,Yes 10 to 4,yes,

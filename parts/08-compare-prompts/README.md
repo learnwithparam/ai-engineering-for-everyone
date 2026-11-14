@@ -23,9 +23,10 @@ flowchart LR
   W --> C[assignment/check.ts]
 ```
 
-| Step                                                            | Minutes | What you hand in | What the check reads      |
-| --------------------------------------------------------------- | ------- | ---------------- | ------------------------- |
-| [view-the-comparison](01-view-the-comparison/problem/README.md) | 10      | `verdict.md`     | a winner for every prompt |
+| Step                                                            | Minutes | What you hand in                | What the check reads                                |
+| --------------------------------------------------------------- | ------- | ------------------------------- | --------------------------------------------------- |
+| [view-the-comparison](01-view-the-comparison/problem/README.md) | 10      | `verdict.md`                    | a winner for every prompt                           |
+| [run-your-own-task](02-run-your-own-task/problem/README.md)     | 20      | `my-task.md`, `my-test-set.csv` | your own task, six cases, and a result that adds up |
 
 ## Walkthrough
 
@@ -48,6 +49,12 @@ bun run verify view-the-comparison
 ```
 
 Expect: `Done. All 3 rules pass.` once `verdict.md` is filled in.
+
+```bash
+bun run verify run-your-own-task
+```
+
+Expect: `Done. All 9 rules pass.` once `my-task.md` and `my-test-set.csv` are filled in.
 
 ```bash
 bun assignment/check.ts
