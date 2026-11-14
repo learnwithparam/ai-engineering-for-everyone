@@ -44,7 +44,7 @@ this folder, and count those.
 - `haiku.csv` and `sonnet.csv` each have the header and one row per test form.
 - Fields right for each model matches its CSV and the answer key.
 - Each accuracy is fields right out of 42, as a percent.
-- The season cost for each model matches part one, within 25%.
+- The season cost for each model matches Price the work, within 25%.
 - Decision names a model and cites an accuracy and a cost.
 
 How this step is checked: the check scores your two CSVs against the key itself. Then it checks that your counts

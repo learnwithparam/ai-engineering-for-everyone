@@ -1,6 +1,6 @@
 // List prices in US dollars per million tokens, read from the Claude pricing page on 2026-11-12:
 // https://platform.claude.com/docs/en/about-claude/pricing
-// Part one of the course prices a season on the three models people pick in the Claude app menu.
+// The Price the work part prices a season on the three models people pick in the Claude app menu.
 // The checker recomputes every learner sheet from this table, so update it here when prices change.
 import { MENU_FOR_ID } from "./models";
 

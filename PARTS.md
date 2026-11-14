@@ -10,6 +10,7 @@ Learner pages follow the rules at the end. The brief is `ai-engineering-for-ever
 | --------------------------- | -------------------------------------------------------- | ------- |
 | `parts/00-meet-the-office/` | meet-the-office                                          | 15      |
 | `parts/01-price-the-work/`  | count-the-tokens, price-the-season, spot-the-hidden-cost | 30      |
+| `parts/08-compare-prompts/` | view-the-comparison                                      | 10      |
 
 ## Still to build
 

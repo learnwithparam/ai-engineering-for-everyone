@@ -9,7 +9,7 @@ A project brief is that page. You already have every part of it. Now you put the
 
 ```mermaid
 flowchart LR
-  C[Cost from part one] --> B[Project brief]
+  C[Cost sheet] --> B[Project brief]
   T[Test set from measure-the-letters] --> B
   G[Guard rules] --> B
   M[Model choice] --> B
@@ -37,7 +37,7 @@ For example, the Harbour Hill cost lines are:
 - Cost: $9.36 a season
 ```
 
-That is 2,402 times $2, plus 300 times $10, divided by 1,000,000, times 1,200. Part one used form 03 and got $9.33. Here
+That is 2,402 times $2, plus 300 times $10, divided by 1,000,000, times 1,200. Price the work used form 03 and got $9.33. Here
 the form is the average form, 586 tokens, so it costs a bit more. A full Harbour Hill brief is in
 `../solution/project-brief.md`. Read it after you write your own.
 
