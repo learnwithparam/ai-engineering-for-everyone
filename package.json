@@ -4,7 +4,7 @@
   "type": "module",
   "packageManager": "bun@1.4.4",
   "scripts": {
-    "check": "bun scripts/readable.ts && bun scripts/plain-english.ts && bun scripts/check.ts && bun scripts/verify.ts --all && bun scripts/assignment-proof.ts && bun run text-audit",
+    "check": "bun scripts/readable.ts && bun scripts/plain-english.ts && bun scripts/check.ts && bun scripts/verify.ts --all && bun scripts/assignment-proof.ts && bun scripts/text-audit.ts && bun test scripts/prose.test.ts && bun test scripts/dates.test.ts && bun scripts/capstone.ts && bun test scripts/shape.test.ts && bun scripts/picks.ts && bun scripts/ladder.ts && bun test scripts/workfiles.test.ts scripts/picks.test.ts scripts/ladder.test.ts scripts/changed.test.ts",
     "text-audit": "bun scripts/text-audit.ts",
     "readable": "bun scripts/readable.ts",
     "format": "biome check --write .",
@@ -15,7 +15,10 @@
     "words": "bun world/words.ts",
     "models": "bun config/try-models.ts",
     "record": "bun world/record.ts",
-    "measure-tokens": "bun world/measure-tokens.ts"
+    "measure-tokens": "bun world/measure-tokens.ts",
+    "check:changed": "bun scripts/changed.ts",
+    "picks": "bun scripts/picks.ts",
+    "ladder": "bun scripts/ladder.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "4.0.103",
@@ -32,6 +35,8 @@
     "@types/papaparse": "5.5.2",
     "typescript": "7.0.2"
   },
+  "picks": true,
+  "capstone": true,
   "plainEnglish": {
     "grade": 6
   }
