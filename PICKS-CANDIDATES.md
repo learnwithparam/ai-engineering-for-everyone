@@ -6,6 +6,7 @@ cuts each part to 4 to 6, keeps at least 2 videos, checks every link is live, an
 memory and need a check when the link is added.
 
 ## 00 meet-the-office
+
 1. Anthropic, "Building effective agents", 2024. Read. The makers of Claude describe workflows and agents in plain terms.
 2. Anthropic, Claude documentation, "Overview". Read. Official docs for what Claude is and how to start.
 3. Andrej Karpathy, "Intro to Large Language Models", 2023. Video. A former OpenAI researcher explains how the models work, for a wide audience.
@@ -16,6 +17,7 @@ memory and need a check when the link is added.
 8. NIST, "AI Risk Management Framework", 2023. Read. A public body's plain frame for AI risk. Use the overview page.
 
 ## 01 price-the-work
+
 1. Anthropic, Claude documentation, "Pricing". Read. The source of the real prices. Evergreen as a method, check numbers each term.
 2. Anthropic, Claude documentation, "Token counting". Read. Official, shows how to count before you pay.
 3. Andrej Karpathy, "Let's build the GPT Tokenizer", 2024. Video. Shows why tokens are not words, by the person who teaches it best.
@@ -26,6 +28,7 @@ memory and need a check when the link is added.
 8. Chip Huyen, "Building a generative AI platform", 2024. Read. An author and practitioner on cost and latency in production.
 
 ## 02 ask-for-a-table
+
 1. Anthropic, Claude documentation, "Prompt engineering overview". Read. Official, kept current.
 2. Anthropic, Claude documentation, "Be clear and direct" and "Use XML tags". Read. Official guidance on the five parts of a prompt.
 3. Anthropic, Claude documentation, "Increase output consistency" (structured output). Read. Official, on fixed shapes.
@@ -36,6 +39,7 @@ memory and need a check when the link is added.
 8. DeepLearning.AI and OpenAI (Andrew Ng, Isa Fulford), "ChatGPT Prompt Engineering for Developers", 2023. Video course. Free and by the people who teach it at scale.
 
 ## 03 give-it-the-policy
+
 1. Anthropic, Claude documentation, "Projects" help article. Read. Official source on how a Project holds files.
 2. Anthropic, "Introducing Contextual Retrieval", 2024. Read. The maker explains why the wrong page gets picked and how to fix it.
 3. Anthropic, Claude documentation, "Long context tips". Read. Official advice on putting documents in a prompt.
@@ -46,6 +50,7 @@ memory and need a check when the link is added.
 8. Anthropic, "Reducing hallucinations", Claude documentation. Read. Official steps such as quoting the source.
 
 ## 04 let-it-act-safely
+
 1. Anthropic, "Building effective agents", 2024. Read. Covers tools and when to keep a person in the loop.
 2. Anthropic, Claude documentation, "Tool use overview". Read. Official source on how a model asks for a tool.
 3. Anthropic, "Model Context Protocol" introduction and docs, 2024. Read. By the team that made the protocol.
@@ -57,6 +62,7 @@ memory and need a check when the link is added.
 9. Anthropic, "Claude's constitution" or "Responsible Scaling Policy" overview, as a check on how a maker thinks about limits. Read. Optional.
 
 ## 05 measure-the-letters
+
 1. Hamel Husain, "Your AI product needs evals", 2024. Read. A working practitioner, plain and concrete.
 2. Hamel Husain and Shreya Shankar, "Creating a LLM-as-a-Judge that drives business results", 2024. Read. Same authors, on yes or no labels and agreeing with an expert.
 3. Anthropic, Claude documentation, "Create strong empirical evaluations". Read. Official guidance.
@@ -68,6 +74,7 @@ memory and need a check when the link is added.
 9. Andrew Ng, "Machine Learning Yearning" chapters on dev and test sets. Read. Free and from a leading teacher.
 
 ## 06 guard-the-forms
+
 1. Anthropic, "Mitigate jailbreaks and prompt injections", Claude documentation. Read. Official, already cited in the part.
 2. Anthropic, "Mitigating the risk of prompt injections in browser use", 2025. Read. The maker's data on attack success rates.
 3. Simon Willison, "Prompt injection explained", 2023 onward. Read and watch. The person who named the problem.
@@ -81,6 +88,7 @@ memory and need a check when the link is added.
 11. Buolamwini and Gebru, "Gender Shades", 2018. Read or watch the talk. The original study of unequal error rates, widely cited.
 
 ## 07 choose-and-argue
+
 1. Anthropic, Claude documentation, "Choosing a model". Read. Official.
 2. Anthropic, Claude documentation, "Create strong empirical evaluations". Read. Official, on picking by your own numbers.
 3. Hamel Husain, "Your AI product needs evals", 2024. Read. Practitioner.
@@ -91,6 +99,7 @@ memory and need a check when the link is added.
 8. Chip Huyen, "Common pitfalls when building generative AI applications", 2025. Read. Practitioner.
 
 ## 08 compare-prompts
+
 1. promptfoo, official docs, "Getting started" and "Comparing models". Read. Made by the team that runs the tool.
 2. promptfoo, "Intro to red teaming and evals", docs. Read. Same team.
 3. Anthropic, Claude documentation, "Develop test cases". Read. Official.
