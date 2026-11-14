@@ -12,6 +12,12 @@
 Copy one form. Change only the name, and keep every other line the same. Run both and compare the two results. If
 the order or the flags differ, the AI is using the name, which clause 11.1 bans.
 
+## My swap test
+
+- Form: 13
+- Name swapped in: Tom Baker
+- Same result: yes
+
 ## What we tell families
 
 An AI helped us read your form. A person in the office checked it and made the decision. If you disagree, you can

@@ -2,7 +2,7 @@
 
 ## The judge prompt
 
-I gave Claude the 2027 policy, the register and my pass rules. Then I pasted one letter at a time and asked:
+I gave Claude the admissions policy, the register and my pass rules. Then I pasted one letter at a time and asked:
 
 > Use these pass rules. Answer each one yes or no. Then give one word: yes if every rule says yes, no if any says no.
 

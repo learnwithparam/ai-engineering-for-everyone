@@ -1,30 +1,22 @@
 # Meet the office
 
+## After this part you can
+
+Run the finished office and say which forms it flags for a person.
+
+## You leave with
+
+An `about-me.md` file that names your plan, your role, one task, and what you would hand to AI.
+
 ## The problem
 
-Harbour Hill School is made up for this course. It is a free state school. It has 180 places in Year 7, the
-first year of secondary school. About 1,200 families apply for those places. Three people read every form and answer every email. They also keep the waiting
-list and sign every letter.
+Harbour Hill School is made up for this course. It is a free state school with 180 places in Year 7, the first year of secondary school. About 1,200 families apply. Three people read every form, answer every email, keep the waiting list and sign every letter.
 
-Schools and colleges now use AI for this kind of work. So the question is not "can AI read a form?" The real
-questions are these:
+Schools and colleges now use AI for this kind of work. So the question is not whether AI can read a form. The real questions are these. What should the AI do? What does it cost? Who checks its work?
 
-- What should the AI do?
-- What does it cost?
-- Who checks its work?
+For example, form HH-0113 is for Zainab Hussain. It has no date of birth. The finished office does not guess. It flags the form and says the date of birth is unknown. A flag means a person must look first.
 
-In this part you meet the office. You watch the finished system run, so you know where the course is going.
-
-For example, the finished office reads form HH-0113 for Zainab Hussain. The form has no date of birth. So the
-office does not guess. It flags the form, and it prints `YES: date of birth is unknown`. A flag means "a person
-must look at this first".
-
-The diagram shows the whole office. Two words in it may be new:
-
-- The **policy** is the school's written rules for who gets a place.
-- The **register** is the list of every child and where they stand.
-
-The AI reads and drafts. The policy sets the order on the register. A person checks and signs.
+Two words in the diagram are new. The **policy** is the school's written rules for who gets a place. The **register** is the list of every child and where they stand.
 
 ```mermaid
 flowchart LR
@@ -37,15 +29,13 @@ flowchart LR
   H --> O[Letters go out]
 ```
 
-In this part there is one step:
+## Steps
 
-| Step                                                    | Minutes | What you hand in | What the check reads                                       |
-| ------------------------------------------------------- | ------- | ---------------- | ---------------------------------------------------------- |
-| [meet-the-office](01-meet-the-office/problem/README.md) | 15      | `about-me.md`    | your plan, role and task, and the forms the office flagged |
+| Step                                                    | What you hand in | What the check reads                                       |
+| ------------------------------------------------------- | ---------------- | ---------------------------------------------------------- |
+| [meet-the-office](01-meet-the-office/problem/README.md) | `about-me.md`    | your plan, role and task, and the forms the office flagged |
 
-## Walkthrough
-
-Run these three commands in order. The Expect line under each one says what you should see.
+Run these three commands in order.
 
 ```bash
 bun run world
@@ -57,10 +47,23 @@ Expect: `The office is ready. Next: bun run office`
 bun run office
 ```
 
-Expect: `3 of 6 forms need a person: HH-0113, HH-0114, HH-0117`
+Expect: the last line says "3 of 6 forms need a person" and names three forms.
 
 ```bash
 bun run verify meet-the-office
 ```
 
 Expect: `Done. All 7 rules pass.` once `about-me.md` is filled in.
+
+## Watch and read
+
+| Kind  | Title                                  | Author              | Why                                                  | Link                                                             |
+| ----- | -------------------------------------- | ------------------- | ---------------------------------------------------- | ---------------------------------------------------------------- |
+| video | Large Language Models explained briefly | 3Blue1Brown         | A short, clear picture of what an AI model does      | https://www.youtube.com/watch?v=LPZh9BOjkQs                      |
+| video | Intro to Large Language Models         | Andrej Karpathy     | A full talk on what these models can and cannot do   | https://www.youtube.com/watch?v=zjkBMFhNj_g                      |
+| read  | Building effective agents              | Anthropic           | Why to keep the AI system simple and add steps slowly | https://www.anthropic.com/research/building-effective-agents     |
+| read  | Models overview                        | Anthropic           | What the Claude models are and how they differ       | https://platform.claude.com/docs/en/models/overview              |
+
+## Project
+
+Name one real task from your own work. Say which part you would hand to AI and which part a person keeps.

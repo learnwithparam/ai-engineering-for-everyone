@@ -56,7 +56,7 @@ The practice folder is `world/harbour-hill/`. Open these three files and look th
 bun run office
 ```
 
-Expect: `3 of 6 forms need a person: HH-0113, HH-0114, HH-0117`
+Expect: the last line says "3 of 6 forms need a person" and names three forms.
 
 Now open `world/state/office-report.html` in your web browser. This page is the goal of the course:
 
@@ -76,7 +76,7 @@ Every step starts with a check that fails. That is fine. It shows you what is le
 bun run verify meet-the-office
 ```
 
-Expect: one `PASS` line, four `FAIL` lines, `1 of 5 rules pass.` and `Progress: 0/26 steps pass.`
+Expect: one `PASS` line, six `FAIL` lines, `1 of 7 rules pass.` and a `Progress:` line.
 
 Each `FAIL` line has a `Try next:` line under it. For example, you see `FAIL  Plan names your Claude plan`. The
 line under it tells you to write your plan name, such as Free or Pro.

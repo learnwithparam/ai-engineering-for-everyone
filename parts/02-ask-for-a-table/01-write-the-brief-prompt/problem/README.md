@@ -2,10 +2,7 @@
 
 ## The problem
 
-The head teacher wants a short note on each form. You ask Claude: "Sum up this form." Each reply has a new
-shape. One leaves out the distance. One makes up a date of birth.
-
-The fix is a better prompt. A prompt is the text you give the AI. A good prompt has five parts:
+The head teacher wants a short note on each form. You ask Claude: "Sum up this form." Each reply has a new shape. One leaves out the distance. One makes up a date of birth. The fix is a better prompt, the text you give the AI.
 
 ```mermaid
 flowchart LR
@@ -15,44 +12,28 @@ flowchart LR
   RU --> O[Output format: the exact shape of the answer]
 ```
 
-## Your challenge
+## Watch it done
 
-Fill in `prompts/summary.md` in this folder. It has the five headings already.
-
-1. **Role**: say who the AI works for.
-2. **Task**: ask for a summary of one form in five lines.
-3. **Input**: say where the form goes.
-4. **Rules**: one rule on each line. One rule must say: if the form does not say, write `unknown`.
-5. **Output format**: list the five lines, one list line each. For example: the child, the home, any priority,
-   the school's place in the family's list, and if a person must check it.
-
-Then try it. Open Claude.ai. Paste your prompt, and paste `world/harbour-hill/applications/13.md` where the
-form goes. Read the reply.
-
-For example, form 13 is for Zainab Hussain. Her form has no date of birth. A good prompt gets this first line
-back:
+Before, a vague prompt makes up a date for form 13. After, a prompt with a rule about unknown gives this first line.
 
 ```text
 1. Child: Zainab Hussain, date of birth unknown
 ```
 
-A weak prompt gets a made-up date. If you see one, make your rule stronger and try again.
-
-6. Try it twice, on two different forms. After each try, add a row to **What I changed after trying it**: what
-   went wrong, and the one thing you changed. A prompt gets good by small fixes, not by one big write.
-
 ![What you see when your prompt is right](../images/expected.png)
 
-## Done when
+## Your turn
 
-- `prompts/summary.md` has the sections Role, Task, Input, Rules and Output format.
-- Each section has at least one real line.
-- Input says where the form goes.
-- Output format lists exactly five lines.
-- Rules tell the AI to write `unknown` when the form does not say.
-- **What I changed after trying it** has two tries, each with what went wrong and what you changed.
+Fill in `prompts/summary.md` in this folder. It has five headings already.
 
-How this step is checked: the check reads your prompt file, not the chat.
+1. Under **Role**, say who the AI works for.
+2. Under **Task**, ask for a summary of one form in five lines.
+3. Under **Input**, say where the form goes.
+4. Under **Rules**, write one rule on each line. One rule must say: if the form does not say, write unknown. Never guess.
+5. Under **Output format**, list the five lines, one list line each. For example: the child, the home, any priority, the school's place in the family's list, and if a person must check it.
+6. Try it. Open Claude.ai. Paste your prompt, and paste `world/harbour-hill/applications/13.md` where the form goes. Read the reply. A made-up date means your rule is too weak. Make it stronger and try again.
+7. Try a second form. After each try, add a row to **What I changed after trying it**: what went wrong, and the one thing you changed. A prompt gets good by small fixes.
+8. Run the check.
 
 ```bash
 bun run verify write-the-brief-prompt
@@ -60,18 +41,20 @@ bun run verify write-the-brief-prompt
 
 Expect: `Done. All 6 rules pass.`
 
-## If you get stuck
+If a line says the output must have five lines, start each summary line with `1.` or `-`. If the unknown rule fails, add: If the form does not say, write unknown. Never guess.
 
-| What you see                                   | Fix                                                                 |
-| ---------------------------------------------- | ------------------------------------------------------------------- |
-| `FAIL  it has the sections Role, Task...`      | Keep the five `##` headings. Write a line under each one.           |
-| `FAIL  Output format lists exactly five lines` | Start each summary line with `1.` or `-`. Use five lines, no more.  |
-| `FAIL  Rules tell the AI to write unknown...`  | Add the rule: If the form does not say, write unknown. Never guess. |
-| `FAIL  What I changed after trying it...`      | Fill two rows. Say what went wrong, then the one change you made.   |
+## Do it on your work
 
-## Words you will use
+Write the same five parts for one task of your own, such as a note on an email or a ticket. Good looks like a rule for every gap you fear, and a reply you can read in a few seconds.
 
-- **Prompt**: the text you give the AI. It says what to do and how to answer.
-- **Role**: who the AI should act as, such as a helper in the admissions office.
-- **Output format**: the exact shape you want back, such as five lines with fixed names.
-- **Unknown**: the word the AI writes when the form does not give the fact.
+## Done when
+
+- `prompts/summary.md` has Role, Task, Input, Rules and Output format, each with a real line.
+- Input says where the form goes.
+- Output format lists exactly five lines.
+- Rules tell the AI to write unknown when the form does not say.
+- **What I changed after trying it** has two tries.
+
+## Solution
+
+The after state is a filled prompt file. See `solution/prompts/summary.md`.

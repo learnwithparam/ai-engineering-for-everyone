@@ -6,7 +6,7 @@ I read 20 letters in batch A. 5 were marked no.
 
 | Failure mode                | Count | Pass rule                                                        |
 | --------------------------- | ----- | ---------------------------------------------------------------- |
-| The clause does not exist   | 2     | Does every clause number in the letter exist in the 2027 policy? |
+| The clause does not exist   | 2     | Does every clause number in the letter exist in the admissions policy? |
 | Does not match the register | 3     | Do the name and the status in the letter match the register?     |
 | Says the AI decided         | 1     | Does the letter say only a person makes the decision?            |
 | No way to appeal            | 1     | Does every waiting list letter say how to appeal?                |

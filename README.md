@@ -38,7 +38,7 @@ Expect: `The office is ready. Next: bun run office`
 bun run office
 ```
 
-Expect: `3 of 6 forms need a person: HH-0113, HH-0114, HH-0117`
+Expect: the last line says "3 of 6 forms need a person" and names three forms.
 
 The last line names three forms. Now open `world/state/office-report.html` in your web browser. You see this
 page:
@@ -124,7 +124,7 @@ reads your file and tells you what passed.
 | [Choose and argue](parts/07-choose-and-argue/README.md)       | 3     | 40      | a model choice, a vendor review and a project brief |
 | [Compare prompts](parts/08-compare-prompts/README.md)         | 1     | 10      | a verdict on which prompt wins                      |
 
-Steps marked "go further" are extra. The main path takes about 240 minutes. Everything takes about 310 minutes.
+Steps marked "go further" are extra. The main path leaves them out.
 Start with [00-orientation](00-orientation/README.md).
 
 ## The project

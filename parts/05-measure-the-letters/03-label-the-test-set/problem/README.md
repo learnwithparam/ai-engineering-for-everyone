@@ -2,11 +2,7 @@
 
 ## The problem
 
-Your pass rules came from batch A. Do they work on letters you have not seen? You find out with a test set: a
-fixed group of cases where you know the right answer. You test the AI on it again after every change.
-
-Batch B has 20 new letters, in `world/harbour-hill/letters/batch-b/`. An expert has already labelled them. Now you
-label them with your rules, and you see how often you agree with the expert.
+Your pass rules came from batch A. Do they work on letters you have not seen? A test set is a fixed group of cases where you know the right answer. Batch B has 20 new letters. An expert has labelled them. You label them with your rules and count how often you agree.
 
 ```mermaid
 flowchart LR
@@ -16,41 +12,32 @@ flowchart LR
   K -->|no| W[Write why]
 ```
 
-## Your challenge
+## Watch it done
 
-Fill in `test-set.csv` in this folder. It has one row for each letter, B01 to B20. Row B01 is the letter in
-`world/harbour-hill/letters/batch-b/01.md`, and so on.
+Before, the starter `test-set.csv` is empty. The check prints this:
 
-1. Open your `failure-modes.md` from the last step. Keep your pass rules beside you.
-2. For each letter, ask each pass rule. If every rule says yes, write `yes`. If one says no, write `no`.
-3. For each `no`, write a note: which rule failed, and why.
-4. When all 20 are done, run the check. It tells you how many labels agree with the expert.
-5. Open `world/keys/letters-b.csv`. For each letter where you disagree, write in `note` why you chose your label.
-
-For example, letter B05 cites clause 4.6. Your rule "Does every clause number exist in the 2027 policy?" says no.
-So the row is:
-
-```
-B05,no,Cites clause 4.6 but the policy has no clause 4.6.
+```text
+  FAIL  every pass cell in test-set.csv says yes or no
+  FAIL  at least 16 of your 20 labels agree with the expert key
+  FAIL  every label that differs from the key has a reason of 5 or more words
+  FAIL  own-test-set.csv has 6 or more different cases from your own work, all filled in
 ```
 
-6. Do it on your own work. In `own-test-set.csv`, add six real cases from a task in your `about-me.md`. Write the
-   right answer before you ask the AI. Then paste what it gave and mark `yes` or `no`.
-
-Watch out: if a letter breaks no rule but is still wrong, mark it `no`. Add a new rule to `failure-modes.md`.
+After, 16 or more labels agree with the expert. The check prints `Done. All 10 rules pass.`
 
 ![What you see when your labels are right](../images/expected.png)
 
-## Done when
+## Your turn
 
-- `test-set.csv` has the header `letter,pass,note` and 20 rows, B01 to B20.
-- Every `pass` cell is `yes` or `no`, and every `no` has a note of 5 or more words.
-- At least 16 of your 20 labels agree with the expert key.
-- Every label that differs from the key has a reason of 5 or more words.
-- `own-test-set.csv` has six or more cases from your own task, each marked `yes` or `no`, and each `no` says why.
+1. Open your `failure-modes.md` from the last step. Keep your pass rules beside you.
+2. For example, open the letter `world/harbour-hill/letters/batch-b/05.md`. Ask each pass rule. If every rule says yes, write `yes`. If one says no, write `no` and a note: which rule failed, and why.
 
-How this step is checked: the check compares each label with `world/keys/letters-b.csv`. The bar is 16 of 20,
-because two careful people do not always agree.
+```text
+B05,no,Cites clause 4.6 but the policy has no clause 4.6.
+```
+
+3. Do the same for B01 to B20 in `test-set.csv`. Row B01 is the letter `01.md`. If a letter breaks no rule but is still wrong, mark it `no` and add a new rule to `failure-modes.md`.
+4. Run the check. It tells you how many labels agree with the expert.
 
 ```bash
 bun run verify label-the-test-set
@@ -58,16 +45,20 @@ bun run verify label-the-test-set
 
 Expect: `Done. All 10 rules pass.`
 
-## If you get stuck
+5. Open `world/keys/letters-b.csv`. For each letter where you differ, write in `note` why you chose your label. If "there is one row for each letter from B01" fails, use the letters in `batch-b`. If "at least 16 of your 20 labels agree" fails, check names, status and waiting list places in the register.
 
-| What you see                                       | Fix                                                                       |
-| -------------------------------------------------- | ------------------------------------------------------------------------- |
-| `FAIL there is one row for each letter from B01`   | Use the letters in `batch-b`, named B01 to B20.                           |
-| `FAIL at least 16 of your 20 labels agree`         | Check names, status and waiting list positions in the register.           |
-| `FAIL every label that differs from the key has a` | Open the key, find each letter where you differ, and write why in `note`. |
+## Do it on your work
 
-## Words you will use
+In `own-test-set.csv`, add six real cases from a task in your `about-me.md`. Write the right answer before you ask the AI. Then paste what it gave and mark `yes` or `no`. Good looks like six different cases, and a reason on every `no`.
 
-- **Test set**: a fixed group of cases with known right answers. You test the AI on it again and again.
-- **Agreement**: how many of your labels match the expert's, for example 19 of 20.
-- **Expert key**: the answers a careful person wrote first. Here, `world/keys/letters-b.csv`.
+## Done when
+
+- `test-set.csv` has the header `letter,pass,note` and 20 rows, B01 to B20.
+- Every `pass` cell is `yes` or `no`, and every `no` has a note of 5 or more words.
+- At least 16 of your 20 labels agree with the expert key. The bar is 16, because two careful people do not always agree.
+- Every label that differs from the key has a reason of 5 or more words.
+- `own-test-set.csv` has six or more cases from your own task, and each `no` says why.
+
+## Solution
+
+The after state is two filled files. See `solution/test-set.csv` and `solution/own-test-set.csv`.

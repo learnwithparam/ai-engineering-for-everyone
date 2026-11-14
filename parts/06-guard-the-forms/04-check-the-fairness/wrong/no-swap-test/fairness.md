@@ -11,6 +11,12 @@
 
 I would check that the AI is fair to everyone.
 
+## My swap test
+
+- Form: 13
+- Name swapped in: Tom Baker
+- Same result: yes
+
 ## What we tell families
 
 An AI helped us read your form. A person in the office checked it and made the decision. If you disagree, you can

@@ -4,12 +4,7 @@ This step is extra. Do it if you have time, or come back to it later.
 
 ## The problem
 
-Every family gets a letter. The letter must name the right child, give the right reason, and cite the right
-clause. It must use words a parent can read with ease. Many parents read English as a second language.
-
-An AI can draft 1,200 letters fast. But one wrong clause can start an appeal. So you build a template first. A
-template is a letter with gaps, called fields. Each field is filled from the register, the office's list of
-every child and where they stand.
+Every family gets a letter. It must cite the right clause. For example, clause 4.6 does not exist, and one wrong clause can start an appeal. So build a template first: a letter with gaps, called fields. Each field is filled from the register, the list of every child.
 
 ```mermaid
 flowchart LR
@@ -18,40 +13,25 @@ flowchart LR
   L --> P[A person reads and signs it]
 ```
 
-## Your challenge
+## Watch it done
 
-1. Open `letters/offer-template.md` in this folder. Write a short letter to a parent. Use these five fields, with
-   their curly brackets: `{child}`, `{decision}`, `{clause}`, `{next step}` and `{signed by}`.
-2. Pick three children from `world/harbour-hill/register.json`. Try to pick one who is `offered` and one who is
-   `waitlisted`.
-3. Ask Claude to fill in the template for each child. Paste the template and the child's row from the register.
-   Ask for short sentences and plain words.
-4. Save each letter in the `letters` folder, next to the template. Name it by the child, such as `HH-0101.md`.
-5. Read each letter. Check the clause in `policy/admissions-policy-2027.md`. Fix it by hand if it is wrong.
-
-For example, the register row for HH-0101 says Amara Okafor, `offered`, clause `4.4`. So her letter says:
+Before, the template is empty. After, it has five fields, and each letter has real words. The register says HH-0101 is Amara Okafor, offered, clause 4.4.
 
 ```text
 We are happy to offer Amara a place in Year 7.
 We made this choice under clause 4.4 of our admissions policy.
 ```
 
-Watch for one mistake AI makes often. It cites a clause that sounds right but does not exist, such as clause
-4.6. The 2027 policy has no clause 4.6.
-
 ![What you see when your letters are right](../images/expected.png)
 
-## Done when
+## Your turn
 
-- `letters/offer-template.md` has the five fields.
-- Three filled letters sit next to it.
-- No filled letter still has a field in curly brackets.
-- Each letter names a child from the register and cites that child's clause, as `clause 4.4`.
-- Every clause a letter cites is in the 2027 policy.
-- Each letter reads at grade 8 or lower. Grade 8 is about the reading level of a 13-year-old.
-
-How this step is checked: the check looks up each child in the register. It checks every clause number against
-the policy. It scores each letter with the same reading test this course uses for its own pages.
+1. Open `letters/offer-template.md` in this folder. Write a short letter to a parent with five fields, curly brackets included: `{child}`, `{decision}`, `{clause}`, `{next step}` and `{signed by}`.
+2. Pick three children from `world/harbour-hill/register.json`. Try one who is offered and one who is waitlisted.
+3. Ask Claude to fill the template for each child. Paste the template and the child's row. Ask for short sentences and plain words.
+4. Save each letter in the `letters` folder, named by the child, such as `HH-0101.md`.
+5. Check each clause in `world/harbour-hill/policy/admissions-policy-2027.md`. AI often cites a clause that sounds right but does not exist, such as clause 4.6. Fix it by hand.
+6. Run the check.
 
 ```bash
 bun run verify draft-the-letter
@@ -59,17 +39,20 @@ bun run verify draft-the-letter
 
 Expect: `Done. All 7 rules pass.`
 
-## If you get stuck
+If a field is left, search each letter for a curly bracket and put real words there. If a name fails, use the child's full name and the clause from the register.
 
-| What you see                                           | Fix                                                                  |
-| ------------------------------------------------------ | -------------------------------------------------------------------- |
-| `FAIL  no filled letter still has a {field} in it`     | Search each letter for `{`. Put real words in its place.             |
-| `FAIL  each letter names a child from the register...` | Use the child's full name, and the clause from the register.         |
-| `FAIL  every clause a letter cites is in the 2027...`  | Find each clause number in the policy. Remove any that is not there. |
+## Do it on your work
 
-## Words you will use
+Build a template for one letter you send often. Good looks like fields for every fact that changes, and a person who reads every letter before it goes.
 
-- **Template**: a letter with gaps you fill in for each person.
-- **Field**: one gap in the template, such as `{child}`.
-- **Clause**: one numbered rule in the policy, such as clause 4.4.
-- **Reading grade**: a score for how hard a text is to read. Lower is easier.
+## Done when
+
+- `letters/offer-template.md` has the five fields.
+- Three filled letters sit next to it, with no field left in curly brackets.
+- Each letter names a child from the register and cites that child's clause.
+- Every clause a letter cites is in the policy.
+- Each letter reads at grade 8 or lower, about the level of a 13-year-old.
+
+## Solution
+
+The after state is a template and three letters. See `solution/letters/`.
