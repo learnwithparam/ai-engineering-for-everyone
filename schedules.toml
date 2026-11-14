@@ -8,7 +8,7 @@ sessions = [
   { parts = ["meet-the-office", "price-the-work", "ask-for-a-table"], minutes = 100 },
   { parts = ["give-it-the-policy", "let-it-act-safely"], minutes = 95 },
   { parts = ["measure-the-letters", "guard-the-forms"], minutes = 90 },
-  { parts = ["choose-and-argue", "compare-prompts"], minutes = 70 },
+  { parts = ["choose-and-argue", "compare-prompts"], minutes = 80 },
 ]
 
 # Four evenings of 100 minutes, each opening with a short recap. The last ends with three learners presenting briefs.
@@ -26,5 +26,5 @@ sessions = [
   { parts = ["meet-the-office", "price-the-work", "ask-for-a-table"], minutes = 155 },
   { parts = ["give-it-the-policy", "let-it-act-safely"], minutes = 150 },
   { parts = ["measure-the-letters", "guard-the-forms"], minutes = 145 },
-  { parts = ["choose-and-argue", "compare-prompts"], minutes = 100 },
+  { parts = ["choose-and-argue", "compare-prompts"], minutes = 110 },
 ]

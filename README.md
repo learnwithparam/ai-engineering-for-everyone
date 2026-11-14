@@ -122,6 +122,7 @@ reads your file and tells you what passed.
 | [Measure the letters](parts/05-measure-the-letters/README.md) | 4     | 50      | notes on 20 letters and a scored test set           |
 | [Guard the forms](parts/06-guard-the-forms/README.md)         | 3     | 35      | guard rules, tested on attacks and normal forms     |
 | [Choose and argue](parts/07-choose-and-argue/README.md)       | 3     | 40      | a model choice, a vendor review and a project brief |
+| [Compare prompts](parts/08-compare-prompts/README.md)         | 1     | 10      | a verdict on which prompt wins                      |
 
 Steps marked "go further" are extra. The main path takes about 240 minutes. Everything takes about 310 minutes.
 Start with [00-orientation](00-orientation/README.md).

@@ -41,7 +41,7 @@ function percentsMatch(folder: string): boolean {
   });
 }
 
-// The season from part one: 1,200 forms, each with the policy, and 300 output tokens.
+// The season from Price the work: 1,200 forms, each with the policy, and 300 output tokens.
 function seasonCostsMatch(folder: string): boolean {
   const usage = {
     applications: 1200,
@@ -90,7 +90,7 @@ export default [
     tryNext: "Accuracy is fields right divided by 42, times 100. For example, 39 of 42 is 92.9%.",
   },
   {
-    says: "the season cost for each model matches part one, within 25%",
+    says: "the season cost for each model matches Price the work, within 25%",
     test: seasonCostsMatch,
     tryNext:
       "Use your Per season costs from price-the-season: one form plus the policy, 1,200 times.",
