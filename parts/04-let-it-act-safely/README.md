@@ -77,13 +77,15 @@ Want to see a right answer first? Add the word `solution` after a step name. For
 
 ## Watch and read
 
-| Kind | Title                                  | Author         | Why                                                      | Link                                                                                    |
-| ---- | -------------------------------------- | -------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| read | Building effective agents              | Anthropic      | What an agent is, and why simple steps beat clever ones. | https://www.anthropic.com/engineering/building-effective-agents                         |
-| read | Our framework for safe agents          | Anthropic      | Why a person keeps control and approves the risky steps. | https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents |
-| read | Writing effective tools for agents     | Anthropic      | How to design tools an agent uses well.                  | https://www.anthropic.com/engineering/writing-tools-for-agents                          |
-| read | Tool use with Claude                   | Anthropic docs | How Claude asks for a tool and gets the result back.     | https://docs.claude.com/en/docs/agents-and-tools/tool-use/overview                      |
-| read | Introducing the Model Context Protocol | Anthropic      | The standard behind the office tools in Claude Desktop.  | https://www.anthropic.com/news/model-context-protocol                                   |
+| Kind  | Title                                  | Author                                   | Why                                                                        | Link                                                                                    |
+| ----- | -------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| read  | Building effective agents              | Anthropic                                | What an agent is, and why simple steps beat clever ones.                   | https://www.anthropic.com/engineering/building-effective-agents                         |
+| read  | Our framework for safe agents          | Anthropic                                | Why a person keeps control and approves the risky steps.                   | https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents |
+| read  | Writing effective tools for agents     | Anthropic                                | How to design tools an agent uses well.                                    | https://www.anthropic.com/engineering/writing-tools-for-agents                          |
+| read  | Tool use with Claude                   | Anthropic docs                           | How Claude asks for a tool and gets the result back.                       | https://docs.claude.com/en/docs/agents-and-tools/tool-use/overview                      |
+| read  | Introducing the Model Context Protocol | Anthropic                                | The standard behind the office tools in Claude Desktop.                    | https://www.anthropic.com/news/model-context-protocol                                   |
+| video | Building more effective AI agents      | Alex Albert and Erik Schluntz, Anthropic | A talk with one author of the agents post, on keeping agents simple.       | https://www.youtube.com/watch?v=uhJJgc-0iTQ                                             |
+| video | Tips for building AI agents            | Anthropic                                | Three Anthropic people on what agents are good for and the traps to avoid. | https://www.youtube.com/watch?v=LP5OCa20Zpg                                             |
 
 ## Project
 

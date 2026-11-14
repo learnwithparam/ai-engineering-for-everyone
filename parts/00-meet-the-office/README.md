@@ -57,12 +57,12 @@ Expect: `Done. All 7 rules pass.` once `about-me.md` is filled in.
 
 ## Watch and read
 
-| Kind  | Title                                  | Author              | Why                                                  | Link                                                             |
-| ----- | -------------------------------------- | ------------------- | ---------------------------------------------------- | ---------------------------------------------------------------- |
-| video | Large Language Models explained briefly | 3Blue1Brown         | A short, clear picture of what an AI model does      | https://www.youtube.com/watch?v=LPZh9BOjkQs                      |
-| video | Intro to Large Language Models         | Andrej Karpathy     | A full talk on what these models can and cannot do   | https://www.youtube.com/watch?v=zjkBMFhNj_g                      |
-| read  | Building effective agents              | Anthropic           | Why to keep the AI system simple and add steps slowly | https://www.anthropic.com/research/building-effective-agents     |
-| read  | Models overview                        | Anthropic           | What the Claude models are and how they differ       | https://platform.claude.com/docs/en/models/overview              |
+| Kind  | Title                                   | Author          | Why                                                   | Link                                                         |
+| ----- | --------------------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
+| video | Large Language Models explained briefly | 3Blue1Brown     | A short, clear picture of what an AI model does       | https://www.youtube.com/watch?v=LPZh9BOjkQs                  |
+| video | Intro to Large Language Models          | Andrej Karpathy | A full talk on what these models can and cannot do    | https://www.youtube.com/watch?v=zjkBMFhNj_g                  |
+| read  | Building effective agents               | Anthropic       | Why to keep the AI system simple and add steps slowly | https://www.anthropic.com/research/building-effective-agents |
+| read  | Models overview                         | Anthropic       | What the Claude models are and how they differ        | https://platform.claude.com/docs/en/models/overview          |
 
 ## Project
 

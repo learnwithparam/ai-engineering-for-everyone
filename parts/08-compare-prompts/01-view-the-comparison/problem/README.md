@@ -15,10 +15,10 @@ flowchart LR
 
 Before, `verdict.md` has an empty Winner cell on every row. After, each row names a winner and says why, from something you can see in the table:
 
-| Prompt  | Winner       | Why                                                                         |
-| ------- | ------------ | --------------------------------------------------------------------------- |
-| HH-0116 | Tie          | Both answers are the same row.                                              |
-| HH-0122 | Middle model | The small model wrote yes for sibling_on_roll. The middle model wrote no.   |
+| Prompt  | Winner       | Why                                                                       |
+| ------- | ------------ | ------------------------------------------------------------------------- |
+| HH-0116 | Tie          | Both answers are the same row.                                            |
+| HH-0122 | Middle model | The small model wrote yes for sibling_on_roll. The middle model wrote no. |
 
 ![The table in promptfoo](../images/expected.png)
 

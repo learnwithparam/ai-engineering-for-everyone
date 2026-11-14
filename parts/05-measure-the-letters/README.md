@@ -70,12 +70,14 @@ Expect: `Part measure-the-letters is done: 4/4 steps pass.`
 
 ## Watch and read
 
-| Kind | Title                                                                  | Author                | Why                                                                          | Link                                                                          |
-| ---- | ---------------------------------------------------------------------- | --------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| read | Demystifying evals for AI agents                                       | Anthropic Engineering | It says to start with a few real cases and to read what the AI wrote.        | https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents       |
-| read | Define success criteria and build evaluations                          | Anthropic             | It shows how to turn a goal into a test, from exact match to a judge.        | https://platform.claude.com/docs/en/test-and-evaluate/develop-tests           |
-| read | Writing effective tools for agents, with agents                        | Anthropic Engineering | It says to build tests from real uses and to read the raw transcripts.       | https://www.anthropic.com/engineering/writing-tools-for-agents                |
-| read | Building effective AI agents                                           | Anthropic Engineering | It says to start simple and measure before you add more parts.               | https://www.anthropic.com/engineering/building-effective-agents               |
+| Kind  | Title                                           | Author                                               | Why                                                                    | Link                                                                   |
+| ----- | ----------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| read  | Demystifying evals for AI agents                | Anthropic Engineering                                | It says to start with a few real cases and to read what the AI wrote.  | https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents |
+| read  | Define success criteria and build evaluations   | Anthropic                                            | It shows how to turn a goal into a test, from exact match to a judge.  | https://platform.claude.com/docs/en/test-and-evaluate/develop-tests    |
+| read  | Writing effective tools for agents, with agents | Anthropic Engineering                                | It says to build tests from real uses and to read the raw transcripts. | https://www.anthropic.com/engineering/writing-tools-for-agents         |
+| read  | Building effective AI agents                    | Anthropic Engineering                                | It says to start simple and measure before you add more parts.         | https://www.anthropic.com/engineering/building-effective-agents        |
+| video | Why AI evals are the hottest new skill          | Lenny Rachitsky with Hamel Husain and Shreya Shankar | Two experts on reading real answers before you trust a score.          | https://www.youtube.com/watch?v=BsWxPI9UM4c                            |
+| video | LLM Evals: Common Mistakes                      | Hamel Husain and Shreya Shankar                      | The mistakes people make when they build tests for AI.                 | https://www.youtube.com/watch?v=GL0XhAj5LPE                            |
 
 ## Project
 

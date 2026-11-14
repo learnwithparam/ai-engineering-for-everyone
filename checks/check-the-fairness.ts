@@ -42,7 +42,9 @@ function officeResult(formText: string, row: Row): string {
 
 // Run the learner's swap for real. Returns undefined if the form or the name is not usable.
 function swapIsSame(folder: string): boolean | undefined {
-  const number = mineField(folder, /^form$/i).match(/\d{1,2}/)?.[0]?.padStart(2, "0");
+  const number = mineField(folder, /^form$/i)
+    .match(/\d{1,2}/)?.[0]
+    ?.padStart(2, "0");
   const newName = mineField(folder, /name/i);
   const key = keyCsv("applications.csv").find((row) => row.file === `${number}.md`);
   if (!number || !newName || !key) return undefined;
@@ -57,7 +59,9 @@ function swapIsSame(folder: string): boolean | undefined {
 // The verdict you wrote must match what the swap really gave.
 function verdictMatchesTheRun(folder: string): boolean {
   const same = swapIsSame(folder);
-  const written = mineField(folder, /same result/i).toLowerCase().match(/\b(yes|no)\b/)?.[1];
+  const written = mineField(folder, /same result/i)
+    .toLowerCase()
+    .match(/\b(yes|no)\b/)?.[1];
   if (same === undefined || !written) return false;
   return (written === "yes") === same;
 }

@@ -67,13 +67,13 @@ Expect: `Part price-the-work is done: 3/3 steps pass.`
 
 ## Watch and read
 
-| Kind  | Title                              | Author          | Why                                                | Link                                                                    |
-| ----- | ---------------------------------- | --------------- | -------------------------------------------------- | ----------------------------------------------------------------------- |
-| video | Let's build the GPT Tokenizer      | Andrej Karpathy | Shows how text is cut into tokens, and why it costs | https://www.youtube.com/watch?v=zduSFxRajkE                             |
-| video | Intro to Large Language Models     | Andrej Karpathy | Context for why input and output are priced apart  | https://www.youtube.com/watch?v=zjkBMFhNj_g                             |
-| read  | Pricing                            | Anthropic       | The price list the course copies                   | https://platform.claude.com/docs/en/about-claude/pricing                |
-| read  | Prompt caching                     | Anthropic       | How a cache read costs less than fresh input       | https://platform.claude.com/docs/en/build-with-claude/prompt-caching    |
-| read  | Token counting                     | Anthropic       | How to count tokens before you pay for them        | https://platform.claude.com/docs/en/build-with-claude/token-counting    |
+| Kind  | Title                          | Author          | Why                                                 | Link                                                                 |
+| ----- | ------------------------------ | --------------- | --------------------------------------------------- | -------------------------------------------------------------------- |
+| video | Let's build the GPT Tokenizer  | Andrej Karpathy | Shows how text is cut into tokens, and why it costs | https://www.youtube.com/watch?v=zduSFxRajkE                          |
+| video | Intro to Large Language Models | Andrej Karpathy | Context for why input and output are priced apart   | https://www.youtube.com/watch?v=zjkBMFhNj_g                          |
+| read  | Pricing                        | Anthropic       | The price list the course copies                    | https://platform.claude.com/docs/en/about-claude/pricing             |
+| read  | Prompt caching                 | Anthropic       | How a cache read costs less than fresh input        | https://platform.claude.com/docs/en/build-with-claude/prompt-caching |
+| read  | Token counting                 | Anthropic       | How to count tokens before you pay for them         | https://platform.claude.com/docs/en/build-with-claude/token-counting |
 
 ## Project
 

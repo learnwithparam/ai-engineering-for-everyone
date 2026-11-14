@@ -78,13 +78,13 @@ Want to see a right answer first? Add the word `solution` after a step name, suc
 
 ## Watch and read
 
-| Kind  | Title                                | Author          | Why                                                | Link                                                                                                  |
-| ----- | ------------------------------------ | --------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| video | AI prompt engineering: A deep dive   | Anthropic       | Anthropic's own prompt team shares how they write prompts | https://www.youtube.com/watch?v=T9aRN5JkmL8                                                    |
-| video | Intro to Large Language Models       | Andrej Karpathy | Why a model guesses when it lacks a fact           | https://www.youtube.com/watch?v=zjkBMFhNj_g                                                           |
-| read  | Prompt engineering overview          | Anthropic       | The steps for a clear prompt and how to test it    | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview                     |
-| read  | Increase output consistency          | Anthropic       | How to fix the shape of an answer                  | https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/increase-consistency      |
-| read  | Vision                               | Anthropic       | How Claude reads a scan or a photo                 | https://platform.claude.com/docs/en/build-with-claude/vision                                          |
+| Kind  | Title                              | Author          | Why                                                       | Link                                                                                             |
+| ----- | ---------------------------------- | --------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| video | AI prompt engineering: A deep dive | Anthropic       | Anthropic's own prompt team shares how they write prompts | https://www.youtube.com/watch?v=T9aRN5JkmL8                                                      |
+| video | Intro to Large Language Models     | Andrej Karpathy | Why a model guesses when it lacks a fact                  | https://www.youtube.com/watch?v=zjkBMFhNj_g                                                      |
+| read  | Prompt engineering overview        | Anthropic       | The steps for a clear prompt and how to test it           | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview                |
+| read  | Increase output consistency        | Anthropic       | How to fix the shape of an answer                         | https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/increase-consistency |
+| read  | Vision                             | Anthropic       | How Claude reads a scan or a photo                        | https://platform.claude.com/docs/en/build-with-claude/vision                                     |
 
 ## Project
 

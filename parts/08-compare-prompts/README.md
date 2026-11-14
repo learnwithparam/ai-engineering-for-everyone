@@ -68,13 +68,13 @@ Without Node, run the same prompts in two browser tabs, one model in each. You g
 
 ## Watch and read
 
-| Kind  | Title                                          | Author                                               | Why                                                              | Link                                                                       |
-| ----- | ---------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| read  | GPT vs Claude vs Gemini: Benchmark on Your Own Data | promptfoo team, promptfoo docs                  | The same compare-in-one-table method, with a config you can copy. | https://www.promptfoo.dev/docs/guides/gpt-vs-claude-vs-gemini/             |
-| read  | Your AI Product Needs Evals                    | Hamel Husain                                         | Why you test on your own cases, and how to start small.          | https://hamel.dev/blog/posts/evals/                                        |
-| read  | Define your success criteria                   | Anthropic, Claude docs                               | How to say what a good answer is before you compare.             | https://platform.claude.com/docs/en/test-and-evaluate/define-success       |
-| video | Why AI evals are the hottest new skill         | Lenny Rachitsky with Hamel Husain and Shreya Shankar | Two experts on looking at real answers and picking by evidence.  | https://www.youtube.com/watch?v=BsWxPI9UM4c                                |
-| video | Prompting 101                                  | Anthropic                                            | See how a prompt is written and improved, so you can compare versions. | https://www.youtube.com/watch?v=FMWRfZ_VNdw                          |
+| Kind  | Title                                               | Author                                               | Why                                                                    | Link                                                                 |
+| ----- | --------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| read  | GPT vs Claude vs Gemini: Benchmark on Your Own Data | promptfoo team, promptfoo docs                       | The same compare-in-one-table method, with a config you can copy.      | https://www.promptfoo.dev/docs/guides/gpt-vs-claude-vs-gemini/       |
+| read  | Your AI Product Needs Evals                         | Hamel Husain                                         | Why you test on your own cases, and how to start small.                | https://hamel.dev/blog/posts/evals/                                  |
+| read  | Define your success criteria                        | Anthropic, Claude docs                               | How to say what a good answer is before you compare.                   | https://platform.claude.com/docs/en/test-and-evaluate/define-success |
+| video | Why AI evals are the hottest new skill              | Lenny Rachitsky with Hamel Husain and Shreya Shankar | Two experts on looking at real answers and picking by evidence.        | https://www.youtube.com/watch?v=BsWxPI9UM4c                          |
+| video | Prompting 101                                       | Anthropic                                            | See how a prompt is written and improved, so you can compare versions. | https://www.youtube.com/watch?v=FMWRfZ_VNdw                          |
 
 ## Project
 

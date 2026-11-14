@@ -68,14 +68,14 @@ What the checks can and cannot do. No check here runs a model. You run the model
 
 ## Watch and read
 
-| Kind  | Title                                  | Author                                  | Why                                                           | Link                                                                         |
-| ----- | -------------------------------------- | --------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| read  | Define your success criteria           | Anthropic, Claude docs                  | How to turn "good" into something you can measure and test.   | https://platform.claude.com/docs/en/test-and-evaluate/define-success         |
-| read  | Choosing the right model               | Anthropic, Claude docs                  | The trade-off between cost, speed and quality, in one page.   | https://platform.claude.com/docs/en/about-claude/models/choosing-a-model     |
-| read  | Your AI Product Needs Evals            | Hamel Husain                            | Why you test on your own cases and not on a headline number.  | https://hamel.dev/blog/posts/evals/                                          |
-| read  | Starting to read the AI Snake Oil      | Arvind Narayanan and Sayash Kapoor      | How to question a vendor's claim about what an AI tool can do. | https://www.normaltech.ai/p/starting-reading-the-ai-snake-oil               |
-| video | Why AI evals are the hottest new skill | Lenny Rachitsky with Hamel Husain and Shreya Shankar | Two experts on why a "99% accurate" claim needs a test behind it. | https://www.youtube.com/watch?v=BsWxPI9UM4c                          |
-| video | Prompting 101                          | Anthropic                               | Watch a prompt for a real task get built, the kind you test in step one. | https://www.youtube.com/watch?v=FMWRfZ_VNdw                            |
+| Kind  | Title                                  | Author                                               | Why                                                                      | Link                                                                     |
+| ----- | -------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| read  | Define your success criteria           | Anthropic, Claude docs                               | How to turn "good" into something you can measure and test.              | https://platform.claude.com/docs/en/test-and-evaluate/define-success     |
+| read  | Choosing the right model               | Anthropic, Claude docs                               | The trade-off between cost, speed and quality, in one page.              | https://platform.claude.com/docs/en/about-claude/models/choosing-a-model |
+| read  | Your AI Product Needs Evals            | Hamel Husain                                         | Why you test on your own cases and not on a headline number.             | https://hamel.dev/blog/posts/evals/                                      |
+| read  | Starting to read the AI Snake Oil      | Arvind Narayanan and Sayash Kapoor                   | How to question a vendor's claim about what an AI tool can do.           | https://www.normaltech.ai/p/starting-reading-the-ai-snake-oil            |
+| video | Why AI evals are the hottest new skill | Lenny Rachitsky with Hamel Husain and Shreya Shankar | Two experts on why a "99% accurate" claim needs a test behind it.        | https://www.youtube.com/watch?v=BsWxPI9UM4c                              |
+| video | Prompting 101                          | Anthropic                                            | Watch a prompt for a real task get built, the kind you test in step one. | https://www.youtube.com/watch?v=FMWRfZ_VNdw                              |
 
 ## Project
 
