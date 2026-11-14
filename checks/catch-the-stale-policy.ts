@@ -1,5 +1,5 @@
 // catch-the-stale-policy: last year's policy in the Project gives wrong answers.
-// The learner names the two clauses that changed and how to fix the Project.
+// The learner names the two clauses that changed and takes the old file out of the Project.
 import type { Rule } from "../scripts/verify";
 import { filled, has, names, section, text } from "./lib/handin";
 
@@ -17,11 +17,9 @@ function namesBothClauses(folder: string): boolean {
   );
 }
 
-// The fix takes the old file out of the Project, or marks it clearly as out of date.
-const FIX_WORDS = [
-  /\b(remove|removed|delete|deleted|take out|took out)\b/i,
-  /\b(label|labelled|labeled|mark|marked)\b/i,
-];
+// The fix must take the old file out of the Project. A label is not enough: Claude still reads a
+// labelled file, so it can still quote it.
+const REMOVE_WORDS = [/\b(remove|removed|delete|deleted|take out|took out|taken out)\b/i];
 
 export default [
   {
@@ -40,8 +38,8 @@ export default [
     tryNext: "Compare clause 4.3 and clause 5.2 in the two policies. Name both numbers.",
   },
   {
-    says: "The fix removes the old policy or labels it as out of date",
-    test: (folder) => names(sectionIn(folder, "The fix"), FIX_WORDS),
-    tryNext: "Say what you do with the 2026 file: remove it from the Project, or label it as old.",
+    says: "The fix removes the old policy from the Project",
+    test: (folder) => names(sectionIn(folder, "The fix"), REMOVE_WORDS),
+    tryNext: "A label is not enough, because Claude still reads the old file. Remove the 2026 file from the Project.",
   },
 ] satisfies Rule[];
