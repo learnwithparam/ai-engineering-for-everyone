@@ -2,7 +2,7 @@
 
 ## What changed
 
-(write here: which clauses are not the same in the 2026 and 2027 policy)
+(write here: which clauses are not the same in the old and new policy)
 
 ## What Claude said
 

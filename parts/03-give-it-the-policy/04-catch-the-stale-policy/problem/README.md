@@ -1,50 +1,48 @@
 # Catch the stale policy
 
-This step is extra. Do it if you have time, or come back to it later.
+This step is extra. Do it if you have time.
 
 ## The problem
 
-Offices keep old files. Someone adds last year's policy to the Project, in case it helps. Now Claude has two policies
-with the same clause numbers. Some rules changed. Claude may quote the old one, and it will sound as sure as ever.
-
-A stale file is an old file that is no longer true. You find out what it does to the answers, and how to stop it.
+Someone adds last year's policy to the Project, in case it helps. Now Claude holds two policies with the same clause numbers. Two rules changed. Claude may quote the old one and sound just as sure. A stale file is an old file that is no longer true.
 
 ```mermaid
 flowchart LR
   Q[Jen Wright's question] --> P[Project]
-  OLD[2026 policy: stepsister does not count] --> P
-  NEW[2027 policy: stepsister counts] --> P
+  OLD[Last year: stepsister does not count] --> P
+  NEW[This year: stepsister counts] --> P
   P --> A{Which one does Claude quote?}
 ```
 
-## Your challenge
+## Watch it done
+
+Before, the notes are blank:
+
+```text
+  FAIL  What changed names both clauses that differ: 4.3 and 5.2
+  FAIL  The fix removes the old policy from the Project
+```
+
+After, the notes name both clauses and say the old file is removed. The check ends with `Done. All 4 rules pass.`
+
+![What you see when your notes are right](../images/expected.png)
+
+## Your turn
 
 1. Open both policies in `world/harbour-hill/policy/`. Compare clause 4.3, then clause 5.2.
-2. Add `admissions-policy-2026.md` to your Harbour Hill Project.
+2. Add last year's policy file to your Project.
 3. Ask Q1 and Q2 again, from `answers.csv` in load-the-policy-project.
-4. Fill in `stale.md` in this folder:
-   - **What changed**: the two clauses, and how each one changed.
-   - **What Claude said**: what it answered with both files in the Project.
-   - **The fix**: what you do with the old file so this cannot happen again.
+4. Fill in `stale.md` in this folder under three headings: what changed, what Claude said, and the fix.
 
-For example, here is the Q1 answer with both files:
+For example, with both files in, Claude says:
 
 ```text
 Clause 4.3 says stepbrothers and stepsisters do not count. So your stepdaughter would not count as a sibling.
 ```
 
-That is the 2026 rule. Under the 2027 policy, she counts. A parent who trusts it may not apply, or may appeal.
+That is last year's rule. This year she counts. A parent who trusts it may not apply, or may appeal.
 
-![What you see when your notes are right](../images/expected.png)
-
-## Done when
-
-- `stale.md` has the sections What changed, What Claude said and The fix, each filled in.
-- What changed names both clauses that differ: 4.3 and 5.2.
-- The fix removes the old policy from the Project. A label is not enough, because Claude still reads a labelled file.
-
-How this step is checked: the check reads your notes. It looks for both clause numbers, and for a fix that
-removes the old file.
+5. Run the check.
 
 ```bash
 bun run verify catch-the-stale-policy
@@ -52,14 +50,18 @@ bun run verify catch-the-stale-policy
 
 Expect: `Done. All 4 rules pass.`
 
-## If you get stuck
+If you see `FAIL  What changed names both clauses...`, name both 4.3 and 5.2. If you see `FAIL  The fix removes the old policy...`, say you remove the old file. A label does not stop Claude reading it.
 
-| What you see                                            | Fix                                                                    |
-| ------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `FAIL  What changed names both clauses that differ...`  | Name both 4.3 and 5.2 under What changed.                              |
-| `FAIL  The fix removes the old policy from the Project` | Say you remove the 2026 file. A label does not stop Claude reading it. |
+## Do it on your work
 
-## Words you will use
+Look in your own Project or folder for two versions of one document. Compare them and list what changed. Good looks like the old version removed, and one line in the instructions saying which version to use.
 
-- **Stale**: old and no longer true, but still in the files.
-- **Out of date**: replaced by a newer version.
+## Done when
+
+- `stale.md` has all three sections filled in.
+- What changed names both clauses: 4.3 and 5.2.
+- The fix removes the old policy from the Project.
+
+## Solution
+
+The after state is a filled `stale.md`. See `solution/stale.md`.

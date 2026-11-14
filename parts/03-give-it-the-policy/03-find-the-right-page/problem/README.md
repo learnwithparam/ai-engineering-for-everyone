@@ -2,11 +2,7 @@
 
 ## The problem
 
-Claude now has three documents. To answer a question, it must find the right one, and the right clause in it.
-This is called retrieval. If it picks the wrong page, the answer is wrong, even with the right files in the
-Project.
-
-To judge Claude's pick, you need to know the right page yourself. So you find it first. Then you compare.
+The Project holds three documents. To answer, Claude must find the right document and the right clause. That is called retrieval. A wrong pick gives a wrong answer, even with the right files loaded. To judge Claude, you find the page first.
 
 ```mermaid
 flowchart LR
@@ -17,38 +13,34 @@ flowchart LR
   C --> H{Did Claude cite it too?}
 ```
 
-## Your challenge
+## Watch it done
 
-`retrieval.csv` in this folder has ten questions, R1 to R10.
+Before, the picks and habits are blank:
 
-1. For each question, find the answer yourself in `world/harbour-hill/policy/`. Write the file name in `document`
-   and the clause in `clause`. The appeals guide numbers its clauses A1 to A7. The key dates are T1 to T6.
-2. Ask each question in your Harbour Hill Project. Write the clause Claude quoted in `claude_clause`.
-3. In `claude_hit`, write `yes` if Claude's clause is the one that holds the answer. Otherwise write `no`.
+```text
+  FAIL  your document and clause match the answer key on at least 8 of 10
+  FAIL  checking-habits.md has your own rule for when to check, in a full sentence
+```
 
-4. Open `checking-habits.md`. Name the questions where Claude missed, say how you caught each miss, and write
-   one rule for when you will open the source before you trust Claude. People trust a sure voice too fast. A
-   rule you wrote down beats a promise to be careful.
+After, eight of ten picks match. Two misses are named, and the check ends with `Done. All 8 rules pass.`
 
-For example, R7 asks: how long do families have to appeal? The answer is in the appeals guide, clause A2. Claude
-may quote clause 10.1 of the policy instead. That clause says families can appeal, but not how long they have.
-So it is a miss:
+![What you see when your picks are right](../images/expected.png)
+
+## Your turn
+
+1. Open `retrieval.csv` in this folder. It has ten questions, R1 to R10.
+2. For each one, find the answer yourself in `world/harbour-hill/policy/`. Write the file name in `document` and the clause in `clause`. The appeals guide numbers its clauses A1 to A7. The key dates are T1 to T6.
+3. Ask each question in your Project. Write the clause Claude quoted in `claude_clause`.
+4. In `claude_hit`, write `yes` if Claude's clause holds the answer. Otherwise write `no`.
+
+For example, R7 asks how long families have to appeal. The answer is in the appeals guide, clause A2. Claude may quote clause 10.1 instead. That says families can appeal, not how long they have. So it is a miss:
 
 ```text
 R7,How long do families have to appeal?,appeals-guide.md,A2,10.1,no
 ```
 
-![What you see when your picks are right](../images/expected.png)
-
-## Done when
-
-- `retrieval.csv` has a row for each of R1 to R10.
-- Your document and clause match the answer key on at least 8 of 10.
-- `claude_hit` is `yes` only where Claude cited the right clause.
-- `checking-habits.md` names each miss, says how you caught it, and has your own rule for when to check.
-
-How this step is checked: the check compares your picks with the answer key. Then it checks your `claude_hit`
-marks against your own `claude_clause` column.
+5. Open `checking-habits.md`. Name each question where Claude missed. Say how you caught it. Write one rule for when you open the source before you trust Claude.
+6. Run the check.
 
 ```bash
 bun run verify find-the-right-page
@@ -56,15 +48,19 @@ bun run verify find-the-right-page
 
 Expect: `Done. All 8 rules pass.`
 
-## If you get stuck
+If you see `FAIL  your document and clause match the answer...`, remember that three answers are in the appeals guide or the key dates. If you see `FAIL  claude_hit is yes only where...`, a hit means Claude's clause holds the answer, not that it is close.
 
-| What you see                                         | Fix                                                                 |
-| ---------------------------------------------------- | ------------------------------------------------------------------- |
-| `FAIL  your document and clause match the answer...` | Three answers are in the appeals guide or the key dates.            |
-| `FAIL  claude_hit is yes only where Claude cited...` | A hit means Claude's clause holds the answer, not that it is close. |
+## Do it on your work
 
-## Words you will use
+Pick ten questions your own documents can answer. Find each page yourself, then ask Claude and compare. Good looks like a hit count you trust, and a written rule for when to open the source.
 
-- **Retrieval**: finding the right piece of a document before you answer.
-- **Hit**: Claude cited the clause that holds the answer.
-- **Miss**: Claude cited a clause, but not the one that answers the question.
+## Done when
+
+- `retrieval.csv` has a row for each of R1 to R10.
+- Your document and clause match the answer key on at least 8 of 10.
+- `claude_hit` is `yes` only where Claude cited the right clause.
+- `checking-habits.md` names each miss, says how you caught it, and has your own rule.
+
+## Solution
+
+The after state is a filled `retrieval.csv` and `checking-habits.md`. See the `solution/` folder.

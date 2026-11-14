@@ -2,7 +2,7 @@
 
 ## Why it stopped
 
-The email came from carla.silva.new@example.net. The email on file for HH-0110 is carla.silva@example.com. Clause
+The email came from carla.silva.new@example.net. The email on file for HH-0110 is carla.silva@example.com. clause
 9.1 says we do not act on a message from an email address that is not on file. Anyone can write "this is Carla".
 
 ## What a person checks

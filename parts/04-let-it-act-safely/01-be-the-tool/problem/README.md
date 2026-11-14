@@ -2,11 +2,7 @@
 
 ## The problem
 
-An agent is an AI that does steps, not only talk. It does them with tools. A tool is a small action the AI may
-ask for, such as "read the register". Something outside the AI runs the tool and sends back the result.
-
-It is easier to trust once you have seen it. So first, you are the tool. Claude asks. You look up the answer in the
-register and paste it back. You see every step the agent takes, and where it could go wrong.
+An agent is an AI that does steps, using tools. A tool is a small action the AI asks for, such as "read the register". Something outside the AI runs it. Before you trust that, you be the tool by hand. Position 1 on the waiting list looks right, but is not.
 
 ```mermaid
 flowchart LR
@@ -17,7 +13,20 @@ flowchart LR
   C -->|asks: offer_place ...| STOP{You decide: run it or stop}
 ```
 
-## Your challenge
+## Watch it done
+
+Before, the notes are blank:
+
+```text
+  FAIL  Next child names HH-0137, the child first in policy order
+  FAIL  Where I would stop it names the change you would check first
+```
+
+After, the notes list the calls in order and name HH-0137. The check ends with `Done. All 5 rules pass.`
+
+![What you see when your notes are right](../images/expected.png)
+
+## Your turn
 
 1. Open Claude.ai and start a new chat. Paste this prompt:
 
@@ -34,21 +43,9 @@ Task: process this email.
 4. When Claude asks for `offer_place`, do not run it. Stop and check the child yourself.
 5. Fill in `tool-calls.md` in this folder: each request in order, the next child, and where you would stop it.
 
-For example, Claude may ask `TOOL next_on_waitlist`. You paste the waiting children. Position 1 is HH-0116, Lily
-Chen, under clause 4.4 (distance). But HH-0137, Zara Ahmed, is at position 22 under clause 4.3 (sibling). Clause
-7.2 keeps the list in policy order, so a sibling comes before distance. If Claude asks to offer the place to
-HH-0116, that is the moment to stop it.
+For example, Claude asks `TOOL next_on_waitlist`. You paste the waiting children. Position 1 is HH-0116, Lily Chen, by distance. But HH-0137, Zara Ahmed, is at position 22 as a sibling, under clause 4.3. The list keeps policy order (clause 7.2), so a sibling comes first. If Claude offers the place to HH-0116, stop it there.
 
-![What you see when your notes are right](../images/expected.png)
-
-## Done when
-
-- `tool-calls.md` lists at least three tool requests, in order, each naming one of the five tools.
-- The withdrawal and a look at the list come before the offer.
-- Next child names HH-0137.
-- Where I would stop it names the change you would check first.
-
-How this step is checked: the check reads your notes. It does not read the chat.
+6. Run the check.
 
 ```bash
 bun run verify be-the-tool
@@ -56,15 +53,19 @@ bun run verify be-the-tool
 
 Expect: `Done. All 5 rules pass.`
 
-## If you get stuck
+If you see `FAIL  Next child names HH-0137...`, position 1 is not the answer. Look for a sibling lower on the list. If you see `FAIL  the withdrawal and a look at the list...`, write the calls in the order Claude asked for them.
 
-| What you see                                     | Fix                                                                 |
-| ------------------------------------------------ | ------------------------------------------------------------------- |
-| `FAIL  Next child names HH-0137...`              | Position 1 is not the answer. Look for a sibling lower on the list. |
-| `FAIL  the withdrawal and a look at the list...` | Write the calls in the order Claude asked for them.                 |
+## Do it on your work
 
-## Words you will use
+Pick one job in your own work that an AI could do in steps. List each tool it would need and write what each returns. Good looks like one line you would never let run without a person.
 
-- **Agent**: an AI that takes steps on its own, with tools.
-- **Tool**: a small action the AI may ask for. Something else runs it and sends back the result.
-- **Tool call**: one request from the AI to run one tool, such as `read_register HH-0102`.
+## Done when
+
+- `tool-calls.md` lists at least three requests, in order, each naming one of the five tools.
+- The withdrawal and a look at the list come before the offer.
+- Next child names HH-0137.
+- Where I would stop it names the change you would check first.
+
+## Solution
+
+The after state is a filled `tool-calls.md`. See `solution/tool-calls.md`.

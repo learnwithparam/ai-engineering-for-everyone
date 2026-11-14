@@ -2,12 +2,7 @@
 
 ## The problem
 
-You played the tools by hand. Now real tools do the work. They change a copy of the register and write an action
-log. The log is a list of every tool call: what, for whom, who approved it, and the result. Each change needs a
-person's name in `approved_by`, or the tool refuses it.
-
-Be careful: in Claude Desktop, Claude types the `approved_by` name itself. The real stop is when Claude Desktop
-asks you to allow the call.
+You played the tools by hand. Now real tools change a copy of the register and write an action log: every tool call, for whom, who approved it, and the result. Each change needs a person's name in `approved_by`, or the tool refuses it.
 
 ```mermaid
 flowchart LR
@@ -18,27 +13,22 @@ flowchart LR
   T --> L[action-log.jsonl]
 ```
 
-## Your challenge
+## Watch it done
 
-Pick one way to run the tools. Both write `action-log.jsonl` and `register.json` into this folder.
+Before, the folder is empty:
 
-**Way 1: Claude Desktop.** Run this in the course folder. It prints the setting Claude Desktop needs:
-
-```bash
-bun parts/04-let-it-act-safely/02-run-the-waitlist-agent/tools/paper.ts desktop-config
+```text
+  FAIL  action-log.jsonl is in the folder
+  FAIL  the only offer went to HH-0137, the child first in policy order
 ```
 
-Expect: `"harbour-hill-office": {`
+After, the log shows a withdrawal for HH-0102 and one offer to HH-0137. The check ends with `Done. All 8 rules pass.`
 
-In Claude Desktop, open **Settings**, then **Developer**, then **Edit Config**. Paste the printed setting into
-that file and restart Claude Desktop. Then ask: "Process the email in inbox/07.md. Ask me before any change." Paste
-the email and the policy. When Claude asks to run `withdraw` or `offer_place`, check it. Then say yes, and give
-your name for `approved_by`.
+![What you see when the agent did it right](../images/expected.png)
 
-**Way 2: the paper register.** No install. Ask Claude in Claude.ai to write each tool call as one line of JSON.
-You read it, put your name in `approved_by`, and run it. Each command prints the result to paste back.
+## Your turn
 
-Give Claude this list. It shows the JSON fields each tool needs:
+Use the paper register. It needs no install. Ask Claude in Claude.ai to write each tool call as one line of JSON. Give it this list of fields:
 
 ```text
 Write each tool call as one line of JSON. The tools and their fields are:
@@ -49,7 +39,7 @@ Write each tool call as one line of JSON. The tools and their fields are:
 {"tool":"draft_letter","applicant_id":"...","text":"the whole letter"}
 ```
 
-For example, Claude asks to withdraw Leo Brennan's place. You add your name and run:
+1. Paste the email `inbox/07.md` and the policy. Claude asks to withdraw Leo Brennan's place. Add your name and run it:
 
 ```bash
 bun parts/04-let-it-act-safely/02-run-the-waitlist-agent/tools/paper.ts '{"tool":"withdraw","applicant_id":"HH-0102","from_email":"siobhan.brennan@example.com","approved_by":"Your Name"}'
@@ -57,16 +47,28 @@ bun parts/04-let-it-act-safely/02-run-the-waitlist-agent/tools/paper.ts '{"tool"
 
 Expect: `ok: HH-0102 is withdrawn. One place is free.`
 
-Before you approve `offer_place`, check the child against clause 7.2. The right child is not position 1. Last,
-have Claude draft the offer letter with `draft_letter`. The letter goes in `text`. For example:
+2. Paste the result back. Run the other calls the same way. Before you approve `offer_place`, check the child against clause 7.2. The right child is not position 1.
+3. Last, have Claude draft the offer letter with `draft_letter`. For example:
 
 ```text
 {"tool":"draft_letter","applicant_id":"HH-0137","text":"Dear Ms Ahmed, we can offer Zara a place in Year 7."}
 ```
 
-To start again, delete `action-log.jsonl` and `register.json` in this folder.
+4. Run the check.
 
-![What you see when the agent did it right](../images/expected.png)
+```bash
+bun run verify run-the-waitlist-agent
+```
+
+Expect: `Done. All 8 rules pass.`
+
+If you see `FAIL  the only offer went to HH-0137...`, delete `action-log.jsonl` and `register.json` in this folder and start again. Check clause 7.2. If you see `refused: An offer needs approved_by...`, put your name in `approved_by`.
+
+## Do it on your work
+
+Go further: run the same tools in Claude Desktop. Print the setting with `bun parts/04-let-it-act-safely/02-run-the-waitlist-agent/tools/paper.ts desktop-config`. Expect: `"harbour-hill-office": {`. In Claude Desktop, open **Settings**, then **Developer**, then **Edit Config**. Paste it and restart. MCP is how Claude Desktop talks to tools on your computer. Claude types the `approved_by` name itself there, so the real stop is when Claude Desktop asks you to allow the call. If the tools do not show, run `which bun` and use that full path.
+
+For your own work, name one change an agent could make and who must say yes. Good looks like a name on every change in the log.
 
 ## Done when
 
@@ -75,24 +77,6 @@ To start again, delete `action-log.jsonl` and `register.json` in this folder.
 - Every `withdraw` and `offer_place` that went through has a name in `approved_by`.
 - `register.json` shows HH-0102 withdrawn, HH-0137 offered, and the list in policy order.
 
-How this step is checked: the check reads the log and the register. It does not read the chat.
+## Solution
 
-```bash
-bun run verify run-the-waitlist-agent
-```
-
-Expect: `Done. All 8 rules pass.`
-
-## If you get stuck
-
-| What you see                              | Fix                                                                   |
-| ----------------------------------------- | --------------------------------------------------------------------- |
-| `FAIL  the only offer went to HH-0137...` | Delete the log and register here. Start again, and check clause 7.2.  |
-| `refused: An offer needs approved_by...`  | Put your name in `approved_by`.                                       |
-| The tools do not show in Claude Desktop   | Run `which bun`. Put that full path in place of `bun` in the setting. |
-
-## Words you will use
-
-- **Action log**: a list of every tool call, who approved it, and what happened.
-- **Approve**: a person says yes to one change, and their name goes in the log.
-- **MCP**: the way Claude Desktop talks to tools on your computer.
+The after state is `action-log.jsonl` and `register.json`. See the `solution/` folder.
