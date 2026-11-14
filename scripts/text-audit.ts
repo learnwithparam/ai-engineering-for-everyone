@@ -1,4 +1,4 @@
-// bun run audit: builds the office report, then runs the text audit on it in a browser.
+// bun run text-audit: builds the office report, then runs the text audit on it in a browser.
 // The audit needs Chromium. Install it once with: bunx playwright install chromium
 import { existsSync } from "node:fs";
 import { chromium } from "@playwright/test";
