@@ -4,7 +4,9 @@ This step is extra. Do it if you have time.
 
 ## The problem
 
-A season has 1,200 letters. You cannot read them all. Could Claude label them with your pass rules? An AI that labels another AI's work is a judge. You test it first. Give it the 20 letters you labelled and count how often it agrees with you.
+A season has 1,200 letters. You cannot read them all. Could Claude label them with your pass rules?
+
+An AI that labels another AI's work is a judge. You test it first. Give it the 20 letters you labelled and count how often it agrees with you.
 
 ```mermaid
 flowchart LR

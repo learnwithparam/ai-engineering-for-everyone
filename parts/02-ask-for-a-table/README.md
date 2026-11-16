@@ -10,7 +10,7 @@ A `prompts/summary.md` prompt and an `applications.csv` table of 18 children.
 
 ## The problem
 
-Forms come in as free text and scans. The office needs one clean row for each child, with the same fields every time: name, date of birth, sibling, distance, care status, EHCP and preference. An EHCP is an Education, Health and Care Plan, a legal plan for a child who needs extra support.
+Forms come in as free text and scans. The office needs one clean row for each child. Every row has the same fields: name, date of birth, sibling, distance, care status, EHCP and preference. An EHCP is an Education, Health and Care Plan, a legal plan for a child who needs extra support.
 
 You get these rows by writing a prompt, the text you give the AI. A vague prompt gets a nice paragraph. The office needs a table it can sort. When the form does not say something, the table must say unknown.
 

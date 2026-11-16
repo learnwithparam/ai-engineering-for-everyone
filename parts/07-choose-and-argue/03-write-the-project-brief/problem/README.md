@@ -32,7 +32,7 @@ Before, `project-brief.md` has eight headings and `(write here)` under each. Aft
 You work in this `problem/` folder. Pick one task. It can be from your own job, like the one in your `about-me.md`, or the Harbour Hill forms.
 
 1. Write under each of the 8 headings. A few sentences is enough.
-2. Under **Cost estimate**, keep the five lines and put a number on each: runs, input tokens per run, output tokens per run, the model and the cost.
+2. Under **Cost estimate**, keep the five lines and put a number on each. The lines are runs, input tokens per run, output tokens per run, the model and the cost.
 3. Work the cost out like this: input tokens times the input price, plus output tokens times the output price, divided by 1,000,000, times the runs. For Harbour Hill that is 2,402 times $2, plus 300 times $10, divided by 1,000,000, times 1,200.
 4. Under **How we will measure it**, name a test set of 20 or more real cases, like 20 letters.
 5. Under **What a person does**, name the person, by role, who approves or signs.

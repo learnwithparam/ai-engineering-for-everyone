@@ -10,7 +10,11 @@ A `project-brief.md` with real numbers behind it, plus `model-choice.md` and `ve
 
 ## The problem
 
-A vendor says its tool is "95% accurate" and "saves 80% of staff time". Your boss wants a decision. Carta Healthcare says it cut clinical data work "by up to 66%" ([Carta Healthcare's story on claude.com](https://claude.com/customers/carta-healthcare)). AES says AI agents gave "a 99% reduction in audit costs" ([Google Cloud's list of use cases](https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders)). These are the companies' own claims, and each leaves out what it was measured on. For example, the pitch for a made-up tool called Sortwell Admit says "95% accurate" and "makes the decisions". But clause 1.2 of the school's policy says a person makes every decision. So that claim is a problem, not a feature.
+A vendor says its tool is "95% accurate" and "saves 80% of staff time". Your boss wants a decision.
+
+Carta Healthcare says it cut clinical data work "by up to 66%" ([Carta Healthcare's story on claude.com](https://claude.com/customers/carta-healthcare)). AES says AI agents gave "a 99% reduction in audit costs" ([Google Cloud's list of use cases](https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders)). These are the companies' own claims, and each leaves out what it was measured on.
+
+For example, the pitch for a made-up tool called Sortwell Admit says "95% accurate" and "makes the decisions". But clause 1.2 of the school's policy says a person makes every decision. So that claim is a problem, not a feature.
 
 ```mermaid
 flowchart LR
@@ -64,7 +68,9 @@ bun run verify part choose-and-argue
 
 Expect: `Part choose-and-argue is done: 3/3 steps pass.`
 
-What the checks can and cannot do. No check here runs a model. You run the models in the Claude app. Step one scores your CSVs against the answer key and works out the cost again. Steps two and three look for headings and topic words, and step three redoes the cost sum. A person has to judge whether your questions and your brief are good.
+What the checks can and cannot do. No check here runs a model. You run the models in the Claude app.
+
+Step one scores your CSVs against the answer key and works out the cost again. Steps two and three look for headings and topic words, and step three redoes the cost sum. A person has to judge whether your questions and your brief are good.
 
 ## Watch and read
 
@@ -81,4 +87,6 @@ What the checks can and cannot do. No check here runs a model. You run the model
 
 Take the brief to your own job. Swap the forms for your own task, keep the same steps, and run the same checks. For example: "1,200 forms a season. Sonnet costs $9.36 and got 42 of 42 fields right on our test forms. A person signs every letter." Your boss can say yes or no to that.
 
-Hand in `model-choice.md` with its two CSVs, `vendor-review.md` and `project-brief.md`. Two things a person checks: does the brief name who signs each action, by role, and would a stranger know what happens when the AI is wrong? For more practice, turn your brief into a pilot pack, a repo with your files from every part and `bun run verify --report` with every step passing.
+Hand in `model-choice.md` with its two CSVs, `vendor-review.md` and `project-brief.md`. A person checks two things. Does the brief name who signs each action, by role? Would a stranger know what happens when the AI is wrong?
+
+For more practice, turn your brief into a pilot pack, a repo with your files from every part and `bun run verify --report` with every step passing.

@@ -10,7 +10,15 @@ A Claude Project that holds this year's policy, plus `answers.csv` and `retrieva
 
 ## The problem
 
-Parents ask the office questions by email, and the answer is in the school's policy, the written rules for who gets a place. Each rule has a number, called a clause. For example, Jen Wright asks if her partner's daughter counts as her son's sibling. This year's policy says yes, in clause 4.3. Last year's said no. An AI with no policy guesses, sounds sure, and may use last year's rules. A wrong answer can become an appeal. West Sussex County Council runs "14 unique generative AI agents". They help staff find policy guides and the law ([Google Cloud's list of use cases](https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders)). In this part you give Claude the right pages in a Claude Project, a space where you add files that Claude reads before it answers.
+Parents ask the office questions by email, and the answer is in the school's policy, the written rules for who gets a place. Each rule has a number, called a clause.
+
+For example, Jen Wright asks if her partner's daughter counts as her son's sibling. This year's policy says yes, in clause 4.3. Last year's said no.
+
+An AI with no policy guesses, sounds sure, and may use last year's rules. A wrong answer can become an appeal.
+
+West Sussex County Council runs "14 unique generative AI agents". They help staff find policy guides and the law ([Google Cloud's list of use cases](https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders)).
+
+In this part you give Claude the right pages in a Claude Project, a space where you add files that Claude reads before it answers.
 
 ```mermaid
 flowchart LR

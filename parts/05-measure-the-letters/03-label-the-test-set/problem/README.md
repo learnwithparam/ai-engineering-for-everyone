@@ -2,7 +2,9 @@
 
 ## The problem
 
-Your pass rules came from batch A. Do they work on letters you have not seen? A test set is a fixed group of cases where you know the right answer. Batch B has 20 new letters. An expert has labelled them. You label them with your rules and count how often you agree.
+Your pass rules came from batch A. Do they work on letters you have not seen?
+
+A test set is a fixed group of cases where you know the right answer. Batch B has 20 new letters. An expert has labelled them. You label them with your rules and count how often you agree.
 
 ```mermaid
 flowchart LR

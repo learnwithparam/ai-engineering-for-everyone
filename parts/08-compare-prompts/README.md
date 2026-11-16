@@ -10,7 +10,11 @@ A `verdict.md` for the recorded table, and a `my-task.md` with `my-test-set.csv`
 
 ## The problem
 
-In the last part you compared two models by hand. You scored each answer against the key, one field at a time. That works for six forms and is slow for sixty. A free tool called promptfoo puts the same prompts through two models and shows the answers in one table. For example, the two models disagree on the birth date for HH-0128, and the table shows it at once. It also saves a record you can open again later. A choice you can show beats a choice you remember.
+In the last part you compared two models by hand. You scored each answer against the key, one field at a time. That works for six forms and is slow for sixty.
+
+A free tool called promptfoo puts the same prompts through two models and shows the answers in one table. For example, the two models disagree on the birth date for HH-0128, and the table shows it at once.
+
+It also saves a record you can open again later. A choice you can show beats a choice you remember.
 
 ```mermaid
 flowchart LR
@@ -62,7 +66,13 @@ bun assignment/check.ts
 
 Expect: `PASS  verdict.md names a winner for every prompt` and a new `assignment/result.json`.
 
-What the checks can and cannot do. The table is a recorded run. Nothing here calls a model. The checks read your files: that every prompt has a named winner, that your own task has a pass rule and six cases, and that your count adds up. They do not judge whether your winners or your cases are good. A person does that. The assignment is optional in the live session and expected as homework. Its task and rubric are in [assignment/README.md](../../assignment/README.md).
+What the checks can and cannot do. The table is a recorded run. Nothing here calls a model.
+
+The checks read your files. Every prompt must have a named winner, and your count must add up. Your own task must have a pass rule and six cases.
+
+They do not judge whether your winners or your cases are good. A person does that.
+
+The assignment is optional in the live session and expected as homework. Its task and rubric are in [assignment/README.md](../../assignment/README.md).
 
 Without Node, run the same prompts in two browser tabs, one model in each. You get no table and no saved record, and you copy each answer by hand.
 

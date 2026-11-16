@@ -2,7 +2,9 @@
 
 ## The problem
 
-Your boss asks which model to use. Most people pick the one they have heard of. You can do better. Run the same prompt on the same six forms with two models. Score both against the answer key. For example, Haiku got 39 of 42 fields right and Sonnet got 42.
+Your boss asks which model to use. Most people pick the one they have heard of. You can do better.
+
+Run the same prompt on the same six forms with two models. Score both against the answer key. For example, Haiku got 39 of 42 fields right and Sonnet got 42.
 
 ```mermaid
 flowchart LR

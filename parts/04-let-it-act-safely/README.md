@@ -10,7 +10,15 @@ An `action-log.jsonl` and `register.json` where every change has an approver, an
 
 ## The problem
 
-A family gives up its place. Then the waiting list moves up, the next child gets an offer, and a letter goes out. For example, Siobhan Brennan asks the school to withdraw the place for Leo Brennan (HH-0102). Now `bun run world` prints `Top of the waiting list: 1. HH-0116`. But clause 7.2 says the list is kept in policy order, so that may be wrong. An AI that does steps with tools is an agent. Only a person may offer a place. Qonto, a business bank, says its agents make transfers "2X faster". It also says "Any action with a financial or customer relationship impact requires user confirmation" ([Qonto's story on claude.com](https://claude.com/customers/qonto)). The AI acts, and a person says yes. Every action goes into an action log.
+A family gives up its place. Then the waiting list moves up, the next child gets an offer, and a letter goes out.
+
+For example, Siobhan Brennan asks the school to withdraw the place for Leo Brennan (HH-0102). Now `bun run world` prints `Top of the waiting list: 1. HH-0116`. But clause 7.2 says the list is kept in policy order, so that may be wrong.
+
+An AI that does steps with tools is an agent. Only a person may offer a place.
+
+Qonto, a business bank, says its agents make transfers "2X faster". It also says "Any action with a financial or customer relationship impact requires user confirmation" ([Qonto's story on claude.com](https://claude.com/customers/qonto)).
+
+The AI acts, and a person says yes. Every action goes into an action log.
 
 ```mermaid
 flowchart LR

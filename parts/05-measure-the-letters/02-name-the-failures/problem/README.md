@@ -2,7 +2,9 @@
 
 ## The problem
 
-You have notes on 20 letters. "Five letters were bad" does not tell your boss what to fix first. So you group the notes. Letters with the same kind of problem go in one group. Each group is a failure mode. Then you count each one.
+You have notes on 20 letters. "Five letters were bad" does not tell your boss what to fix first.
+
+So you group the notes. Letters with the same kind of problem go in one group. Each group is a failure mode. Then you count each one.
 
 ```mermaid
 flowchart LR

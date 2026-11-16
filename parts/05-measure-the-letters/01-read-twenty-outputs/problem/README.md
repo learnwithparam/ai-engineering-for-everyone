@@ -2,7 +2,9 @@
 
 ## The problem
 
-AI drafted 20 letters to families. No person has read them. For example, letter A03 offers Bilal Qureshi a place "under clause 4.6". The policy has no clause 4.6. It looks fine until you check. You cannot fix what you have not seen.
+AI drafted 20 letters to families. No person has read them. For example, letter A03 offers Bilal Qureshi a place "under clause 4.6". The policy has no clause 4.6.
+
+It looks fine until you check. You cannot fix what you have not seen.
 
 ```mermaid
 flowchart LR

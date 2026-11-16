@@ -2,7 +2,9 @@
 
 ## The problem
 
-An agent is an AI that does steps, using tools. A tool is a small action the AI asks for, such as "read the register". Something outside the AI runs it. Before you trust that, you be the tool by hand. Position 1 on the waiting list looks right, but is not.
+An agent is an AI that does steps, using tools. A tool is a small action the AI asks for, such as "read the register". Something outside the AI runs it.
+
+Before you trust that, you be the tool by hand. Position 1 on the waiting list looks right, but is not.
 
 ```mermaid
 flowchart LR
@@ -43,7 +45,9 @@ Task: process this email.
 4. When Claude asks for `offer_place`, do not run it. Stop and check the child yourself.
 5. Fill in `tool-calls.md` in this folder: each request in order, the next child, and where you would stop it.
 
-For example, Claude asks `TOOL next_on_waitlist`. You paste the waiting children. Position 1 is HH-0116, Lily Chen, by distance. But HH-0137, Zara Ahmed, is at position 22 as a sibling, under clause 4.3. The list keeps policy order (clause 7.2), so a sibling comes first. If Claude offers the place to HH-0116, stop it there.
+For example, Claude asks `TOOL next_on_waitlist`. You paste the waiting children. Position 1 is HH-0116, Lily Chen, by distance.
+
+But HH-0137, Zara Ahmed, is at position 22 as a sibling, under clause 4.3. The list keeps policy order (clause 7.2), so a sibling comes first. If Claude offers the place to HH-0116, stop it there.
 
 6. Run the check.
 

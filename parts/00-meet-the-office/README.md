@@ -10,9 +10,13 @@ An `about-me.md` file that names your plan, your role, one task, and what you wo
 
 ## The problem
 
-Harbour Hill School is made up for this course. It is a free state school with 180 places in Year 7, the first year of secondary school. About 1,200 families apply. Three people read every form, answer every email, keep the waiting list and sign every letter.
+Harbour Hill School is made up for this course. It is a free state school with 180 places in Year 7, the first year of secondary school. About 1,200 families apply.
 
-Schools and colleges now use AI for this kind of work. So the question is not whether AI can read a form. The real questions are these. What should the AI do? What does it cost? Who checks its work?
+Three people read every form, answer every email, keep the waiting list and sign every letter.
+
+Schools and colleges now use AI for this kind of work. So the question is not whether AI can read a form.
+
+The real questions are these. What should the AI do? What does it cost? Who checks its work?
 
 For example, form HH-0113 is for Zainab Hussain. It has no date of birth. The finished office does not guess. It flags the form and says the date of birth is unknown. A flag means a person must look first.
 
