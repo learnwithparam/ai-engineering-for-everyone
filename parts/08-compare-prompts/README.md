@@ -14,7 +14,7 @@ In the last part you compared two models by hand. You scored each answer against
 
 A free tool called promptfoo puts the same prompts through two models and shows the answers in one table. For example, the two models disagree on the birth date for HH-0128, and the table shows it at once.
 
-It also saves a record you can open again later. A choice you can show beats a choice you remember.
+promptfoo also saves a record you can open again later. A choice you can show beats a choice you remember.
 
 ```mermaid
 flowchart LR
@@ -68,7 +68,7 @@ Expect: `PASS  verdict.md names a winner for every prompt` and a new `assignment
 
 What the checks can and cannot do. The table is a recorded run. Nothing here calls a model.
 
-The checks read your files. Every prompt must have a named winner, and your count must add up. Your own task must have a pass rule and six cases.
+The checks read your files. Every prompt must have a named winner. Your own task must have a pass rule and six cases, and your count must add up.
 
 They do not judge whether your winners or your cases are good. A person does that.
 

@@ -91,6 +91,6 @@ Expect: `Part measure-the-letters is done: 4/4 steps pass.`
 
 Build a test set for one real task of your own: 20 outputs, a yes or no label on each, and a failure mode table. For example, when the office changes its letter prompt, draft new letters and read them with your pass rules.
 
-Batch B in `world/harbour-hill/letters/batch-b` is a fresh set to practise on. Count the fails again. If the count is worse, you do not ship it. This repo has no script that drafts letters from a new prompt, so do that by hand.
+Batch B in `world/harbour-hill/letters/batch-b` is a fresh set to practise on. Count the fails again. If the count is worse, you do not ship the new prompt. This repo has no script that drafts letters from a new prompt, so do that by hand.
 
 Next, in guard-the-forms, you look at a different kind of failure. A form tries to give the AI orders. You write guard rules and test them, the same way you tested the letters.

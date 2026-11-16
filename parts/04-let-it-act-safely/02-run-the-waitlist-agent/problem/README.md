@@ -68,7 +68,7 @@ If you see `FAIL  the only offer went to HH-0137...`, delete `action-log.jsonl` 
 
 Go further: run the same tools in Claude Desktop. Print the setting with `bun parts/04-let-it-act-safely/02-run-the-waitlist-agent/tools/paper.ts desktop-config`. Expect: `"harbour-hill-office": {`.
 
-In Claude Desktop, open **Settings**, then **Developer**, then **Edit Config**. Paste it and restart.
+In Claude Desktop, open **Settings**, then **Developer**, then **Edit Config**. Paste the setting you printed and restart.
 
 MCP is how Claude Desktop talks to tools on your computer. Claude types the `approved_by` name itself there. So the real stop is when Claude Desktop asks you to allow the call. If the tools do not show, run `which bun` and use that full path.
 
