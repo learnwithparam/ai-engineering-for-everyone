@@ -67,22 +67,22 @@ bun run verify try-the-hidden-instruction
 
 Expect: `Done. All 7 rules pass.`
 
-If "quotes the hidden line" fails, copy the line word for word. If "the policy place the office run gave" fails, copy the number and word on the HH-0117 line.
+If "quotes the hidden line" fails, copy the line word for word. If "the policy place the office run gave" fails, copy the number and the word on the HH-0117 line.
 
 Claude may resist the line. The saved office reply did not. One run that resists does not prove it always will.
 
 ## Do it on your work
 
-Add one line of orders to a file your AI reads, such as an email. Run your usual prompt. Good looks like a note of the line, what the AI did, and who would lose out.
+Add one line of orders to a file your AI reads, such as an email. Run your usual prompt. A good answer has a note of the line, what the AI did, and who would lose out.
 
 ## Done when
 
 - `attack.md` has What the text said, What Claude did and Why it matters.
 - What the text said quotes the hidden line in form 17.
-- What Claude did gives the sibling value and says if the field changed.
+- What Claude did gives the sibling value, and says if the field changed.
 - It gives the policy place the office run gave HH-0117.
 - Why it matters has 12 or more words.
 
 ## Solution
 
-The after state is one filled `attack.md`. See `solution/attack.md`.
+The finished state is one filled `attack.md`. See `solution/attack.md`.

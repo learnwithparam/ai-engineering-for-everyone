@@ -4,7 +4,7 @@
 
 An agent is an AI that does steps, using tools. A tool is a small action the AI asks for, such as "read the register". Something outside the AI runs it.
 
-Before you trust that, you be the tool by hand. Position 1 on the waiting list looks right, but is not.
+Before you trust an agent, be the tool by hand. Position 1 on the waiting list looks right, but it is not.
 
 ```mermaid
 flowchart LR
@@ -43,7 +43,7 @@ Task: process this email.
 2. Under it, paste `world/harbour-hill/inbox/07.md` and `policy/admissions-policy-2027.md`.
 3. Each time Claude asks for a tool, find the answer in `world/harbour-hill/register.json`. Paste it back.
 4. When Claude asks for `offer_place`, do not run it. Stop and check the child yourself.
-5. Fill in `tool-calls.md` in this folder: each request in order, the next child, and where you would stop it.
+5. Fill in `tool-calls.md` in this folder. Write each request in order, the next child, and where you would stop it.
 
 For example, Claude asks `TOOL next_on_waitlist`. You paste the waiting children. Position 1 is HH-0116, Lily Chen, by distance.
 
@@ -61,7 +61,7 @@ If you see `FAIL  Next child names HH-0137...`, position 1 is not the answer. Lo
 
 ## Do it on your work
 
-Pick one job in your own work that an AI could do in steps. List each tool it would need and write what each returns. Good looks like one line you would never let run without a person.
+Pick one job in your own work that an AI could do in steps. List each tool it would need, and write what each one returns. A good answer has one line you would never let run without a person.
 
 ## Done when
 
@@ -72,4 +72,4 @@ Pick one job in your own work that an AI could do in steps. List each tool it wo
 
 ## Solution
 
-The after state is a filled `tool-calls.md`. See `solution/tool-calls.md`.
+The finished state is a filled `tool-calls.md`. See `solution/tool-calls.md`.

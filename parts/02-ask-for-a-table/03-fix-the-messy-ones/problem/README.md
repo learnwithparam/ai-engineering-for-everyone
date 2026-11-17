@@ -2,7 +2,7 @@
 
 ## The problem
 
-Not every form is neat. Some are scans, which are photos of a paper form. Some leave a box empty. This is where AI most likely guesses, and a guessed date looks real, so nobody checks it.
+Not every form is neat. Some are scans, which are photos of a paper form. Some leave a box empty. This is where AI most often guesses. A guessed date looks real, so nobody checks it.
 
 For example, form 15 says the distance is "not sure". The row must say unknown.
 
@@ -48,9 +48,9 @@ If a row is missing, start each row with its HH number. If a gap fails, look at 
 
 ## Do it on your work
 
-Run your own prompt on the messiest item you have, such as a blurry photo or a half-empty form. Good looks like unknown in each gap and a mark for a person to check.
+Run your own prompt on the messiest item you have, such as a blurry photo or a half-empty form. A good answer has unknown in each gap, and a mark for a person to check.
 
-Go further. Add forms 13, and the scans 25.png, 26.png and 27.png. Attach each scan with the paperclip button, because Claude can read text in a picture. The check needs all 18 rows.
+Go further. Add form 13, and the scans 25.png, 26.png and 27.png. Attach each scan with the paperclip button. Claude can read the text in a picture. The check needs all 18 rows.
 
 ## Done when
 
@@ -61,4 +61,4 @@ Go further. Add forms 13, and the scans 25.png, 26.png and 27.png. Attach each s
 
 ## Solution
 
-The after state is a table of 18 rows. See `solution/applications.csv`.
+The finished state is a table of 18 rows. See `solution/applications.csv`.

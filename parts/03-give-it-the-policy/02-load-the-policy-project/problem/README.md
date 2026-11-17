@@ -21,7 +21,7 @@ Before, the check says the new columns are missing:
   FAIL  at least 4 of the 5 clauses match the answer key
 ```
 
-After, each row ends with the Project's answer and its clause, and the check ends with `Done. All 5 rules pass.`
+After, each row ends with the Project's answer and its clause. The check ends with `Done. All 5 rules pass.`
 
 ![What you see when every clause is right](../images/expected.png)
 
@@ -51,7 +51,7 @@ If you see `FAIL  every clause is a clause that exists...`, write the number onl
 
 ## Do it on your work
 
-Make a Project for your own team. Add the two or three documents people ask about most. Use the same instructions. Good looks like answers that name a page or clause you can open and confirm.
+Make a Project for your own team. Add the two or three documents people ask about most. Use the same instructions. A good answer names a page or clause you can open and confirm.
 
 ## Done when
 
@@ -62,4 +62,4 @@ Make a Project for your own team. Add the two or three documents people ask abou
 
 ## Solution
 
-The after state is `answers.csv` with the two new columns. See `solution/answers.csv`.
+The finished state is `answers.csv` with the two new columns. See `solution/answers.csv`.

@@ -1,11 +1,11 @@
 # Start here
 
 You are the new admissions officer at Harbour Hill School. The school, the town and every family in it are made
-up. The work is real: forms, a waiting list, parent emails, and letters that change a family's plans.
+up. The work is real. It has forms, a waiting list, parent emails, and letters that change a family's plans.
 
 You will not write code. You will work in Claude, on the website or in the desktop app. Each step asks you to
-make one small file. For example, it can be a prompt, a filled table or a scored sheet. A prompt is the text you
-give the AI.
+make one small file. For example, the file can be a prompt, a filled table or a scored sheet. A prompt is the
+text you give the AI.
 
 When your file is ready, you run one command. A check reads your file and tells you what passed.
 
@@ -14,14 +14,14 @@ When your file is ready, you run one command. A check reads your file and tells 
 - A computer: Mac, Windows or Linux.
 - A Claude account. The free plan is fine.
 - This course folder.
-- Bun. It is a small free tool that runs the checks.
+- Bun. Bun is a small free tool that runs the checks.
 
 ## Set up
 
 You type commands in a terminal. A terminal is a window where you type a command and press Enter. Then the
 computer prints an answer.
 
-1. Get the folder. On the course page, click **Code**, then **Download ZIP**. Unzip it.
+1. Get the folder. On the course page, click **Code**, then **Download ZIP**. Unzip the file.
 2. Open a terminal. On a Mac, open the app called Terminal. On Windows, open PowerShell.
 3. Install Bun. On Mac or Linux, paste `curl -fsSL https://bun.com/install | bash`. On Windows, paste
    `powershell -c "irm bun.sh/install.ps1 | iex"`. Then close the terminal and open a new one.
@@ -58,7 +58,7 @@ bun run office
 
 Expect: the last line says "3 of 6 forms need a person" and names three forms.
 
-Now open `world/state/office-report.html` in your web browser. This page is the goal of the course:
+Now open `world/state/office-report.html` in your web browser. This page shows the goal of the course:
 
 - The AI reads the forms and drafts the letters.
 - The rules set the order of the children.
@@ -79,22 +79,23 @@ bun run verify meet-the-office
 Expect: one `PASS` line, six `FAIL` lines, `1 of 7 rules pass.` and a `Progress:` line.
 
 Each `FAIL` line has a `Try next:` line under it. For example, you see `FAIL  Plan names your Claude plan`. The
-line under it tells you to write your plan name, such as Free or Pro.
+line under it tells you what to write. Write your plan name, such as Free or Pro.
 
-The last line says `error: script "verify" exited with code 1`. That is normal. It only means some rules still
+The last line says `error: script "verify" exited with code 1`. That is normal. It means some rules still
 fail. You did not break anything.
 
 ![Your first check: each FAIL line says what to try next](images/first-run.png)
 
 Now do your first step: [meet the office](../parts/00-meet-the-office/01-meet-the-office/problem/README.md).
 
-Sometimes a command prints something you do not expect. Look it up in [troubleshooting.md](troubleshooting.md).
+If a command prints something you do not expect, look it up in [troubleshooting.md](troubleshooting.md).
 
 ## Want to use your own AI account?
 
-You do not need one. Replay mode runs everything with no key. It plays back saved AI replies, so it costs nothing.
+You do not need one. Replay mode runs everything with no key. Replay plays back saved AI replies, so it costs
+nothing.
 
-A key is a secret password that lets the course use your own AI account. If you want live replies, follow these
+A key is a secret password. It lets the course use your own AI account. If you want live replies, follow these
 steps:
 
 1. Copy `.env.example` to `.env`.

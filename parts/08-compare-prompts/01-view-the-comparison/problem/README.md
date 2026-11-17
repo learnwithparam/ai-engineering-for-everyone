@@ -56,15 +56,15 @@ If `npx` is not found, install Node. Or run the same prompts in two browser tabs
 
 ## Do it on your work
 
-Write three or more prompts from your own work, such as three emails you need to answer. Put them through two models, in promptfoo or in two tabs. Pick a winner for each and say why. Good looks like a reason you can point at, not a feeling. Step two does this on a task of your own.
+Write three or more prompts from your own work, such as three emails you need to answer. Put them through two models, in promptfoo or in two tabs. Pick a winner for each, and say why. A good answer has a reason you can point at, not a feeling. Step two does this on a task of your own.
 
 ## Done when
 
 - `verdict.md` has a row for every prompt, HH-0116 to HH-0130.
 - Every winner is Small model, Middle model or Tie.
 
-The answers in the table were recorded earlier. Nothing in this step runs a model. The check only reads `verdict.md` and confirms every prompt has a named winner. It does not judge whether you picked the right one. A pass in the table means the model gave an answer, not that the answer is right.
+The answers in the table were recorded earlier. Nothing in this step runs a model. The check only reads `verdict.md`, and confirms every prompt has a named winner. It does not judge whether you picked the right one. A pass in the table means the model gave an answer, not that the answer is right.
 
 ## Solution
 
-The after state is one filled-in `verdict.md`. See `solution/verdict.md` for a sample.
+The finished state is one filled-in `verdict.md`. See `solution/verdict.md` for a sample.

@@ -2,9 +2,9 @@
 
 ## The problem
 
-AI drafted 20 letters to families. No person has read them. For example, letter A03 offers Bilal Qureshi a place "under clause 4.6". The policy has no clause 4.6.
+AI drafted 20 letters to families. No person has read them yet. For example, letter A03 offers Bilal Qureshi a place "under clause 4.6". The policy has no clause 4.6.
 
-The letter looks fine until you check. You cannot fix what you have not seen.
+The letter looks fine until you check it. You cannot fix what you have not seen.
 
 ```mermaid
 flowchart LR
@@ -38,7 +38,7 @@ After, every row has a yes or no, and every no has a note. The check prints `Don
 A03,no,Cites clause 4.6 but the policy has no clause 4.6.
 ```
 
-4. Do the same for the other 19 letters. Write `yes` if the letter can go out as it is. For each letter ask:
+4. Do the same for the other 19 letters. Write `yes` if the letter can go out as it is. For each letter, ask:
    - Is the child's name right for that reference number? The register, `world/harbour-hill/register.json`, says who is who.
    - Does the clause it cites exist in the policy?
    - Does the register agree? An offer must go to a child the register says was offered.
@@ -58,7 +58,7 @@ You may ask Claude to help you read. Paste the policy and one letter, and ask wh
 
 ## Do it on your work
 
-Take 10 to 20 outputs from an AI task of your own, such as drafts, summaries or replies. Put each in a row with a yes or no and a note on every no. Good looks like this: for every no, a stranger could find the fault from your note alone.
+Take 10 to 20 outputs from an AI task of your own, such as drafts, summaries or replies. Put each one in a row with a yes or no, and a note on every no. A good answer means that, for every no, a stranger could find the fault from your note alone.
 
 ## Done when
 
@@ -67,8 +67,8 @@ Take 10 to 20 outputs from an AI task of your own, such as drafts, summaries or 
 - At least 4 of the 5 letters with a fault are marked `no`.
 - At least 12 of the 15 good letters are marked `yes`.
 
-The check compares your labels with `world/keys/letters-a.csv`. Open that file only when you are done or stuck.
+The check compares your labels with `world/keys/letters-a.csv`. Open that file only when you are done, or when you are stuck.
 
 ## Solution
 
-The after state is one filled `letter-notes.csv`. See `solution/letter-notes.csv`.
+The finished state is one filled `letter-notes.csv`. See `solution/letter-notes.csv`.

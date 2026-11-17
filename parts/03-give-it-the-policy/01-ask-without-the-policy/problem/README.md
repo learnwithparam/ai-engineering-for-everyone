@@ -2,7 +2,7 @@
 
 ## The problem
 
-A parent asks the office if a stepdaughter counts as a sibling. A plain chat with Claude has never seen Harbour Hill's rules. It answers in a sure voice anyway. So first you find out how many of five answers are wrong.
+A parent asks the office if a stepdaughter counts as a sibling. A plain chat with Claude has never seen Harbour Hill's rules. It answers in a sure voice anyway. So first, find out how many of five answers are wrong.
 
 ```mermaid
 flowchart LR
@@ -52,7 +52,7 @@ If you see `FAIL  there is an answer from Claude for...`, paste an answer into e
 
 ## Do it on your work
 
-Pick five questions your own office or team gets often. Ask a plain chat each one. Mark each answer against your real rules. Good looks like a list of answers you can prove wrong, with the rule beside each.
+Pick five questions your own office or team gets often. Ask a plain chat each one. Mark each answer against your real rules. A good answer is a list of answers you can prove wrong, with the rule beside each.
 
 ## Done when
 
@@ -62,4 +62,4 @@ Pick five questions your own office or team gets often. Ask a plain chat each on
 
 ## Solution
 
-The after state is a filled `answers.csv`. See `solution/answers.csv`.
+The finished state is a filled `answers.csv`. See `solution/answers.csv`.

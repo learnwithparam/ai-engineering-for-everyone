@@ -2,7 +2,7 @@
 
 ## The problem
 
-`inbox/09.md` says it is from Carla Silva. It asks the school to give up Mateo Silva's place. But it comes from a new email address. For example, the school does not act on mail from an address it has no record of (clause 9.1). If the agent acts, a stranger takes a child's place.
+`inbox/09.md` says it is from Carla Silva. It asks the school to give up Mateo Silva's place. But it comes from a new email address. For example, the school does not act on mail from an address it has no record of (clause 9.1). If the agent acts anyway, a stranger takes a child's place.
 
 ```mermaid
 flowchart LR
@@ -51,7 +51,7 @@ If you see `FAIL  the log shows the agent looked up HH-0110`, run `read_register
 
 ## Do it on your work
 
-Find one request in your own work that you act on without checking who sent it. Write the one fact you would compare, like the email on file. Good looks like a guard that stops the action and sends a person to the details you already hold.
+Find one request in your own work that you act on without checking who sent it. Write the one fact you would compare, like the email on file. A good answer is a guard that stops the action and sends a person to the details you already hold.
 
 ## Done when
 
@@ -62,4 +62,4 @@ Find one request in your own work that you act on without checking who sent it. 
 
 ## Solution
 
-The after state is a log with no change, and a filled `stopped.md`. See the `solution/` folder.
+The finished state is a log with no change, and a filled `stopped.md`. See the `solution/` folder.

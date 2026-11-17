@@ -4,7 +4,7 @@ This step is extra. Do it if you have time.
 
 ## The problem
 
-Someone adds last year's policy to the Project, in case it helps. Now Claude holds two policies with the same clause numbers. Two rules changed. Claude may quote the old one and sound just as sure. A stale file is an old file that is no longer true.
+Someone adds last year's policy to the Project, in case it helps. Now Claude holds two policies with the same clause numbers. Two rules have changed. Claude may quote the old one and sound just as sure. A stale file is an old file that is no longer true.
 
 ```mermaid
 flowchart LR
@@ -40,7 +40,7 @@ For example, with both files in, Claude says:
 Clause 4.3 says stepbrothers and stepsisters do not count. So your stepdaughter would not count as a sibling.
 ```
 
-That is last year's rule. This year she counts. A parent who trusts it may not apply, or may appeal.
+That is last year's rule. This year she counts. A parent who trusts the old answer may not apply, or may appeal.
 
 5. Run the check.
 
@@ -54,7 +54,7 @@ If you see `FAIL  What changed names both clauses...`, name both 4.3 and 5.2. If
 
 ## Do it on your work
 
-Look in your own Project or folder for two versions of one document. Compare them and list what changed. Good looks like the old version removed, and one line in the instructions saying which version to use.
+Look in your own Project or folder for two versions of one document. Compare them, and list what changed. A good answer removes the old version, and has one line in the instructions that says which version to use.
 
 ## Done when
 
@@ -64,4 +64,4 @@ Look in your own Project or folder for two versions of one document. Compare the
 
 ## Solution
 
-The after state is a filled `stale.md`. See `solution/stale.md`.
+The finished state is a filled `stale.md`. See `solution/stale.md`.

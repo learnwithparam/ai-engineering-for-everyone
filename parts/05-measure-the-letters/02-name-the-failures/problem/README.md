@@ -4,7 +4,7 @@
 
 You have notes on 20 letters. "Five letters were bad" does not tell your boss what to fix first.
 
-So you group the notes. Letters with the same kind of problem go in one group. Each group is a failure mode. Then you count each one.
+So group the notes. Letters with the same kind of problem go in one group. Each group is a failure mode. Then count each one.
 
 ```mermaid
 flowchart LR
@@ -49,13 +49,13 @@ Expect: `Done. All 7 rules pass.`
 
 If "the counts add up to the no rows" fails, count again. If "every pass rule is a yes or no question" fails, check each rule. It starts with Does, Is, Are or Has. It ends with a `?`. If the copy of `letter-notes.csv` is missing, copy it from the last step.
 
-Why yes or no, and not a score from 1 to 5? Give letter A01 a score and ask a friend to do the same. You may say 3 and they may say 4. You are far more likely to agree on yes or no. And a yes or no rule can become a test later.
+Why yes or no, and not a score from 1 to 5? Give letter A01 a score, and ask a friend to do the same. You may say 3, and they may say 4. You are far more likely to agree on yes or no. And a yes or no rule can become a test later.
 
 You may paste your notes into Claude and ask it to suggest groups. Then check that each group makes sense to you.
 
 ## Do it on your work
 
-Group the notes on your own outputs from the last step. Good looks like 2 to 5 modes, counts that add up to your `no` rows, and a rule a stranger could answer with no help.
+Group the notes on your own outputs from the last step. A good answer has 2 to 5 modes, counts that add up to the `no` rows, and a rule a stranger can answer.
 
 ## Done when
 
@@ -63,8 +63,8 @@ Group the notes on your own outputs from the last step. Good looks like 2 to 5 m
 - Every mode has a count of 1 or more, and the counts add up to the `no` rows in your `letter-notes.csv`.
 - Every pass rule is a yes or no question, and none asks for a score.
 
-The check counts the `no` rows, adds up your counts and reads each rule.
+The check counts the `no` rows, adds up your counts, and reads each rule.
 
 ## Solution
 
-The after state is one filled `failure-modes.md`. See `solution/failure-modes.md`.
+The finished state is one filled `failure-modes.md`. See `solution/failure-modes.md`.

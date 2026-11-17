@@ -4,7 +4,7 @@
 
 Your pass rules came from batch A. Do they work on letters you have not seen?
 
-A test set is a fixed group of cases where you know the right answer. Batch B has 20 new letters. An expert has labelled them. You label them with your rules and count how often you agree.
+A test set is a fixed group of cases where you know the right answer. Batch B has 20 new letters. An expert has labelled them. You label them with your rules, and count how often you agree.
 
 ```mermaid
 flowchart LR
@@ -38,7 +38,7 @@ After, 16 or more labels agree with the expert. The check prints `Done. All 10 r
 B05,no,Cites clause 4.6 but the policy has no clause 4.6.
 ```
 
-3. Do the same for B01 to B20 in `test-set.csv`. Row B01 is the letter `01.md`. If a letter breaks no rule but is still wrong, mark it `no` and add a new rule to `failure-modes.md`.
+3. Do the same for B01 to B20 in `test-set.csv`. Row B01 is the letter `01.md`. If a letter breaks no rule but is still wrong, mark it `no`, and add a new rule to `failure-modes.md`.
 4. Run the check. It tells you how many labels agree with the expert.
 
 ```bash
@@ -51,7 +51,7 @@ Expect: `Done. All 10 rules pass.`
 
 ## Do it on your work
 
-In `own-test-set.csv`, add six real cases from a task in your `about-me.md`. Write the right answer before you ask the AI. Then paste what it gave and mark `yes` or `no`. Good looks like six different cases, and a reason on every `no`.
+In `own-test-set.csv`, add six real cases from a task in your `about-me.md`. Write the right answer before you ask the AI. Then paste what it gave, and mark `yes` or `no`. A good answer has six different cases, and a reason on every `no`.
 
 ## Done when
 
@@ -63,4 +63,4 @@ In `own-test-set.csv`, add six real cases from a task in your `about-me.md`. Wri
 
 ## Solution
 
-The after state is two filled files. See `solution/test-set.csv` and `solution/own-test-set.csv`.
+The finished state is two filled files. See `solution/test-set.csv` and `solution/own-test-set.csv`.

@@ -6,13 +6,13 @@ Let an AI use tools on your records, with a person's name on every change.
 
 ## You leave with
 
-An `action-log.jsonl` and `register.json` where every change has an approver, and a `stopped.md` for the email the agent refused.
+An `action-log.jsonl` and `register.json`, where every change has an approver. Also a `stopped.md` for the email the agent refused.
 
 ## The problem
 
 A family gives up its place. Then the waiting list moves up, the next child gets an offer, and a letter goes out.
 
-For example, Siobhan Brennan asks the school to withdraw the place for Leo Brennan (HH-0102). Now `bun run world` prints `Top of the waiting list: 1. HH-0116`. But clause 7.2 says the list is kept in policy order, so that may be wrong.
+For example, Siobhan Brennan asks the school to withdraw the place for Leo Brennan (HH-0102). Now `bun run world` prints `Top of the waiting list: 1. HH-0116`. But clause 7.2 says the list is kept in policy order. So that may be wrong.
 
 An AI that does steps with tools is an agent. Only a person may offer a place.
 
@@ -34,7 +34,7 @@ flowchart LR
 
 ## Steps
 
-You work in Claude.ai or Claude Desktop, and save each answer in the step's `problem` folder. The last step is extra. The office tools live in `02-run-the-waitlist-agent/tools/`. If you cannot install Claude Desktop, the paper register runs the same tools by hand.
+You work in Claude.ai or Claude Desktop. Save each answer in the step's `problem` folder. The last step is extra. The office tools live in `02-run-the-waitlist-agent/tools/`. If you cannot install Claude Desktop, the paper register runs the same tools by hand.
 
 | Step                                                                  | What you hand in                       | What the check reads                                                             |
 | --------------------------------------------------------------------- | -------------------------------------- | -------------------------------------------------------------------------------- |

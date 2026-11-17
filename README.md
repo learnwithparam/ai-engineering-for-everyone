@@ -6,16 +6,17 @@ model. A model is a program that reads text and writes text back. The free Claud
 At the end, you can answer four questions about an AI project:
 
 - What does the work cost?
-- How well does it work? You find out with a test set: a fixed group of cases where you know the right answer.
+- How well does it work? You find out with a test set. A test set is a fixed group of cases where you know the
+  right answer.
 - Where must a person check and sign?
 - What should you ask a company that sells AI?
 
-You work in the admissions office of Harbour Hill School. The school is made up, but the work is real. There are
-1,200 forms, 180 places, a waiting list, parent emails and letters. Each letter changes a family's plans.
+You work in the admissions office of Harbour Hill School. The school is made up, but the work is real. The
+office has 1,200 forms, 180 places, a waiting list, parent emails and letters. Each letter changes a family's plans.
 
 For example, form HH-0101 is for Amara Okafor. She lives 0.84 km from the school gate. Under the school's rules,
-distance decides her place in the order. You will learn to get that fact out of a long form, check it, and price
-the work.
+distance decides her place in the order. You will learn to pull that fact out of a long form, check it, and
+price the work.
 
 ## Run the finished system
 
@@ -155,14 +156,14 @@ Here are three short reads from the company that makes Claude:
 2. [Prompt engineering best practices](https://claude.com/blog/best-practices-for-prompt-engineering). Be
    clear and give context. Show an example. Let the AI say when it is not sure.
 3. [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents). Read the first
-   two sections. They explain the words "workflow" and "agent". They also say why the simple way is often best.
+   two sections. They explain the words "workflow" and "agent". They also show why the simple way is often best.
 
 ## How the course is made
 
 This part is for people who build or change the course. [STANDARD.md](STANDARD.md) lists every rule this
 course follows, and the check behind each rule. Run `bun run check` and `bun test` to prove the rules hold.
 
-The course names its models in one file: `config/models.ts`. By default it uses replay, so it plays back saved
+The course names its models in one file: `config/models.ts`. By default it uses replay, which plays back saved
 replies. For live replies, set `LLM_PROVIDER` and one key in `.env`. The file `.env.example` shows how. Then
 `bun run models` tests it.
 

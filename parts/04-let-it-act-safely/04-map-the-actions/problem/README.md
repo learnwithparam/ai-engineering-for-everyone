@@ -4,7 +4,7 @@ This step is extra. Do it if you have time.
 
 ## The problem
 
-Your agent had five tools. A real office would add more: send emails, change records, delete files. Before anyone adds a tool, someone must say how risky it is and who approves it. Without that map, the AI ends up approving itself.
+Your agent had five tools. A real office would add more: send emails, change records, delete files. Before anyone adds a tool, someone must say how risky it is and who approves it. Without that map, the AI ends up approving its own changes.
 
 ```mermaid
 flowchart LR
@@ -55,7 +55,7 @@ If you see `FAIL  every action that changes or sends names...`, write a job titl
 
 ## Do it on your work
 
-Make the same table for the tools you would give an AI in your own work. Good looks like at least five actions, and a human role beside every one that changes or sends.
+Make the same table for the tools you would give an AI in your own work. A good answer has at least five actions, and a human role beside every one that changes or sends.
 
 ## Done when
 
@@ -66,4 +66,4 @@ Make the same table for the tools you would give an AI in your own work. Good lo
 
 ## Solution
 
-The after state is a filled `tools.md`. See `solution/tools.md`.
+The finished state is a filled `tools.md`. See `solution/tools.md`.

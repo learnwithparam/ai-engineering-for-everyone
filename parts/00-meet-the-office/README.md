@@ -2,11 +2,11 @@
 
 ## After this part you can
 
-Run the finished office and say which forms it flags for a person.
+Run the finished office. Say which forms it flags for a person.
 
 ## You leave with
 
-An `about-me.md` file that names your plan, your role, one task, and what you would hand to AI.
+An `about-me.md` file. It names your plan, your role, one task, and the part you would hand to AI.
 
 ## The problem
 
@@ -14,9 +14,7 @@ Harbour Hill School is made up for this course. It is a free state school with 1
 
 Three people read every form, answer every email, keep the waiting list and sign every letter.
 
-Schools and colleges now use AI for this kind of work. So the question is not whether AI can read a form.
-
-The real questions are these. What should the AI do? What does it cost? Who checks its work?
+Schools now use AI for this kind of work. So the real question is not whether AI can read a form. The real questions are these: What should the AI do? What does it cost? Who checks its work?
 
 For example, form HH-0113 is for Zainab Hussain. It has no date of birth. The finished office does not guess. It flags the form and says the date of birth is unknown. A flag means a person must look first.
 
@@ -39,7 +37,7 @@ flowchart LR
 | ------------------------------------------------------- | ---------------- | ---------------------------------------------------------- |
 | [meet-the-office](01-meet-the-office/problem/README.md) | `about-me.md`    | your plan, role and task, and the forms the office flagged |
 
-Run these three commands in order.
+Run these three commands, one after the other.
 
 ```bash
 bun run world
@@ -70,4 +68,4 @@ Expect: `Done. All 7 rules pass.` once `about-me.md` is filled in.
 
 ## Project
 
-Name one real task from your own work. Say which part you would hand to AI and which part a person keeps.
+Name one real task from your own work. Say which part you would give to AI, and which part a person keeps.

@@ -2,7 +2,7 @@
 
 ## The problem
 
-An AI can treat two families differently when no rule says it should. The policy bans, in clause 11.1, using a child's name, race, religion or disability to decide a place. For example, a form for a child with a hard name could rank lower. You test this with a swap: change one detail, run both, and compare.
+An AI can treat two families differently when no rule says it should. The policy bans, in clause 11.1, using a child's name, race, religion or disability to decide a place. For example, a form for a child with a hard name could rank lower. You test this with a swap. Change one detail, run both versions, and compare.
 
 ```mermaid
 flowchart LR
@@ -27,7 +27,7 @@ After, the check prints `Done. All 7 rules pass.`
 
 ## Your turn
 
-1. Under **Who could be treated worse**, add two or more rows. Name a group, and say how the office could treat it worse. One row must name a detail clause 11.1 bans, such as a name, gender, race, religion or disability.
+1. Under **Who could be treated worse**, add two or more rows. Name a group, and say how the office could treat it worse. One row must name a detail that clause 11.1 bans, such as a name, gender, race, religion or disability.
 
 ```text
 | Children with a long, hard name | The AI may misread it and lose the form |
@@ -56,11 +56,11 @@ If "your verdict matches the run" fails, write the form as a number, use a new n
 
 ## What the check proves
 
-It proves that your swap runs on a real form and your verdict matches the office rules. It does not prove the AI model is fair, because it never calls the model. The group rows and the family letter are word checks. What you saw in Claude is your own report. A person must judge your test.
+It proves that your swap runs on a real form, and that your verdict matches the office rules. It does not prove the model is fair, because it never calls the model. The group rows and the family letter are word checks. What you saw in Claude is your own report. A person must judge your test.
 
 ## Do it on your work
 
-Change one personal detail on a copy of an input to your own AI task. Run both and compare.
+Change one personal detail in a copy of your own AI input. Run both, and compare.
 
 ## Done when
 
@@ -71,4 +71,4 @@ Change one personal detail on a copy of an input to your own AI task. Run both a
 
 ## Solution
 
-The after state is one filled `fairness.md`. See `solution/fairness.md`.
+The finished state is one filled `fairness.md`. See `solution/fairness.md`.

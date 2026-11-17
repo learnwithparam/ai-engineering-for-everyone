@@ -4,7 +4,7 @@
 
 Your boss asks which model to use. Most people pick the one they have heard of. You can do better.
 
-Run the same prompt on the same six forms with two models. Score both against the answer key. For example, Haiku got 39 of 42 fields right and Sonnet got 42.
+Run the same prompt on the same six forms with two models. Score both against the answer key. For example, Haiku got 39 of 42 fields right, and Sonnet got 42.
 
 ```mermaid
 flowchart LR
@@ -19,7 +19,7 @@ flowchart LR
 
 ## Watch it done
 
-Before, `model-choice.md` says `(write here)` in every cell. After, it shows both models side by side and a decision that cites both:
+Before, `model-choice.md` says `(write here)` in every cell. After, it shows both models side by side, and a decision that cites both:
 
 | Model  | Fields right | Fields checked | Accuracy | Season cost |
 | ------ | ------------ | -------------- | -------- | ----------- |
@@ -35,7 +35,7 @@ You work in this `problem/` folder. The prompt is in `prompt.md`. The answer key
 1. In the Claude app, pick Haiku in the model menu. Paste the prompt from `prompt.md` and one form, one chat per form. Paste each row Claude gives into `haiku.csv`, on the line with the same application id.
 2. Pick Sonnet and do it again. Paste the rows into `sonnet.csv`.
 3. Compare each CSV with the key, field by field. Each CSV has 42 fields: 6 forms times 7 fields. Count the fields that match. A different date or number is wrong.
-4. Fill in `model-choice.md`. For the season cost, copy each model's cost for 1,200 forms from your `season-cost.md` in price-the-season, not the cost of one form.
+4. Fill in `model-choice.md`. For the season cost, copy each model's cost for 1,200 forms from your `season-cost.md` in price-the-season. Do not use the cost of one form.
 5. Write your Decision in one paragraph: the model, a percent, and a dollar cost.
 6. Run the check.
 
@@ -47,11 +47,11 @@ Expect: `Done. All 6 rules pass.`
 
 If you see `FAIL Fields right for each model matches`, count again. For example, if Haiku said form 22 has a sibling, that is wrong. The form names a cousin, and a cousin does not count. If you see `FAIL Decision names a model and cites`, put the model name, a percent and a cost in the same paragraph.
 
-On the Free plan, a model may be missing from your menu. Then copy `haiku.csv` and `sonnet.csv` from `../solution/` into this folder and count those. Those files are recorded sample answers.
+On the Free plan, a model may be missing from your menu. Then copy `haiku.csv` and `sonnet.csv` from `../solution/` into this folder, and count those. Those files are recorded sample answers.
 
 ## Do it on your work
 
-Take one task you repeat and six real cases with a known right answer. Run one prompt on two models. Count the right answers and price a season for each. Good looks like a decision that names both numbers.
+Take one task you repeat, and six real cases with a known right answer. Run one prompt on two models. Count the right answers, and price a season for each. A good answer is a decision that names both numbers.
 
 ## Done when
 
@@ -65,4 +65,4 @@ The check does not run any model. It scores your two CSVs against the key itself
 
 ## Solution
 
-The after state is `model-choice.md` plus the two CSVs. See `solution/` for recorded sample answers.
+The finished state is `model-choice.md` plus the two CSVs. See `solution/` for recorded sample answers.

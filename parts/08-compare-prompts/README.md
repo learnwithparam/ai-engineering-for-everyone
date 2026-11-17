@@ -6,13 +6,13 @@ Put the same prompts through two models, read the answers in one table, and pick
 
 ## You leave with
 
-A `verdict.md` for the recorded table, and a `my-task.md` with `my-test-set.csv` for a task of your own.
+A `verdict.md` for the recorded table. Also a `my-task.md` with `my-test-set.csv` for a task of your own.
 
 ## The problem
 
-In the last part you compared two models by hand. You scored each answer against the key, one field at a time. That works for six forms and is slow for sixty.
+In the last part you compared two models by hand. You scored each answer against the key, one field at a time. That works for six forms, but it is slow for sixty.
 
-A free tool called promptfoo puts the same prompts through two models and shows the answers in one table. For example, the two models disagree on the birth date for HH-0128, and the table shows it at once.
+A free tool called promptfoo puts the same prompts through two models, and shows the answers in one table. For example, the two models disagree on the birth date for HH-0128, and the table shows it at once.
 
 promptfoo also saves a record you can open again later. A choice you can show beats a choice you remember.
 
@@ -72,7 +72,7 @@ The checks read your files. Every prompt must have a named winner. Your own task
 
 They do not judge whether your winners or your cases are good. A person does that.
 
-The assignment is optional in the live session and expected as homework. Its task and rubric are in [assignment/README.md](../../assignment/README.md).
+The assignment is optional in the live session, and expected as homework. Its task and rubric are in [assignment/README.md](../../assignment/README.md).
 
 Without Node, run the same prompts in two browser tabs, one model in each. You get no table and no saved record, and you copy each answer by hand.
 

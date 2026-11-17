@@ -14,7 +14,7 @@ AI drafted 20 decision letters. Some are fine. Some cite a clause that does not 
 
 For example, letter A03 offers Bilal Qureshi (HH-0129) a place "under clause 4.6 of our admissions policy (distance)". The policy has no clause 4.6. Distance is clause 4.4.
 
-A test set is a fixed group of cases where you know the right answer. You run the AI on it and count how often it is right. Then you can run it again later and compare.
+A test set is a fixed group of cases where you know the right answer. You run the AI on it, and count how often it is right. Then you can run it again later and compare.
 
 DXC Technology says an AI build was "80% right on the first pass" ([DXC's story on claude.com](https://claude.com/customers/dxc)). Newfront reports "12 out of 20 complex insurance questions answered correctly" ([Newfront's story on claude.com](https://claude.com/customers/newfront)).
 
@@ -91,6 +91,6 @@ Expect: `Part measure-the-letters is done: 4/4 steps pass.`
 
 Build a test set for one real task of your own: 20 outputs, a yes or no label on each, and a failure mode table. For example, when the office changes its letter prompt, draft new letters and read them with your pass rules.
 
-Batch B in `world/harbour-hill/letters/batch-b` is a fresh set to practise on. Count the fails again. If the count is worse, you do not ship the new prompt. This repo has no script that drafts letters from a new prompt, so do that by hand.
+Batch B in `world/harbour-hill/letters/batch-b` is a fresh set to practise on. Count the fails again. If the count is worse, do not ship the new prompt. This repo has no script that drafts letters from a new prompt, so do that by hand.
 
 Next, in guard-the-forms, you look at a different kind of failure. A form tries to give the AI orders. You write guard rules and test them, the same way you tested the letters.

@@ -6,13 +6,13 @@ Price a season of AI work in dollars, and name the costs that hide in the bill.
 
 ## You leave with
 
-A `season-cost.md` sheet with a season cost for three models, a list of hidden costs, and a cached total.
+A `season-cost.md` sheet. It has a season cost for three models, a list of hidden costs, and a cached total.
 
 ## The problem
 
-Before your boss says yes to AI, they want a number. Most people guess, and a guess can be very wrong. AI is not priced by the page. It is priced by the token, and some costs hide.
+Before your boss says yes to AI, they want a number. Most people guess, and a guess can be very wrong. AI is not priced by the page. It is priced by the token. Some costs are hidden.
 
-A **token** is a small piece of text, often part of a word. You pay for every token you send and every token the AI writes back.
+A **token** is a small piece of text, often part of a word. You pay for every token you send, and for every token the AI writes back.
 
 For example, the school's policy file has 1,009 words, about 1,816 tokens. Every form goes to the AI with the whole policy, so you pay for those tokens 1,200 times. On Sonnet, one of Claude's three models, the sample answer works out a season at $9.33.
 
@@ -79,4 +79,4 @@ Expect: `Part price-the-work is done: 3/3 steps pass.`
 
 ## Project
 
-Price one real job of your own: count its tokens, work out a season for three models, and list its hidden costs.
+Price one real job of your own. Count its tokens, work out a season for three models, and list its hidden costs.

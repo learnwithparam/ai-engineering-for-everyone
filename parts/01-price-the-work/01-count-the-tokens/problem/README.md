@@ -33,8 +33,8 @@ bun run words world/harbour-hill/inbox/04.md
 
 Expect: `world/harbour-hill/inbox/04.md: 33 words`
 
-2. Turn words into tokens. Claude's docs say one million tokens is about 555,000 words. That is about 1.8 tokens for each word. Multiply the words by 1.8 and round to a whole number. For example, 32 words times 1.8 is 57.6, so write 58.
-3. Put the words and tokens in each row of the CSV. A CSV is a plain table file with commas between columns. If your spreadsheet changes the first line, put back `file,words,tokens`.
+2. Turn words into tokens. Claude's docs say one million tokens is about 555,000 words. That is about 1.8 tokens for each word. Multiply the words by 1.8, and round to a whole number. For example, 32 words times 1.8 is 57.6, so write 58.
+3. Put the words and tokens in each row of the CSV. A CSV is a plain table file, with commas between the columns. If your spreadsheet changes the first line, put back `file,words,tokens`.
 4. Run the check.
 
 ```bash
@@ -47,7 +47,7 @@ If a word count fails, count again with `bun run words` and the file path. If a 
 
 ## Do it on your work
 
-Count one real file of your own, such as a policy or a long email. Good looks like a number you can multiply by 1,200 for a season. Go further: with your own AI key, `bun run measure-tokens` asks Claude for the real count and saves it in `world/keys/tokens.json`. How close was 1.8?
+Count one real file of your own, such as a policy or a long email. A good answer is a number you can multiply by 1,200 for a season. Go further: with your own AI key, `bun run measure-tokens` asks Claude for the real count and saves it in `world/keys/tokens.json`. How close was 1.8?
 
 ## Done when
 
@@ -57,4 +57,4 @@ Count one real file of your own, such as a policy or a long email. Good looks li
 
 ## Solution
 
-The after state is a filled `token-count.csv`. See `solution/token-count.csv`.
+The finished state is a filled `token-count.csv`. See `solution/token-count.csv`.

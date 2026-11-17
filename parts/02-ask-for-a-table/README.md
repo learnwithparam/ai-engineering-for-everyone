@@ -6,13 +6,13 @@ Write a prompt that turns messy forms into a clean table, with unknown for every
 
 ## You leave with
 
-A `prompts/summary.md` prompt and an `applications.csv` table of 18 children.
+A `prompts/summary.md` prompt, and an `applications.csv` table of 18 children.
 
 ## The problem
 
-Forms come in as free text and scans. The office needs one clean row for each child. Every row has the same fields: name, date of birth, sibling, distance, care status, EHCP and preference. An EHCP is an Education, Health and Care Plan, a legal plan for a child who needs extra support.
+Forms come in as free text and scans. The office needs one clean row for each child. Every row has the same fields: name, date of birth, sibling, distance, care status, EHCP and preference. An EHCP is an Education, Health and Care Plan. It is a legal plan for a child who needs extra support.
 
-You get these rows by writing a prompt, the text you give the AI. A vague prompt gets a nice paragraph. The office needs a table it can sort. When the form does not say something, the table must say unknown.
+You get these rows by writing a prompt. A prompt is the text you give the AI. A vague prompt gets a nice paragraph. The office needs a table it can sort. When the form does not say something, the table must say unknown.
 
 For example, form HH-0101 is for Amara Okafor. Her row in the answer key looks like this:
 
@@ -20,9 +20,9 @@ For example, form HH-0101 is for Amara Okafor. Her row in the answer key looks l
 | ------------ | ------------- | ------- | ------------- | ------------ | ---- | ---------- |
 | Amara Okafor | 2015-03-02    | no      | 0.84          | no           | no   | 1          |
 
-Form HH-0113 for Zainab Hussain has no date of birth, so her row says unknown there. A good prompt never lets the AI guess.
+Form HH-0113 for Zainab Hussain has no date of birth. So her row says unknown there. A good prompt never lets the AI guess.
 
-Hospitals do this with notes. Manipal Hospitals says AI cut the time for nurse handoff notes by more than three quarters ([Google Cloud's list of use cases](https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders)). The lesson: ask for exactly the shape you need.
+Hospitals use the same idea for notes. Manipal Hospitals says AI cut the time for nurse handoff notes by more than three quarters ([Google Cloud's list of use cases](https://cloud.google.com/transform/101-real-world-generative-ai-use-cases-from-industry-leaders)). The lesson: ask for exactly the shape you need.
 
 ```mermaid
 flowchart LR
@@ -42,7 +42,7 @@ The last step is extra.
 | [fix-the-messy-ones](03-fix-the-messy-ones/problem/README.md)          | `applications.csv`                            | 18 rows, the three gaps say unknown, the two-home form is flagged |
 | [draft-the-letter](04-draft-the-letter/problem/README.md) (go further) | `letters/offer-template.md` and three letters | the five fields, real clauses, short sentences                    |
 
-You work in Claude.ai and save each answer in the step's `problem` folder. Then you run one command to check it.
+You work in Claude.ai. Save each answer in the step's `problem` folder. Then run one command to check it.
 
 ```bash
 bun run verify write-the-brief-prompt
@@ -82,7 +82,7 @@ Want to see a right answer first? Add the word `solution` after a step name, suc
 | ----- | ---------------------------------- | --------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | video | AI prompt engineering: A deep dive | Anthropic       | Anthropic's own prompt team shares how they write prompts | https://www.youtube.com/watch?v=T9aRN5JkmL8                                                      |
 | video | Intro to Large Language Models     | Andrej Karpathy | Why a model guesses when it lacks a fact                  | https://www.youtube.com/watch?v=zjkBMFhNj_g                                                      |
-| read  | Prompt engineering overview        | Anthropic       | The steps for a clear prompt and how to test it           | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview                |
+| read  | Prompt engineering overview        | Anthropic       | The steps for a clear prompt, and how to test it          | https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview                |
 | read  | Increase output consistency        | Anthropic       | How to fix the shape of an answer                         | https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/increase-consistency |
 | read  | Vision                             | Anthropic       | How Claude reads a scan or a photo                        | https://platform.claude.com/docs/en/build-with-claude/vision                                     |
 
@@ -90,4 +90,4 @@ Want to see a right answer first? Add the word `solution` after a step name, suc
 
 Turn one pile of your own forms or emails into a table. Write the prompt, run it on a messy item, and mark every gap unknown.
 
-For example, your table marks HH-0114 as needing a person, because Finn has two homes. The next part, give-it-the-policy, gives Claude the policy so it quotes the right clause instead of guessing.
+For example, your table marks HH-0114 as needing a person, because Finn has two homes. The next part, give-it-the-policy, gives Claude the policy. Then Claude quotes the right clause instead of guessing.

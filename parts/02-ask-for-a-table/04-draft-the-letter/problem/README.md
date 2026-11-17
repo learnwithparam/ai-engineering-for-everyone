@@ -4,7 +4,7 @@ This step is extra. Do it if you have time, or come back to it later.
 
 ## The problem
 
-Every family gets a letter. It must cite the right clause. For example, clause 4.6 does not exist, and one wrong clause can start an appeal. So build a template first: a letter with gaps, called fields. Each field is filled from the register, the list of every child.
+Every family gets a letter, and it must cite the right clause. A wrong clause can start an appeal. For example, clause 4.6 does not exist. So build a template first: a letter with gaps, called fields. Each field is filled from the register, the list of every child.
 
 ```mermaid
 flowchart LR
@@ -39,11 +39,11 @@ bun run verify draft-the-letter
 
 Expect: `Done. All 7 rules pass.`
 
-If a field is left, search each letter for a curly bracket and put real words there. If a name fails, use the child's full name and the clause from the register.
+If a field is left, search each letter for a curly bracket, and put real words there. If a name fails, use the child's full name and the clause from the register.
 
 ## Do it on your work
 
-Build a template for one letter you send often. Good looks like fields for every fact that changes, and a person who reads every letter before it goes.
+Build a template for one letter you send often. A good answer has fields for every fact that changes, and a person who reads every letter before it goes.
 
 ## Done when
 
@@ -55,4 +55,4 @@ Build a template for one letter you send often. Good looks like fields for every
 
 ## Solution
 
-The after state is a template and three letters. See `solution/letters/`.
+The finished state is a template and three letters. See `solution/letters/`.
